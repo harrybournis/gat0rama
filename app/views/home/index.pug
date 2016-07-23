@@ -1,25 +1,25 @@
 #slider.slider
 	ul.slides
 		li
-			img(src='slider_image1.png')
+			img(src='placeholders/slider_image1.png')
 			// random image
 			.caption.right-align
 				h3 <%= Faker::Company.catch_phrase %>
 				h5.light.grey-text.text-lighten-3 <%= Faker::StarWars.quote %>
 		li
-			img(src='slider_image2.jpg')
+			img(src='placeholders/slider_image2.jpg')
 			// random image
 			.caption.right-align
 				h3 <%= Faker::Company.catch_phrase %>
 				h5.light.grey-text.text-lighten-3 <%= Faker::StarWars.quote %>
 		li
-			img(src='slider_image3.jpg')
+			img(src='placeholders/slider_image3.jpg')
 			// random image
 			.caption.right-align
 				h3 <%= Faker::Company.catch_phrase %>
 				h5.light.grey-text.text-lighten-3 <%= Faker::StarWars.quote %>
 		li
-			img(src='slider_image4.jpg')
+			img(src='placeholders/slider_image4.jpg')
 			// random image
 			.caption.right-align
 				h3 <%= Faker::Company.catch_phrase %>
@@ -27,10 +27,11 @@
 
 
 .row
+	<% 3.times do %>
 	.col.s12.m4.l4
 		.card
 			.card-image
-				<img src="<%= Faker::Avatar.image %>">
+				<img src=<%= @images.sample %>>
 				span.card-title Card Title
 			.card-content
 				p
@@ -38,4 +39,6 @@
 					| I am convenient because I require little markup to use effectively.
 			.card-action
 				a(href='#') This is a link
+
+	<% end %>
 

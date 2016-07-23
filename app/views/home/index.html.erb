@@ -1,28 +1,28 @@
 
 <div class="slider" id="slider">
   <ul class="slides">
-    <li><img src="slider_image1.png"/>
+    <li><img src="placeholders/slider_image1.png"/>
       <!-- random image-->
       <div class="caption right-align">
         <h3><%= Faker::Company.catch_phrase %></h3>
         <h5 class="light grey-text text-lighten-3"><%= Faker::StarWars.quote %></h5>
       </div>
     </li>
-    <li><img src="slider_image2.jpg"/>
+    <li><img src="placeholders/slider_image2.jpg"/>
       <!-- random image-->
       <div class="caption right-align">
         <h3><%= Faker::Company.catch_phrase %></h3>
         <h5 class="light grey-text text-lighten-3"><%= Faker::StarWars.quote %></h5>
       </div>
     </li>
-    <li><img src="slider_image3.jpg"/>
+    <li><img src="placeholders/slider_image3.jpg"/>
       <!-- random image-->
       <div class="caption right-align">
         <h3><%= Faker::Company.catch_phrase %></h3>
         <h5 class="light grey-text text-lighten-3"><%= Faker::StarWars.quote %></h5>
       </div>
     </li>
-    <li><img src="slider_image4.jpg"/>
+    <li><img src="placeholders/slider_image4.jpg"/>
       <!-- random image-->
       <div class="caption right-align">
         <h3><%= Faker::Company.catch_phrase %></h3>
@@ -31,10 +31,10 @@
     </li>
   </ul>
 </div>
-<div class="row">
+<div class="row"><% 3.times do %>
   <div class="col s12 m4 l4">
     <div class="card">
-      <div class="card-image"><img src="<%= Faker::Avatar.image %>"><span class="card-title">Card Title</span></div>
+      <div class="card-image"><img src=<%= @images.sample %>><span class="card-title">Card Title</span></div>
       <div class="card-content">
         <p>
           I am a very simple card. I am good at containing small bits of information.
@@ -43,5 +43,5 @@
       </div>
       <div class="card-action"><a href="#">This is a link</a></div>
     </div>
-  </div>
+  </div><% end %>
 </div>
