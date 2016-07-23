@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20160717112830) do
 
   create_table "tags", force: :cascade do |t|
     t.string   "name"
-    t.boolean  "is_search_tag"
+    t.boolean  "only_search_tag"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end

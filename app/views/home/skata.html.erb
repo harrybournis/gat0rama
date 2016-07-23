@@ -1,0 +1,20 @@
+
+<h1>Poutsa</h1>
+<div>
+  <skata></skata>
+  <p>pousti</p>
+  <p>
+    thanatos re agoouris
+    sapio <%= @yo %>
+    
+  </p>
+  <h2>tsalikis</h2>
+</div>
+<div class="gamwtoxritsouli ton poutsi" id="gamietai">
+  <h1>atzougiotripidi</h1>
+</div>
+<div class="posts"><% @posts.limit(1).each do |post| %>
+  <div class="post-instance"><span>
+      <p>Title: <%= post.title %></p></span><span>
+      <p>subtitle: <%= post.subtitle %></p></span></div><% end %>
+</div>

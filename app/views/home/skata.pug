@@ -1,0 +1,27 @@
+h1 Poutsa
+
+div
+	skata
+	p pousti
+
+	p.
+		thanatos re agoouris
+		sapio <%= @yo %>
+
+	h2 tsalikis
+
+div.gamwtoxritsouli.ton.poutsi#gamietai
+	h1 atzougiotripidi
+
+div.posts
+
+
+	<% @posts.limit(1).each do |post| %>
+	div.post-instance
+
+		span
+			p Title: <%= post.title %>
+		span
+			p subtitle: <%= post.subtitle %>
+	<% end %>
+
