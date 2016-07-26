@@ -1,4 +1,4 @@
-#slider.slider
+.slider#slider
 	ul.slides
 		li
 			img(src='placeholders/slider_image1.png')
@@ -27,18 +27,32 @@
 
 
 .row
-	<% 3.times do %>
+	<% @posts.limit(6).each do |post| %>
 	.col.s12.m4.l4
 		.card
 			.card-image
 				<img src=<%= @images.sample %>>
-				span.card-title Card Title
-			.card-content
-				p
-					| I am a very simple card. I am good at containing small bits of information.
-					| I am convenient because I require little markup to use effectively.
-			.card-action
-				a(href='#') This is a link
+				span.card-tag fashion
+				span.card-title <%= post.title %>
+				span.card-content
+					p <%= post.subtitle %>
+
+	<% end %>
+
+.row
+	.parallax-container
+		.parallax
+			img(src="placeholders/clown.gif")
+.row
+	<% @posts.limit(6).each do |post| %>
+	.col.s12.m4.l4
+		.card
+			.card-image
+				<img src=<%= @images.sample %>>
+				span.card-tag fashion
+				span.card-title <%= post.title %>
+				span.card-content
+					p <%= post.subtitle %>
 
 	<% end %>
 

@@ -1,3 +1,4 @@
 $(document).on 'turbolinks:load', ->
-	$('.slider').slider()
-
+	$(".button-collapse").sideNav();
+	$('#slider').slider()
+	$('.parallax').parallax();

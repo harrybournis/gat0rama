@@ -1,20 +1,198 @@
 // Header links
-nav ul a {
-	color: #b5b5b5;
+nav ul a, #burger_menu_icon {
+	// Link Color
+	color: $navbar-links-color;
+	font-weight: 500;
 }
+
+nav {
+	box-shadow: none;
+}
+
+.row {
+	margin-bottom: 0px;
+}
+
+#nav-logo, #nav-main, body {
+	background-color: $website-background-color;
+}
+
+#nav-logo {
+
+	a.brand-logo{
+		position: relative;
+		height: 100%;
+
+		img {
+			position: relative;
+			height: 100%;
+		}
+	}
+}
+
+#nav-main {
+
+	.ul-flex {
+		display: -webkit-flex;
+		display: flex;
+		flex-direction: row;
+		-webkit-flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+
+		li a{
+			display: -webkit-flex;
+			display: flex;
+			flex-direction: row;
+			-webkit-flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+
+		}
+
+		li.navbar-link :hover, li.social-button :hover {
+			background-color: $navbar-links-hover-color;
+		}
+
+		li.navbar-link {
+			flex: 20 10 auto;
+
+			a {
+				font-size: 1.3em;
+				border-radius: 2%;
+			}
+		}
+
+		li.social-button {
+			flex: 1 1 auto;
+
+			a {
+				font-size: 10px;
+			}
+		}
+	}
+
+}
+
+// Create the waves-custom ripple effect
+.waves-effect.waves-custom .waves-ripple {
+      background-color: $waves-custom-color;
+}
+
+
+.card .card-image  {
+	@extend .z-depth-3;
+
+	img {
+		-webkit-filter: brightness(94%);
+		filter: brightness(94%);
+	}
+
+	.card-tag {
+		@extend .z-depth-1;
+
+		color: white;
+		background-color: $card-tag-color;
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 17%;
+    	width: 13%;
+	}
+
+	.card-title {
+		top: 0;
+		text-shadow: 0px 0px 3px #000;
+		font-weight: 500;
+	}
+
+	.card-content {
+		position: absolute;
+		bottom: 0;
+		color: $card-content-color;
+		font-weight: 500;
+		text-shadow: 0px 0px 3px #000;
+
+	}
+
+}
+
 
 // Footer Text
 footer.page-footer .container .row a,
 footer.page-footer .container .row p,
 footer.page-footer .container .row h5 {
-	color: #6f6f6f !important;
+	color: $footer-text-color !important;
 }
 
 footer.page-footer.container {
-	background-color: #e0e0e0;
+	background-color: $footer-color;
 }
 
 #footer-copyright {
-	background-color: #bdbdbd;
+	background-color: $footer-copyright-color;
+}
+
+
+
+//MAIN NAVBAR HEIGHT
+
+$main-navbar-height: 40px;
+
+nav#nav-main {
+    height: $main-navbar-height;
+    line-height: $main-navbar-height;
+}
+
+nav#nav-main i, nav#nav-main [class^="mdi-"], nav#nav-main [class*="mdi-"], nav#nav-main i.material-icons {
+    height: $main-navbar-height;
+    line-height: $main-navbar-height;
+}
+
+nav#nav-main .button-collapse i {
+    height: $main-navbar-height;
+    line-height: $main-navbar-height;
+}
+
+nav#nav-main .brand-logo {
+    font-size: 1.6rem;
+}
+
+@media only screen and (min-width: 601px){
+    nav#nav-main, nav#nav-main .nav-wrapper i, nav#nav-main a.button-collapse, nav#nav-main a.button-collapse i {
+        height: $main-navbar-height;
+        line-height: $main-navbar-height;
+    }
+}
+
+
+//LOG NAVBAR HEIGHT
+
+$logo-navbar-height: 100px;
+
+nav#nav-logo {
+    height: $logo-navbar-height;
+    line-height: $logo-navbar-height;
+}
+
+nav#nav-logo i, nav#nav-logo [class^="mdi-"], nav#nav-logo [class*="mdi-"], nav#nav-logo i.material-icons {
+    height: $logo-navbar-height;
+    line-height: $logo-navbar-height;
+}
+
+nav#nav-logo .button-collapse i {
+    height: $logo-navbar-height;
+    line-height: $logo-navbar-height;
+}
+
+nav#nav-logo .brand-logo {
+    font-size: 1.6rem;
+}
+
+@media only screen and (min-width: 601px){
+    nav#nav-logo, nav#nav-logo .nav-wrapper i, nav#nav-logo a.button-collapse, nav#nav-logo a.button-collapse i {
+        height: $logo-navbar-height;
+        line-height: $logo-navbar-height;
+    }
 }
 

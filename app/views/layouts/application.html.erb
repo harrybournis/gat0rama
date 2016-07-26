@@ -1,66 +1,62 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>StellositeRails</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'main_site.js', 'data-turbolinks-track': 'reload' %>
+    <title>StellositeRails</title><%= csrf_meta_tags %>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'main_site.js', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-
-	<header>
-		<nav>
-			<div class="nav-wrapper">
-			  <a href="#" class="brand-logo center"><img src="placeholders/adidas.png" style="width: 70px; height: 50px;"></a>
-			  <ul id="nav-mobile" class="right hide-on-med-and-down">
-			    <li class="social-button"><a href="#/">
-			    	<%= fa_icon "twitter", class: "fa-2x" %> </a>
-			    </li>
-			    <li class="social-button"><a href="#/">
-			    	<%= fa_icon "facebook", class: "fa-2x" %></a>
-		    	</li>
-			    <li class="social-button"><a href="#/">
-			    	<%= fa_icon "instagram", class: "fa-2x" %></a>
-		    	</li>
-			    <li class="social-button"><a href="#/">
-			    	<%= fa_icon "tumblr", class: "fa-2x" %> </a>
-		    	</li>
-			  </ul>
-			</div>
-		</nav>
-	</header>
-
-
-    <%= yield %>
-
-
- 	<footer class="page-footer">
-		<div class="container">
-		<div class="row">
-		  <div class="col l6 s12">
-		    <h5 class="white-text">Footer Content</h5>
-		    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-		  </div>
-		  <div class="col l4 offset-l2 s12">
-		    <h5 class="white-text">Links</h5>
-		    <ul>
-		      <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-		      <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-		      <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-		      <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-		    </ul>
-		  </div>
-		</div>
-		</div>
-		<div class="footer-copyright" id="footer-copyright">
-		<div class="container">
-		© 2014 Copyright Korkolis
-		<a class="grey-text text-lighten-4 right" href="#!"> <%= Faker::Superhero.name %> </a>
-		</div>
-		</div>
+    <header>
+      <nav id="nav-logo">
+        <div class="nav-wrapper"><a class="button-collapse" id="burger_menu_icon" href="#" data-activates="mobile-demo"><i class="fa fa-bars fa-2x" style="padding-left: 10px"></i></a><a class="brand-logo center" href="#"><img src="images/gatoramalogofun.gif"></a>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">Javascript</a></li>
+            <li><a href="mobile.html">Mobile</a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav class="hide-on-med-and-down" id="nav-main">
+        <div class="nav-wrapper">
+          <ul class="center hide-on-med-and-down ul-flex" id="nav-mobile">
+            <li class="navbar-link"><a class="waves-effect waves-custom" href="#/"> NEWS</a></li>
+            <li class="navbar-link"><a class="waves-effect waves-custom" href="#/"> FEATURES</a></li>
+            <li class="navbar-link"><a class="waves-effect waves-custom" href="#/"> SHOP</a></li>
+            <li class="navbar-link"><a class="waves-effect waves-custom" href="/contribute"> CONTRIBUTE</a></li>
+            <li class="navbar-link"><a class="waves-effect waves-custom" href="/about"> ABOUT</a></li>
+            <li class="social-button"><a class="waves-effect waves-custom" href="#/"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+            <li class="social-button"><a class="waves-effect waves-custom" href="#/"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+            <li class="social-button"><a class="waves-effect waves-custom" href="#/"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
+            <li class="social-button"><a class="waves-effect waves-custom" href="#/"><i class="fa fa-tumblr fa-2x" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main id="main_content"><%= yield %></main>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright" id="footer-copyright">
+        <div class="container">
+          © 2014 Copyright Korkolis<a class="grey-text text-lighten-4 right" href="#!">More Links</a></div>
+      </div>
     </footer>
   </body>
 </html>

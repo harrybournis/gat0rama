@@ -1,0 +1,83 @@
+doctype html
+html
+  head
+    title StellositeRails
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'main_site.js', 'data-turbolinks-track': 'reload' %>
+  body
+    header
+      nav#nav-logo
+        .nav-wrapper
+          a#burger_menu_icon.button-collapse(href='#', data-activates='mobile-demo')
+            i.fa.fa-bars.fa-2x(style='padding-left: 10px;')
+          a.brand-logo.center(href='#')
+            img(src='images/gatoramalogofun.gif')
+          ul#mobile-demo.side-nav
+            li
+              a(href='sass.html') Sass
+            li
+              a(href='badges.html') Components
+            li
+              a(href='collapsible.html') Javascript
+            li
+              a(href='mobile.html') Mobile
+      nav#nav-main.hide-on-med-and-down
+        .nav-wrapper
+          ul#nav-mobile.center.hide-on-med-and-down.ul-flex
+            li.navbar-link
+              a(href='#/').waves-effect.waves-custom  NEWS
+            li.navbar-link
+              a(href='#/').waves-effect.waves-custom  FEATURES
+            li.navbar-link
+              a(href='#/').waves-effect.waves-custom  SHOP
+            li.navbar-link
+              a(href='/contribute').waves-effect.waves-custom  CONTRIBUTE
+            li.navbar-link
+              a(href='/about').waves-effect.waves-custom  ABOUT
+
+            li.social-button
+              a(href='#/').waves-effect.waves-custom
+                i.fa.fa-twitter.fa-2x(aria-hidden='true')
+
+            li.social-button
+              a(href='#/').waves-effect.waves-custom
+                i.fa.fa-facebook.fa-2x(aria-hidden='true')
+
+            li.social-button
+              a(href='#/').waves-effect.waves-custom
+                i.fa.fa-instagram.fa-2x(aria-hidden='true')
+
+            li.social-button
+              a(href='#/').waves-effect.waves-custom
+                i.fa.fa-tumblr.fa-2x(aria-hidden='true')
+
+
+
+    main#main_content
+        <%= yield %>
+
+
+    footer.page-footer
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text Footer Content
+            p.grey-text.text-lighten-4 You can use rows and columns here to organize your footer content.
+          .col.l4.offset-l2.s12
+            h5.white-text Links
+            ul
+              li
+                a.grey-text.text-lighten-3(href='#!') Link 1
+              li
+                a.grey-text.text-lighten-3(href='#!') Link 2
+              li
+                a.grey-text.text-lighten-3(href='#!') Link 3
+              li
+                a.grey-text.text-lighten-3(href='#!') Link 4
+      #footer-copyright.footer-copyright
+        .container
+          | © 2014 Copyright Korkolis
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
