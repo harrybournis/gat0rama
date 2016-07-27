@@ -1,0 +1,15 @@
+.row
+	.col.l7.m7.s12.offset-l1.offset-m1
+		article#show-post
+			#post-title <%= @news.title %>
+
+			#post-subtitle <%= @news.subtitle %>
+
+			#post-content <%= @news.body %>
+
+	.col.l1.m1
+		p(style="color:transparent") <%= Faker::Lorem.paragraphs(5).join %>
+
+	.col.l2.m2#col-extra
+		p(style="background-color: black") <%= Faker::Lorem.paragraphs(5).join %>
+

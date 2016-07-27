@@ -1,14 +1,14 @@
 .row
-	h1 Posts
-	<% @posts.limit(6).each do |post| %>
+	h1 News
+	<% @news.each do |news_item| %>
 	.col.s12.m4.l4
-		<%= link_to post do %>
+		<%= link_to news_item do %>
 			.card
 				.card-image
 					<img src=<%= @images.sample %>>
 					span.card-tag fashion
-					span.card-title <%= post.title %>
+					span.card-title <%= news_item.title %>
 					span.card-content
-						p <%= post.subtitle %>
+						p <%= news_item.subtitle %>
 		<% end %>
 	<% end %>

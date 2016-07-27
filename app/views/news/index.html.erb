@@ -1,0 +1,10 @@
+
+<div class="row">
+  <h1>News</h1><% @news.each do |news_item| %>
+  <div class="col s12 m4 l4"><%= link_to news_item do %>
+    <div class="card">
+      <div class="card-image"><img src=<%= @images.sample %>><span class="card-tag">fashion</span><span class="card-title"><%= news_item.title %></span><span class="card-content">
+          <p><%= news_item.subtitle %></p></span></div>
+    </div><% end %>
+  </div><% end %>
+</div>
