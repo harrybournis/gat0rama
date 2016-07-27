@@ -2,26 +2,19 @@ class PostsController < ApplicationController
 
 	before_action :set_post, only: [:show]
 
+	include ApplicationHelper
 
 	def index
 		@posts = Post.all
 
-		@images = []
-
-		17.times do |index|
-			@images << "/placeholders/post" + (index + 1).to_s + ".jpeg"
-		end
+		@images = generate_dummy_images
 	end
 
 
 	def show
 		logger.info @post
 
-		@images = []
-
-		17.times do |index|
-			@images << "/placeholders/post" + (index + 1).to_s + ".jpeg"
-		end
+		@images = generate_dummy_images
 	end
 
 

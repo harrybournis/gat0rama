@@ -1,14 +1,12 @@
 class HomeController < ApplicationController
 
+	include ApplicationHelper
+
 	def index
 		@yo = "yo"
 		@posts = Post.all
 
-		@images = []
-
-		17.times do |index|
-			@images << "placeholders/post" + (index + 1).to_s + ".jpeg"
-		end
+		@images = generate_dummy_images
 	end
 
 	def about

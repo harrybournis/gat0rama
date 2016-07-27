@@ -6,9 +6,12 @@ $primary-color: color("shades", "white") !default;
 $link-color: color("red", "darken-1") !default;
 $slider-indicator-color:  #af9cab; //color('lime', 'lighten-2') !default;
 $website-background-color: #FFFFFF;
+body {
+	background-image: url(placeholders/2shock.jpg);
+}
 
 // Navbar
-$navbar-links-color: #af9cab;
+$navbar-links-color: #063a35;
 $navbar-links-hover-color: transparent; //#fcedfd;
 
 // Cards

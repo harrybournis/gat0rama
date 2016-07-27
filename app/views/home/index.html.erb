@@ -1,26 +1,32 @@
 
 <div class="slider" id="slider">
   <ul class="slides">
-    <li><img src="placeholders/slider_image1.png"/>
-      <div class="caption right-align">
+    <li><img src="placeholders/fidi.jpg"/>
+      <div class="caption center-align">
         <h3 class="caption-title">	<%= Faker::Company.catch_phrase %></h3>
         <h5 class="caption-subtitle"><%= Faker::StarWars.quote %></h5>
       </div>
     </li>
-    <li><img src="placeholders/slider_image2.jpg"/>
-      <div class="caption right-align">
+    <li><img src="placeholders/boozoukia.jpg"/>
+      <div class="caption center-align">
         <h3 class="caption-title">	<%= Faker::Company.catch_phrase %></h3>
         <h5 class="caption-subtitle"><%= Faker::StarWars.quote %></h5>
       </div>
     </li>
-    <li><img src="placeholders/slider_image3.jpg"/>
-      <div class="caption right-align">
+    <li><img src="placeholders/2shock.jpg"/>
+      <div class="caption center-align">
         <h3 class="caption-title">	<%= Faker::Company.catch_phrase %></h3>
         <h5 class="caption-subtitle"><%= Faker::StarWars.quote %></h5>
       </div>
     </li>
-    <li><img src="placeholders/slider_image4.jpg"/>
-      <div class="caption right-align">
+    <li><img src="placeholders/gynekes.jpg"/>
+      <div class="caption center-align">
+        <h3 class="caption-title">	<%= Faker::Company.catch_phrase %></h3>
+        <h5 class="caption-subtitle"><%= Faker::StarWars.quote %></h5>
+      </div>
+    </li>
+    <li><img src="placeholders/podia.jpg"/>
+      <div class="caption center-align">
         <h3 class="caption-title">	<%= Faker::Company.catch_phrase %></h3>
         <h5 class="caption-subtitle"><%= Faker::StarWars.quote %></h5>
       </div>
@@ -36,11 +42,28 @@
       </div>
     </div><% end %>
   </div>
-  <div class="row">
-    <div class="parallax-container">
-      <div class="parallax"><img src="placeholders/clown.gif"/></div>
-    </div>
+</div>
+<div class="row">
+  <div class="parallax-container">
+    <div class="parallax"><img src="placeholders/clown.gif"/></div>
   </div>
+</div>
+<div class="container">
+  <div class="row"><% @posts.limit(6).each do |post| %>
+    <div class="col s12 m4 l4">
+      <div class="card">
+        <div class="card-image"><img src=<%= @images.sample %>><span class="card-tag">fashion</span><span class="card-title"><%= post.title %></span><span class="card-content">
+            <p><%= post.subtitle %></p></span></div>
+      </div>
+    </div><% end %>
+  </div>
+</div>
+<div class="row">
+  <div class="parallax-container">
+    <div class="parallax"><img src="placeholders/clown.gif"/></div>
+  </div>
+</div>
+<div class="container">
   <div class="row"><% @posts.limit(6).each do |post| %>
     <div class="col s12 m4 l4">
       <div class="card">
