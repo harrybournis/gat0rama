@@ -5,10 +5,22 @@ class NewsController < ApplicationController
 
 	def index
 		@news = News.all
+
+		@images = []
+
+		17.times do |index|
+			@images << "/placeholders/post" + (index + 1).to_s + ".jpeg"
+		end
 	end
 
 
 	def show
+
+		@images = []
+
+		17.times do |index|
+			@images << "/placeholders/post" + (index + 1).to_s + ".jpeg"
+		end
 	end
 
 

@@ -61,6 +61,32 @@ class Randomizer
 
 
 
+	def self.news(number=1, authors=nil)
+		results = []
+
+		number.times do
+			news = News.new(
+				title: Faker::Hipster.sentence,
+				subtitle: Faker::Hacker.say_something_smart,
+				body: Faker::Hipster.paragraphs(5).join,
+				category: "fashion")
+
+			if news.save
+				Rails.logger.info "\n %^&* Randomly Created Post: #{ news.inspect } \n"
+				results << news
+
+				# add the post to the authors
+				# unless authors.empty?
+				# 	authors.each { |author| post << author }
+				# end
+			end
+		end
+
+		to_return(results)
+	end
+
+
+
 	def self.tag(number=1, only_seach_tag=false)
 		results = []
 
