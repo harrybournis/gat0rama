@@ -1,17 +1,11 @@
-total = 0;
-noOfTimes = 0;
 $(document).on 'turbolinks:load', ->
+
+	# initialize materialize javascript
 	$(".button-collapse").sideNav();
 	$('#slider').slider()
 	$('.parallax').parallax();
 
-	# set active tab
-	# console.log window
-	# if !window.activeTab?
-	# 	$("##{window.location.pathname.substr(1)}").addClass('active')
-
-	Waves.displayEffect()
-
+	# set the active class on the current navbar tab
 	cache3 = window.location.pathname
 	index2 = cache3.length
 	for i in [1...index2]
@@ -20,4 +14,6 @@ $(document).on 'turbolinks:load', ->
 			break
 	search = cache3.substr(1, index2)
 	$("##{search}").addClass('active')
+
+	Waves.displayEffect()
 
