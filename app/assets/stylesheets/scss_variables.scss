@@ -1,22 +1,44 @@
 @import "materialize/components/color";
+
+//////////////////////// Colors ////////////////////////////////
+// Globals
 $primary-color: color("shades", "white") !default;
 $link-color: color("red", "darken-1") !default;
 $slider-indicator-color:  #af9cab; //color('lime', 'lighten-2') !default;
-$card-link-color: color('lime', 'darken-2') !default;
-
-nav {
-	background-color: white;
-}
-
-$footer-bg-color: color("grey", "lighten-3");
-
 $website-background-color: #FFFFFF;
 
+// Navbar
 $navbar-links-color: #af9cab;
-$navbar-links-hover-color: #fcedfd;
-$waves-custom-color: #fab0ff;
+$navbar-links-hover-color: transparent; //#fcedfd;
+
+// Cards
+$card-link-color: color('lime', 'darken-2') !default;
 $card-tag-color: black;
 $card-content-color: #f1f1f1;
+
+// Footer
 $footer-color: #e0e0e0;
 $footer-copyright-color: #bdbdbd;
 $footer-text-color: #6f6f6f;
+$footer-bg-color: color("grey", "lighten-3");
+
+//Extra
+$waves-custom-color: #fab0ff;
+
+
+///////////////////////// Fonts ////////////////////////////////
+$fonts-navbar-links: 'glacial-regular';
+
+$fonts-slider-caption-title: 'glacial-regular';
+$fonts-slider-caption-subtitle: 'garamond-regular';
+
+$fonts-card-tag: 'garamond-regular';
+$fonts-card-title: 'glacial-regular';
+$fonts-card-subtitle: 'garamond-regular';
+
+$fonts-post-title: 'glacial-regular';
+$fonts-post-subtitle: 'garamond-regular';
+$fonts-post-content: 'garamond-regular';
+
+$fonts-footer: 'garamond-regular';
+

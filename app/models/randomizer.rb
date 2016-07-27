@@ -42,7 +42,7 @@ class Randomizer
 			post = Post.new(
 				title: Faker::Hipster.sentence,
 				subtitle: Faker::Hacker.say_something_smart,
-				body: Faker::Hipster.paragraphs(5),
+				body: Faker::Hipster.paragraphs(5).join,
 				is_published: false)
 
 			if post.save

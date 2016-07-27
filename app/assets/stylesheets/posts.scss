@@ -1,0 +1,25 @@
+#show-post {
+
+	#post-title {
+		@extend h2;
+
+		font-family: $fonts-post-title;
+		font-weight: 900;
+	}
+
+	#post-subtitle {
+		@extend h4;
+
+		font-family: $fonts-post-subtitle;
+	}
+
+	#post-content {
+		font-family: $fonts-post-content;
+	    font-size: 1.6em;
+	    line-height: 1.5;
+	}
+}
+
+.navbar-link {
+	font-family: $fonts-navbar-links;
+}

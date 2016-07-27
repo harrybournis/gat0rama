@@ -2,11 +2,16 @@
 nav ul a, #burger_menu_icon {
 	// Link Color
 	color: $navbar-links-color;
-	font-weight: 500;
+	font-weight: 900;
 }
 
 nav {
 	box-shadow: none;
+}
+
+nav ul li.active {
+	background-color: transparent;
+	border-top: 2px solid #b034d8;
 }
 
 .row {
@@ -22,10 +27,12 @@ nav {
 	a.brand-logo{
 		position: relative;
 		height: 100%;
+		width: 100%;
 
 		img {
 			position: relative;
 			height: 100%;
+			width: 100%;
 		}
 	}
 }
@@ -80,49 +87,12 @@ nav {
 }
 
 
-.card .card-image  {
-	@extend .z-depth-3;
-
-	img {
-		-webkit-filter: brightness(94%);
-		filter: brightness(94%);
-	}
-
-	.card-tag {
-		@extend .z-depth-1;
-
-		color: white;
-		background-color: $card-tag-color;
-		position: absolute;
-		top: 0;
-		right: 0;
-		height: 17%;
-    	width: 13%;
-	}
-
-	.card-title {
-		top: 0;
-		text-shadow: 0px 0px 3px #000;
-		font-weight: 500;
-	}
-
-	.card-content {
-		position: absolute;
-		bottom: 0;
-		color: $card-content-color;
-		font-weight: 500;
-		text-shadow: 0px 0px 3px #000;
-
-	}
-
-}
-
-
 // Footer Text
 footer.page-footer .container .row a,
 footer.page-footer .container .row p,
 footer.page-footer .container .row h5 {
 	color: $footer-text-color !important;
+	font-family: $fonts-footer;
 }
 
 footer.page-footer.container {
@@ -130,6 +100,7 @@ footer.page-footer.container {
 }
 
 #footer-copyright {
+	font-family: $fonts-footer;
 	background-color: $footer-copyright-color;
 }
 

@@ -13,8 +13,8 @@ html
         .nav-wrapper
           a#burger_menu_icon.button-collapse(href='#', data-activates='mobile-demo')
             i.fa.fa-bars.fa-2x(style='padding-left: 10px;')
-          a.brand-logo.center(href='#')
-            img(src='images/gatoramalogofun.gif')
+          a.brand-logo.center(href='/')
+            img(src='/images/gatorama2.gif')
           ul#mobile-demo.side-nav
             li
               a(href='sass.html') Sass
@@ -27,15 +27,15 @@ html
       nav#nav-main.hide-on-med-and-down
         .nav-wrapper
           ul#nav-mobile.center.hide-on-med-and-down.ul-flex
-            li.navbar-link
+            li.navbar-link#news
               a(href='#/').waves-effect.waves-custom  NEWS
-            li.navbar-link
-              a(href='#/').waves-effect.waves-custom  FEATURES
-            li.navbar-link
+            li.navbar-link#posts.waves-effect.waves-custom
+              a(href='/posts')  FEATURES
+            li.navbar-link#shop
               a(href='#/').waves-effect.waves-custom  SHOP
-            li.navbar-link
+            li.navbar-link#contribute
               a(href='/contribute').waves-effect.waves-custom  CONTRIBUTE
-            li.navbar-link
+            li.navbar-link#about
               a(href='/about').waves-effect.waves-custom  ABOUT
 
             li.social-button
