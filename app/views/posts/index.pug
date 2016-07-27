@@ -1,7 +1,7 @@
 .row
 	<% @posts.limit(6).each do |post| %>
 	.col.s12.m4.l4
-		<%= link_to post  do %>
+		<%= link_to post do %>
 			.card
 				.card-image
 					<img src=<%= @images.sample %>>

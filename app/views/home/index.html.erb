@@ -27,24 +27,26 @@
     </li>
   </ul>
 </div>
-<div class="row"><% @posts.limit(6).each do |post| %>
-  <div class="col s12 m4 l4">
-    <div class="card">
-      <div class="card-image"><img src=<%= @images.sample %>><span class="card-tag">fashion</span><span class="card-title"><%= post.title %></span><span class="card-content">
-          <p><%= post.subtitle %></p></span></div>
-    </div>
-  </div><% end %>
-</div>
-<div class="row">
-  <div class="parallax-container">
-    <div class="parallax"><img src="placeholders/clown.gif"/></div>
+<div class="container">
+  <div class="row"><% @posts.limit(6).each do |post| %>
+    <div class="col s12 m4 l4">
+      <div class="card">
+        <div class="card-image"><img src=<%= @images.sample %>><span class="card-tag">fashion</span><span class="card-title"><%= post.title %></span><span class="card-content">
+            <p><%= post.subtitle %></p></span></div>
+      </div>
+    </div><% end %>
   </div>
-</div>
-<div class="row"><% @posts.limit(6).each do |post| %>
-  <div class="col s12 m4 l4">
-    <div class="card">
-      <div class="card-image"><img src=<%= @images.sample %>><span class="card-tag">fashion</span><span class="card-title"><%= post.title %></span><span class="card-content">
-          <p><%= post.subtitle %></p></span></div>
+  <div class="row">
+    <div class="parallax-container">
+      <div class="parallax"><img src="placeholders/clown.gif"/></div>
     </div>
-  </div><% end %>
+  </div>
+  <div class="row"><% @posts.limit(6).each do |post| %>
+    <div class="col s12 m4 l4">
+      <div class="card">
+        <div class="card-image"><img src=<%= @images.sample %>><span class="card-tag">fashion</span><span class="card-title"><%= post.title %></span><span class="card-content">
+            <p><%= post.subtitle %></p></span></div>
+      </div>
+    </div><% end %>
+  </div>
 </div>

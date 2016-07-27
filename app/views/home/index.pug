@@ -21,34 +21,34 @@
 				h3.caption-title 	<%= Faker::Company.catch_phrase %>
 				h5.caption-subtitle <%= Faker::StarWars.quote %>
 
+.container
+	.row
+		<% @posts.limit(6).each do |post| %>
+		.col.s12.m4.l4
+			.card
+				.card-image
+					<img src=<%= @images.sample %>>
+					span.card-tag fashion
+					span.card-title <%= post.title %>
+					span.card-content
+						p <%= post.subtitle %>
 
-.row
-	<% @posts.limit(6).each do |post| %>
-	.col.s12.m4.l4
-		.card
-			.card-image
-				<img src=<%= @images.sample %>>
-				span.card-tag fashion
-				span.card-title <%= post.title %>
-				span.card-content
-					p <%= post.subtitle %>
+		<% end %>
 
-	<% end %>
+	.row
+		.parallax-container
+			.parallax
+				img(src="placeholders/clown.gif")
+	.row
+		<% @posts.limit(6).each do |post| %>
+		.col.s12.m4.l4
+			.card
+				.card-image
+					<img src=<%= @images.sample %>>
+					span.card-tag fashion
+					span.card-title <%= post.title %>
+					span.card-content
+						p <%= post.subtitle %>
 
-.row
-	.parallax-container
-		.parallax
-			img(src="placeholders/clown.gif")
-.row
-	<% @posts.limit(6).each do |post| %>
-	.col.s12.m4.l4
-		.card
-			.card-image
-				<img src=<%= @images.sample %>>
-				span.card-tag fashion
-				span.card-title <%= post.title %>
-				span.card-content
-					p <%= post.subtitle %>
-
-	<% end %>
+		<% end %>
 
