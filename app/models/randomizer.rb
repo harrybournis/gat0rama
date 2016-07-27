@@ -43,7 +43,7 @@ class Randomizer
 				title: Faker::Hipster.sentence,
 				subtitle: Faker::Hacker.say_something_smart,
 				body: Faker::Hipster.paragraphs(5).join,
-				is_published: false)
+				category: "fashion")
 
 			if post.save
 				Rails.logger.info "\n %^&* Randomly Created Post: #{ post.inspect } \n"

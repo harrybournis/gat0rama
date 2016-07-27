@@ -2,6 +2,7 @@ class Post < ApplicationRecord
     has_many :tags, through: :taggings
     has_many :taggings, dependent: :destroy
 
+    validates :title, presence: true
     validates :subtitle, presence: true
 
     accepts_nested_attributes_for :tags
