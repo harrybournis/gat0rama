@@ -5,10 +5,7 @@
 $primary-color: color("shades", "white") !default;
 $link-color: color("red", "darken-1") !default;
 $slider-indicator-color:  #af9cab; //color('lime', 'lighten-2') !default;
-$website-background-color: #FFFFFF;
-body {
-	background-image: url(placeholders/2shock.jpg);
-}
+$website-background-color: transparent;
 
 // Navbar
 $navbar-links-color: #063a35;
