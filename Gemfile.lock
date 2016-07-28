@@ -93,6 +93,8 @@ GEM
     pkg-config (1.1.7)
     puma (3.5.2)
     rack (2.0.1)
+    rack-mini-profiler (0.10.1)
+      rack (>= 1.2.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.0)
@@ -174,6 +176,7 @@ DEPENDENCIES
   materialize-sass (~> 0.97.6)
   pg (~> 0.18)
   puma (~> 3.0)
+  rack-mini-profiler (~> 0.10.1)
   rails (~> 5.0.0)
   sass-rails (~> 5.0)
   spring

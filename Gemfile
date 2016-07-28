@@ -53,6 +53,9 @@ group :development do
   # dummy data
   gem 'faker', '~> 1.6', '>= 1.6.5'
   gem 'factory_girl', '~> 4.7'
+
+  # performance profiling
+  gem 'rack-mini-profiler', '~> 0.10.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

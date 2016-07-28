@@ -7,6 +7,11 @@ html
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'main_site.js', 'data-turbolinks-track': 'reload' %>
+    //custom
+    style.
+      body {
+        background-color: <%= @settings["website_background_color"] %>;
+      }
   body
     header
       nav#nav-logo

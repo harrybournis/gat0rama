@@ -3,8 +3,8 @@ class HomeController < ApplicationController
 	include ApplicationHelper
 
 	def index
-		@yo = "yo"
 		@posts = Post.all
+		#@settings = Setting.first.value
 
 		@images = generate_dummy_images
 	end
