@@ -21,46 +21,52 @@
 	}
 }
 
-.card .card-image  {
-	@extend .z-depth-3;
+.card {
+	//@extend .z-index-1;
+	box-shadow: none;
 
-	img {
-		-webkit-filter: brightness(94%);
-		filter: brightness(94%);
+	.card-image  {
+		//@extend .z-depth-3;
 
-		// JUST FOR TESTING
-	    min-height: 365px;
-	    max-height: 365px;
-		// REMOVEEE
+		img {
+			-webkit-filter: brightness(94%);
+			filter: brightness(94%);
+
+			// JUST FOR TESTING
+		    min-height: 365px;
+		    max-height: 365px;
+			// REMOVEEE
+		}
+
+		.card-tag {
+			@extend .z-depth-1;
+
+			color: white;
+			background-color: $card-tag-color;
+			font-family: $fonts-card-tag;
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 7%;
+	    	width: 24%;
+	    	text-transform: uppercase;
+		}
+
+		.card-title {
+			top: 0;
+			text-shadow: 0px 0px 3px #000;
+			font-weight: 500;
+			font-family: $fonts-card-title;
+		}
+
+		.card-content {
+			position: absolute;
+			bottom: 0;
+			color: $card-content-color;
+			font-weight: 500;
+			text-shadow: 0px 0px 3px #000;
+			font-family: $fonts-card-subtitle;
+		}
+
 	}
-
-	.card-tag {
-		@extend .z-depth-1;
-
-		color: white;
-		background-color: $card-tag-color;
-		font-family: $fonts-card-tag;
-		position: absolute;
-		top: 0;
-		right: 0;
-		height: 17%;
-    	width: 13%;
-	}
-
-	.card-title {
-		top: 0;
-		text-shadow: 0px 0px 3px #000;
-		font-weight: 500;
-		font-family: $fonts-card-title;
-	}
-
-	.card-content {
-		position: absolute;
-		bottom: 0;
-		color: $card-content-color;
-		font-weight: 500;
-		text-shadow: 0px 0px 3px #000;
-		font-family: $fonts-card-subtitle;
-	}
-
 }
