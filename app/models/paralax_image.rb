@@ -1,0 +1,3 @@
+class ParalaxImage < ApplicationRecord
+
+end

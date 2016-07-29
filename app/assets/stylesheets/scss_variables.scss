@@ -1,15 +1,15 @@
 @import "materialize/components/color";
 
-//////////////////////// Colors ////////////////////////////////
+//----------------------- Colors ------------------------------//
 // Globals
 $primary-color: color("shades", "white") !default;
 $link-color: color("red", "darken-1") !default;
-$slider-indicator-color:  #af9cab; //color('lime', 'lighten-2') !default;
-$website-background-color: #FFFFFF;
+$slider-indicator-color:  #063a35; //color('lime', 'lighten-2') !default;
+$website-background-color: transparent;
 
 // Navbar
-$navbar-links-color: #af9cab;
-$navbar-links-hover-color: transparent; //#fcedfd;
+$navbar-links-color: #063a35;
+$navbar-links-hover-color: transparent;
 
 // Cards
 $card-link-color: color('lime', 'darken-2') !default;
@@ -26,7 +26,7 @@ $footer-bg-color: color("grey", "lighten-3");
 $waves-custom-color: #fab0ff;
 
 
-///////////////////////// Fonts ////////////////////////////////
+//----------------------- Fonts ------------------------------//
 $fonts-navbar-links: 'glacial-regular';
 
 $fonts-slider-caption-title: 'glacial-regular';

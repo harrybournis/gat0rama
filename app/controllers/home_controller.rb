@@ -1,14 +1,23 @@
 class HomeController < ApplicationController
 
+	include ApplicationHelper
+
 	def index
-		@yo = "yo"
 		@posts = Post.all
 
-		@images = []
+		# test for performance
+		# database:
+		@slider_posts = Post.where(is_slider_post: true)
 
-		17.times do |index|
-			@images << "placeholders/post" + (index + 1).to_s + ".jpeg"
-		end
+		# ruby:
+		# @slider_posts = []
+		# @posts.each do |post|
+		# 	@slider_posts << post if post.is_slider_post
+		# end
+		@paralax_images = ParalaxImage.all
+
+		@images = generate_dummy_images
+		@slider_images = generate_dummy_slider_images
 	end
 
 	def about

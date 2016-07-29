@@ -1,34 +1,17 @@
 
 <div class="slider" id="slider">
-  <ul class="slides">
-    <li><img src="placeholders/slider_image1.png"/>
-      <div class="caption right-align">
-        <h3 class="caption-title">	<%= Faker::Company.catch_phrase %></h3>
-        <h5 class="caption-subtitle"><%= Faker::StarWars.quote %></h5>
+  <ul class="slides"><% @slider_posts.each_with_index do |slider_post, index| %>
+    <li><img src=<%= @slider_images[index] %>>
+      <div class="caption center-align">
+        <h3 class="caption-title">	<%= slider_post.title %></h3>
+        <h5 class="caption-subtitle"><%= slider_post.subtitle %></h5>
       </div>
-    </li>
-    <li><img src="placeholders/slider_image2.jpg"/>
-      <div class="caption right-align">
-        <h3 class="caption-title">	<%= Faker::Company.catch_phrase %></h3>
-        <h5 class="caption-subtitle"><%= Faker::StarWars.quote %></h5>
-      </div>
-    </li>
-    <li><img src="placeholders/slider_image3.jpg"/>
-      <div class="caption right-align">
-        <h3 class="caption-title">	<%= Faker::Company.catch_phrase %></h3>
-        <h5 class="caption-subtitle"><%= Faker::StarWars.quote %></h5>
-      </div>
-    </li>
-    <li><img src="placeholders/slider_image4.jpg"/>
-      <div class="caption right-align">
-        <h3 class="caption-title">	<%= Faker::Company.catch_phrase %></h3>
-        <h5 class="caption-subtitle"><%= Faker::StarWars.quote %></h5>
-      </div>
-    </li>
+    </li><% end %>
   </ul>
-</div>
+</div><% if @posts.length - 6 > 0 %>
+<% @posts.each_slice(6).with_index do |posts_chunk, index| %>
 <div class="container">
-  <div class="row"><% @posts.limit(6).each do |post| %>
+  <div class="row"><% posts_chunk.each do |post| %>
     <div class="col s12 m4 l4">
       <div class="card">
         <div class="card-image"><img src=<%= @images.sample %>><span class="card-tag">fashion</span><span class="card-title"><%= post.title %></span><span class="card-content">
@@ -36,12 +19,16 @@
       </div>
     </div><% end %>
   </div>
-  <div class="row">
-    <div class="parallax-container">
-      <div class="parallax"><img src="placeholders/clown.gif"/></div>
-    </div>
+</div><% if posts_chunk.length == 6 %>
+<div class="row">
+  <div class="parallax-container">
+    <div class="parallax"><img src=<%= @paralax_images.sample.url %>></div>
   </div>
-  <div class="row"><% @posts.limit(6).each do |post| %>
+</div><% end %>
+<% end %>
+<% else %>
+<div class="container">
+  <div class="row"><% @posts.each do |post| %>
     <div class="col s12 m4 l4">
       <div class="card">
         <div class="card-image"><img src=<%= @images.sample %>><span class="card-tag">fashion</span><span class="card-title"><%= post.title %></span><span class="card-content">
@@ -49,4 +36,4 @@
       </div>
     </div><% end %>
   </div>
-</div>
+</div><% end %>
