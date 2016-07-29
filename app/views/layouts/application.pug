@@ -11,11 +11,11 @@ html
     //custom
     style.
       body {
-        background-color: <%= @settings["website_background_color"] %>;
-        background-image: <%= @settings["website_background_image"] %>;
+        background-color: <%= @settings.value["website_background_color"] %>;
+        background-image: <%= @settings.value["website_background_image"] %>;
       }
       nav ul a, #burger_menu_icon {
-        color: <%= @settings["navbar_links_color"] %>;
+        color: <%= @settings.value["navbar_links_color"] %>;
       }
 
   body
@@ -25,7 +25,7 @@ html
           a#burger_menu_icon.button-collapse(href='#', data-activates='mobile-demo')
             i.fa.fa-bars.fa-2x
           a.brand-logo(href='/')
-            <img src=<%= @settings["header_logo"] %>>
+            <img src=<%= @settings.value["header_logo"] %>>
           ul#mobile-demo.side-nav
             li
               a(href='sass.html') Sass

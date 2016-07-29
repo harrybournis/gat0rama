@@ -1,5 +1,5 @@
 class Setting < ApplicationRecord
-	store_accessor :slider_posts, :website_background_color, :website_background_image,
+	store_accessor :website_background_color, :website_background_image,
 	:navbar_links_color, :paralax_images, :header_logo
 
 
@@ -34,4 +34,5 @@ class Setting < ApplicationRecord
 		s.globals = {}
 		return s.save
 	end
+
 end

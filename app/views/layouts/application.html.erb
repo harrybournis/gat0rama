@@ -8,11 +8,11 @@
     <!--custom-->
     <style>
       body {
-        background-color: <%= @settings["website_background_color"] %>;
-        background-image: <%= @settings["website_background_image"] %>;
+        background-color: <%= @settings.value["website_background_color"] %>;
+        background-image: <%= @settings.value["website_background_image"] %>;
       }
       nav ul a, #burger_menu_icon {
-        color: <%= @settings["navbar_links_color"] %>;
+        color: <%= @settings.value["navbar_links_color"] %>;
       }
       
     </style>
@@ -20,7 +20,7 @@
   <body>
     <header>
       <nav id="nav-logo">
-        <div class="nav-wrapper"><a class="button-collapse" id="burger_menu_icon" href="#" data-activates="mobile-demo"><i class="fa fa-bars fa-2x"></i></a><a class="brand-logo" href="/"><img src=<%= @settings["header_logo"] %>></a>
+        <div class="nav-wrapper"><a class="button-collapse" id="burger_menu_icon" href="#" data-activates="mobile-demo"><i class="fa fa-bars fa-2x"></i></a><a class="brand-logo" href="/"><img src=<%= @settings.value["header_logo"] %>></a>
           <ul class="side-nav" id="mobile-demo">
             <li><a href="sass.html">Sass</a></li>
             <li><a href="badges.html">Components</a></li>

@@ -8,9 +8,16 @@
 				h5.caption-subtitle <%= slider_post.subtitle %>
 		<% end %>
 
+
+
+
+<% if @posts.length - 6 > 0 %>
+
+<% @posts.each_slice(6).with_index do |posts_chunk, index| %>
+
 .container
 	.row
-		<% @posts.limit(6).each do |post| %>
+		<% posts_chunk.each do |post| %>
 		.col.s12.m4.l4
 			.card
 				.card-image
@@ -22,13 +29,22 @@
 
 		<% end %>
 
+
+<% if posts_chunk.length == 6 %>
 .row
 	.parallax-container
 		.parallax
-			img(src="placeholders/clown.gif")
+			<img src=<%= @paralax_images.sample.url %>>
+<% end %>
+
+
+<% end %>
+
+<% else %>
+
 .container
 	.row
-		<% @posts.limit(6).each do |post| %>
+		<% @posts.each do |post| %>
 		.col.s12.m4.l4
 			.card
 				.card-image
@@ -39,21 +55,6 @@
 						p <%= post.subtitle %>
 
 		<% end %>
-.row
-	.parallax-container
-		.parallax
-			img(src="placeholders/clown.gif")
-.container
-	.row
-		<% @posts.limit(6).each do |post| %>
-		.col.s12.m4.l4
-			.card
-				.card-image
-					<img src=<%= @images.sample %>>
-					span.card-tag fashion
-					span.card-title <%= post.title %>
-					span.card-content
-						p <%= post.subtitle %>
 
-		<% end %>
+<% end %>
 

@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
 
 private
 	def get_settings
-		@settings = Setting.first.value
+		@settings = Setting.first
 	end
 end
