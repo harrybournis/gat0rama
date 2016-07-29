@@ -1,30 +1,12 @@
 .slider#slider
 	ul.slides
+		<% @slider_posts.each_with_index do |slider_post, index| %>
 		li
-			img(src='/placeholders/fidi.jpg')
+			<img src=<%= @slider_images[index] %>>
 			.caption.center-align
-				h3.caption-title 	<%= Faker::Company.catch_phrase %>
-				h5.caption-subtitle <%= Faker::StarWars.quote %>
-		li
-			img(src='/placeholders/boozoukia.jpg')
-			.caption.center-align
-				h3.caption-title 	<%= Faker::Company.catch_phrase %>
-				h5.caption-subtitle <%= Faker::StarWars.quote %>
-		li
-			img(src='/placeholders/2shock.jpg')
-			.caption.center-align
-				h3.caption-title 	<%= Faker::Company.catch_phrase %>
-				h5.caption-subtitle <%= Faker::StarWars.quote %>
-		li
-			img(src='/placeholders/gynekes.jpg')
-			.caption.center-align
-				h3.caption-title 	<%= Faker::Company.catch_phrase %>
-				h5.caption-subtitle <%= Faker::StarWars.quote %>
-		li
-			img(src='/placeholders/podia.jpg')
-			.caption.center-align
-				h3.caption-title 	<%= Faker::Company.catch_phrase %>
-				h5.caption-subtitle <%= Faker::StarWars.quote %>
+				h3.caption-title 	<%= slider_post.title %>
+				h5.caption-subtitle <%= slider_post.subtitle %>
+		<% end %>
 
 .container
 	.row
