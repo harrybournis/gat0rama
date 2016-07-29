@@ -12,6 +12,10 @@ html
     style.
       body {
         background-color: <%= @settings["website_background_color"] %>;
+        background-image: <%= @settings["website_background_image"] %>;
+      }
+      nav ul a, #burger_menu_icon {
+        color: <%= @settings["navbar_links_color"] %>;
       }
 
   body
@@ -19,9 +23,9 @@ html
       nav#nav-logo
         .nav-wrapper
           a#burger_menu_icon.button-collapse(href='#', data-activates='mobile-demo')
-            i.fa.fa-bars.fa-2x(style='padding-left: 10px;')
-          a.brand-logo.center(href='/')
-            img(src='/images/LOGOSITETEST.png')
+            i.fa.fa-bars.fa-2x
+          a.brand-logo(href='/')
+            <img src=<%= @settings["header_logo"] %>>
           ul#mobile-demo.side-nav
             li
               a(href='sass.html') Sass
@@ -31,6 +35,7 @@ html
               a(href='collapsible.html') Javascript
             li
               a(href='mobile.html') Mobile
+
       nav#nav-main.hide-on-med-and-down
         .nav-wrapper
           ul#nav-mobile.center.hide-on-med-and-down.ul-flex
