@@ -1,7 +1,8 @@
 
 <div class="slider" id="slider">
   <ul class="slides"><% @slider_posts.each_with_index do |slider_post, index| %>
-    <li><img src=<%= @slider_images[index] %>>
+    <li class="slide"><img src=<%= @slider_images[index] %>>
+      <div class="slide-mask"></div>
       <div class="caption center-align">
         <h3 class="caption-title">	<%= slider_post.title %></h3>
         <h5 class="caption-subtitle"><%= slider_post.subtitle %></h5>
@@ -14,8 +15,7 @@
   <div class="row"><% posts_chunk.each do |post| %>
     <div class="col s12 m4 l4">
       <div class="card">
-        <div class="card-image"><img src=<%= @images.sample %>><span class="card-tag">fashion</span><span class="card-title"><%= post.title %></span><span class="card-content">
-            <p><%= post.subtitle %></p></span></div>
+        <div class="card-image"><img src=<%= @images.sample %>><span class="card-tag">fashion</span><span class="card-title"><%= post.title %></span></div>
       </div>
     </div><% end %>
   </div>
@@ -31,8 +31,7 @@
   <div class="row"><% @posts.each do |post| %>
     <div class="col s12 m4 l4">
       <div class="card">
-        <div class="card-image"><img src=<%= @images.sample %>><span class="card-tag">fashion</span><span class="card-title"><%= post.title %></span><span class="card-content">
-            <p><%= post.subtitle %></p></span></div>
+        <div class="card-image"><img src=<%= @images.sample %>><span class="card-tag">fashion</span><span class="card-title"><%= post.title %></span></div>
       </div>
     </div><% end %>
   </div>

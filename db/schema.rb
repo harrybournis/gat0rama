@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160729142217) do
+ActiveRecord::Schema.define(version: 20160801220513) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 20160729142217) do
     t.string   "title"
     t.string   "subtitle"
     t.text     "body"
-    t.string   "category",                       null: false
     t.boolean  "is_published",   default: false
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
@@ -57,9 +56,11 @@ ActiveRecord::Schema.define(version: 20160729142217) do
 
   create_table "tags", force: :cascade do |t|
     t.string   "name"
-    t.boolean  "only_search_tag"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.boolean  "is_main_category", default: false, null: false
+    t.boolean  "only_search_tag",  default: false, null: false
+    t.index ["is_main_category"], name: "index_tags_on_is_main_category", using: :btree
   end
 
   add_foreign_key "taggings", "posts"

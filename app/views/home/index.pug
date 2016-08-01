@@ -1,8 +1,9 @@
 .slider#slider
 	ul.slides
 		<% @slider_posts.each_with_index do |slider_post, index| %>
-		li
+		li.slide
 			<img src=<%= @slider_images[index] %>>
+			.slide-mask
 			.caption.center-align
 				h3.caption-title 	<%= slider_post.title %>
 				h5.caption-subtitle <%= slider_post.subtitle %>
@@ -24,8 +25,8 @@
 					<img src=<%= @images.sample %>>
 					span.card-tag fashion
 					span.card-title <%= post.title %>
-					span.card-content
-						p <%= post.subtitle %>
+					//- span.card-content
+					//- 	p <%#= post.subtitle %>
 
 		<% end %>
 
@@ -51,8 +52,8 @@
 					<img src=<%= @images.sample %>>
 					span.card-tag fashion
 					span.card-title <%= post.title %>
-					span.card-content
-						p <%= post.subtitle %>
+					//- span.card-content
+					//- 	p <%#= post.subtitle %>
 
 		<% end %>
 
