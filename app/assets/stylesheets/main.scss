@@ -74,7 +74,7 @@ nav ul li.active {
 			flex: 20 10 auto;
 
 			a {
-				font-size: 1.1em;
+				font-size: $fonts-navbar-links-font-size;
 				border-radius: 2%;
 			}
 		}
@@ -83,7 +83,7 @@ nav ul li.active {
 			flex: 1 1 auto;
 
 			a {
-				font-size: 10px;
+				font-size: $fonts-navbar-links-social-buttons-font-size;
 			}
 		}
 	}
@@ -146,7 +146,7 @@ nav#nav-main .brand-logo {
 }
 
 
-//LOG NAVBAR HEIGHT
+//LOGO NAVBAR HEIGHT
 
 $logo-navbar-height: 100px;
 
@@ -174,7 +174,7 @@ nav#nav-logo .button-collapse i {
 }
 
 nav#nav-logo .brand-logo {
-    font-size: 1.6rem;
+    font-size: $fonts-navbar-brand-logo-font-size;
 }
 
 @media only screen and (min-width: 601px){

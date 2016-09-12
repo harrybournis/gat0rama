@@ -1,8 +1,9 @@
 #show-post {
 
 	#post-title {
-		@extend h2;
+		@extend h3;
 
+		font-size: 2.5rem;
 		font-family: $fonts-post-title;
 		font-weight: 900;
 	}
@@ -10,12 +11,13 @@
 	#post-subtitle {
 		@extend h4;
 
+		font-size: 1.77rem;
 		font-family: $fonts-post-subtitle;
 	}
 
 	#post-content {
 		font-family: $fonts-post-content;
-	    font-size: 1.6em;
+	    font-size: 1.31em;
 	    line-height: 1.5;
 	}
 }

@@ -1,15 +1,11 @@
 .row
-	.col.l7.m7.s12.offset-l1.offset-m1
-		article#show-post
-			#post-title <%= @post.title %>
+	.container
+		.col.l12.m12.s12
+			article#show-post
+				#post-title <%= @post.title %>
 
-			#post-subtitle <%= @post.subtitle %>
+				#post-subtitle <%= @post.subtitle %>
 
-			#post-content <%= @post.body %>
+				#post-content <%= @post.body %>
 
-	.col.l1.m1
-		p(style="color:transparent") <%= Faker::Lorem.paragraphs(5).join %>
-
-	.col.l2.m2#col-extra
-		p(style="background-color: black") <%= Faker::Lorem.paragraphs(5).join %>
 

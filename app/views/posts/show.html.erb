@@ -1,16 +1,12 @@
 
 <div class="row">
-  <div class="col l7 m7 s12 offset-l1 offset-m1">
-    <article id="show-post">
-      <div id="post-title"><%= @post.title %></div>
-      <div id="post-subtitle"><%= @post.subtitle %></div>
-      <div id="post-content"><%= @post.body %></div>
-    </article>
-  </div>
-  <div class="col l1 m1">
-    <p style="color:transparent"><%= Faker::Lorem.paragraphs(5).join %></p>
-  </div>
-  <div class="col l2 m2" id="col-extra">
-    <p style="background-color: black"><%= Faker::Lorem.paragraphs(5).join %></p>
+  <div class="container">
+    <div class="col l12 m12 s12">
+      <article id="show-post">
+        <div id="post-title"><%= @post.title %></div>
+        <div id="post-subtitle"><%= @post.subtitle %></div>
+        <div id="post-content"><%= @post.body %></div>
+      </article>
+    </div>
   </div>
 </div>

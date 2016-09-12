@@ -27,18 +27,31 @@ $waves-custom-color: #fab0ff;
 
 
 //----------------------- Fonts ------------------------------//
+// Navbar
 $fonts-navbar-links: 'PoppinsRegular'; //'glacial-regular';
+$fonts-navbar-links-font-size: 1.0rem;
+$fonts-navbar-links-social-buttons-font-size: 0.6em;
+$fonts-navbar-brand-logo-font-size: 1.6rem;
 
+// Slider
 $fonts-slider-caption-title: 'PoppinsRegular';//Poppins, Georgia, serif; //'glacial-regular';
 $fonts-slider-caption-subtitle: 'Raleway-ExtraLight';//'Raleway-ExtraLight';//'garamond-regular';
+$fonts-slider-caption-title-font-size: 2.5rem;
+$fonts-slider-caption-subtitle-font-size: 1.3rem;
 
+// Cards
 $fonts-card-tag: 'garamond-regular';
 $fonts-card-title: 'garamond-regular';
 $fonts-card-subtitle: 'garamond-regular';
+$fonts-card-tag-font-size: 0.9em;
+$fonts-card-title-font-size: 1.4em;
+$fonts-card-subtitle-font-size: 1.0em;
 
+// Post
 $fonts-post-title: 'glacial-regular';
 $fonts-post-subtitle: 'garamond-regular';
 $fonts-post-content: 'garamond-regular';
 
+// Footer
 $fonts-footer: 'garamond-regular';
 
