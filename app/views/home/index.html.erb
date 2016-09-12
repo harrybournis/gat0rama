@@ -1,12 +1,13 @@
 
 <div class="slider" id="slider">
   <ul class="slides"><% @slider_posts.each_with_index do |slider_post, index| %>
-    <li class="slide"><img src=<%= @slider_images[index] %>>
+    <li class="slide"><%= link_to slider_post do %>
+<img src=<%= @slider_images[index] %>>
       <div class="slide-mask"></div>
       <div class="caption center-align">
         <h3 class="caption-title">	<%= slider_post.title %></h3>
         <h5 class="caption-subtitle"><%= slider_post.subtitle %></h5>
-      </div>
+      </div><% end %>
     </li><% end %>
   </ul>
 </div><% if @posts.length - 6 > 0 %>
