@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
 
 	def index
-		@posts = Post.where(is_slider_post: false)
-		@slider_posts = Post.where(is_slider_post: true)
+		@posts = BlogPost.where(is_slider_post: false)
+		@slider_posts = BlogPost.slider_posts
 
 		@paralax_images = ParalaxImage.all
 		@slider_images = generate_dummy_slider_images

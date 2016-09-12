@@ -1,6 +1,7 @@
 class News < Post
 
 	validate :cant_be_slider_post
+	validates_absence_of :is_slider_post
 
 	private
 

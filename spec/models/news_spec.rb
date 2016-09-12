@@ -2,6 +2,10 @@ require 'rails_helper'
 
 RSpec.describe News, type: :model do
 
+	subject(:news) { FactoryGirl.build(:news_unpublished) }
+
+	it { should validate_absence_of :is_slider_post }
+
 	it 'validates that it cannot be slider post' do
 		news = News.new(title: 'title', subtitle: 'subtitle', body: 'body', is_slider_post: true)
 		expect(news.valid?).to be_falsy

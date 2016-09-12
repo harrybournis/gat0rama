@@ -5,13 +5,21 @@ class Post < ApplicationRecord
   has_many :taggings, dependent: :destroy
 
   # Validations
-  validates_presence_of :title, :subtitle
+  validates_presence_of :title, :subtitle, :body
   validate :is_published_is_true_if_publication_date_exists
   validate :published_at_exists_if_is_published_is_true
 
   accepts_nested_attributes_for :tags
 
   # Class Methods
+
+  def self.published
+    where(is_published: true)
+  end
+
+  def self.unpublished
+    where(is_published: false)
+  end
 
   #override create to create tags
   def self.create_with_tags(post_params)
