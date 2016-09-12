@@ -24,12 +24,14 @@
 		.caption-title {
 			font-family: $fonts-slider-caption-title;
 			font-size: $fonts-slider-caption-title-font-size;
+			text-shadow: 1px 1px 0px rgb(97, 96, 96);
 			//font-weight: 900;
 		}
 
 		.caption-subtitle {
 			font-family: $fonts-slider-caption-subtitle;
 			font-size: $fonts-slider-caption-subtitle-font-size;
+			text-shadow: 1px 1px 0px rgb(97, 96, 96);
 		}
 	}
 

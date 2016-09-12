@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 	get 'about', to: 'home#about'
 	get 'contribute', to: 'home#contribute'
 
-	resources :posts
+	resources :blog_posts
 
 	resources :news
 end
