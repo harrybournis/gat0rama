@@ -4,7 +4,8 @@
     <div class="col l12 m12 s12">
       <article id="show-post">
         <div id="post-title"><%= @post.title %></div>
-        <div id="post-subtitle"><%= @post.subtitle %></div><img src=<%= @images.sample %>>
+        <div id="post-subtitle"><%= @post.subtitle %></div>
+        <div class="post-image-container"><img class="responsive-img post-image" src=<%= @images.sample %>></div>
         <div id="post-content"><%= @post.body %></div>
       </article>
     </div>

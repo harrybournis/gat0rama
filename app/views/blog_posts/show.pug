@@ -2,12 +2,12 @@
 	.container
 		.col.l12.m12.s12
 			article#show-post
-
-
 				#post-title <%= @post.title %>
-
 				#post-subtitle <%= @post.subtitle %>
-				<img src=<%= @images.sample %>>
+
+				.post-image-container
+					<img class="responsive-img post-image" src=<%= @images.sample %>>
+
 				#post-content <%= @post.body %>
 
 
