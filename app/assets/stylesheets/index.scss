@@ -7,19 +7,8 @@
 		top: initial;
 		left: 0;
 		width: 100%;
-		background: rgba(0, 0, 0, 0.26);
-		//background-color: rgba(255, 255, 255, 0.59);
 		color: white;
-
-		.slide-mask {
-			width: 100%;
-			height: 100%;
-			background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
-			background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
-			background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-
-		}
+		z-index: 2;
 
 		.caption-title {
 			font-family: $fonts-slider-caption-title;
@@ -35,24 +24,24 @@
 		}
 	}
 
-	img {
-		-webkit-filter: brightness(94%);
-		filter: brightness(94%);
-	}
+	.slide {
 
-	.slide:before {
-		background-image: -moz-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,.7) 100%);
-	    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(0,0,0,0)),color-stop(100%,rgba(0,0,0,.7)));
-	    background-image: -webkit-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,.7) 100%);
-	    background-image: -o-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,.7) 100%);
-	    background-image: -ms-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,.7) 100%);
-	    background-image: linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,.7) 100%);
-	 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50&0+0,1+100 */
-	// background-image: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
-	// background-image: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
-	// background-image: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-
+		// Image Gradient Mask
+		a:first-child:before {
+			bottom: 0;
+		    content: "";
+		    display: block;
+		    height: 70%;
+		    width: 100%;
+		    position: absolute;
+		    z-index: 1;
+		    background: -moz-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+		    background: -webkit-gradient(linear,left top,left bottom,color-stop(40%,rgba(0,0,0,0)),color-stop(100%,rgba(0,0,0,.7)));
+		    background: -webkit-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+		    background: -o-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+		    background: -ms-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+		    background: linear-gradient(to bottom,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+		}
 	}
 }
 
@@ -73,6 +62,24 @@
 			// REMOVEEE
 		}
 
+		// Image Gradient Mask
+		&:first-child:before {
+			bottom: 0;
+		    content: "";
+		    display: block;
+		    height: 70%;
+		    width: 100%;
+		    position: absolute;
+		    z-index: 1;
+		    background: -moz-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+		    background: -webkit-gradient(linear,left top,left bottom,color-stop(40%,rgba(0,0,0,0)),color-stop(100%,rgba(0,0,0,.7)));
+		    background: -webkit-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+		    background: -o-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+		    background: -ms-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+		    background: linear-gradient(to bottom,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+		}
+
+
 		.card-tag {
 			@extend .z-depth-1;
 
@@ -82,10 +89,13 @@
 			font-size: $fonts-card-tag-font-size;
 			position: absolute;
 			top: 0;
-			right: 0;
-			height: 7%;
-	    	width: 24%;
 	    	text-transform: uppercase;
+	    	font-weight: 500;
+		    margin: 5px;
+		    padding: 3px 7px;
+		    line-height: 13px;
+			letter-spacing: 0.7px;
+			z-index: 10;
 		}
 
 		.card-title {
@@ -94,6 +104,7 @@
 			font-weight: 500;
 			font-family: $fonts-card-title;
 			font-size: $fonts-card-title-font-size;
+			z-index: 10;
 		}
 
 		.card-content {
