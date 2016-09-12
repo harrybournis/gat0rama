@@ -10,5 +10,20 @@
 					<img class="responsive-img post-image" src=<%= @images.sample %>>
 
 				#post-content <%= @post.body %>
+					p <%= Faker::Hipster.paragraph %>
 
+					.post-image-container
+						<img class="responsive-img post-image" src=<%= @images.sample %>>
 
+					p <%= Faker::Hipster.paragraph %>
+
+					.post-image-container
+						<img class="responsive-img post-image" src=<%= @images.sample %>>
+
+					p <%= Faker::Hipster.paragraph(2) %>
+
+					.post-image-container
+						<img class="responsive-img post-image" src=<%= @images.sample %>>
+
+.row
+	.divider
