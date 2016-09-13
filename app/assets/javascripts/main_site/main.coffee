@@ -17,3 +17,12 @@ $(document).on 'turbolinks:load', ->
 
 	Waves.displayEffect()
 
+
+	# options = [ {
+	#   selector: '.post-item'
+	#   offset: 200
+	#   callback: (el) ->
+	#   	Materialize.fadeInImage $(el)
+
+	# } ]
+	# Materialize.scrollFire options
