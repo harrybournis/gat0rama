@@ -1,10 +1,16 @@
 
 <div class="row">
-  <h1>Posts</h1><% @posts.limit(6).each do |post| %>
-  <div class="col s12 m4 l4"><%= link_to post do %>
-    <div class="card">
-      <div class="card-image"><img src=<%= @images.sample %>><span class="card-tag">fashion</span><span class="card-title"><%= post.title %></span><span class="card-content">
-          <p><%= post.subtitle %></p></span></div>
+  <h1>Posts</h1>
+  <div id="posts-list"><% @posts.limit(6).each_with_index do |post, index| %>
+    <div class="post-item"><div class="col s12 l6 m6 image-column <%= 'push-m6 push-l6' if index % 2 == 1 %>">
+<%= link_to post do %>
+      <div class="post-image"><img class="responsive-img post-image <%= 'even' if index % 2 == 1 %>" src=<%= @images.sample %>></div><% end %>
+</div>
+<div class="col s12 l6 m6 text-column <%= 'pull-m6 pull-l6' if index % 2 == 1 %>">
+      <div class="post-date"><%= post.published_at.to_date.to_formatted_s(:long_ordinal) %></div><%= link_to post do %>
+      <h5 class="post-title"><%= post.title %></h5><% end %>
+      <p class="post-subtitle"><%= post.subtitle %></p>
+      <p class="more">More...</p></div>
     </div><% end %>
-  </div><% end %>
+  </div>
 </div>

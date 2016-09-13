@@ -1,14 +1,24 @@
 .row
 	h1 Posts
-	<% @posts.limit(6).each do |post| %>
-	.col.s12.m4.l4
-		<%= link_to post do %>
-			.card
-				.card-image
-					<img src=<%= @images.sample %>>
-					span.card-tag fashion
-					span.card-title <%= post.title %>
-					span.card-content
-						p <%= post.subtitle %>
+	#posts-list
+		<% @posts.limit(6).each_with_index do |post, index| %>
+		.post-item
+			<div class="col s12 l6 m6 image-column <%= 'push-m6 push-l6' if index % 2 == 1 %>">
+
+				<%= link_to post do %>
+				.post-image
+					<img class="responsive-img post-image <%= 'even' if index % 2 == 1 %>" src=<%= @images.sample %>>
+				<% end %>
+
+			</div>
+			<div class="col s12 l6 m6 text-column <%= 'pull-m6 pull-l6' if index % 2 == 1 %>">
+
+				.post-date <%= post.published_at.to_date.to_formatted_s(:long_ordinal) %>
+				<%= link_to post do %>
+				h5.post-title <%= post.title %>
+				<% end %>
+				p.post-subtitle <%= post.subtitle %>
+
+				p.more More...
+			</div>
 		<% end %>
-	<% end %>
