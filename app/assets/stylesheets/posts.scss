@@ -30,7 +30,81 @@
 	}
 }
 
-.navbar-link {
-	font-family: $fonts-navbar-links;
+.end-of-post {
+	margin-top: 50px;
+	margin-bottom: 34px;
 }
 
+
+#related-posts-section {
+
+	margin-bottom: 50px;
+
+	a {
+		color: black;
+	}
+
+	.related-post {
+
+		.post-thumbnail {
+			height: 220px;
+			margin-bottom: 15px;
+
+			img {
+				height: 100%;
+				width: 100%;
+			}
+		}
+
+		.post-date {
+			font-size: 1.1em;
+			color: grey;
+			margin-bottom: 9px;
+
+		}
+
+		.post-title {
+			@extend h5;
+			font-size: 1.6em;
+    		margin-bottom: 22px;
+    		padding-bottom: 23px;
+			position: relative;
+
+			&:after {
+				content:'';
+				position:absolute;
+				left:0;
+				bottom:0;
+				width:30px;
+				height:2px;
+				transition: width 0.2s ease-in-out;
+				background-color: #4b673a;
+			}
+
+			&:hover:after {
+				width: 100px;
+			}
+		}
+
+		.post-subtitle {
+			font-size: 1.27em;
+			padding-bottom: 17px;
+		}
+
+	}
+
+
+	.card-image {
+
+
+		&:first-child:before {
+			@extend .image-dark-gradient-mask
+		}
+
+
+
+		.card-title {
+			z-index: 2;
+		}
+	}
+}

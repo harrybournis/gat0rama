@@ -9,7 +9,6 @@ class BlogPostsController < ApplicationController
 
 
 	def show
-		logger.info @post
 	end
 
 

@@ -77,6 +77,12 @@ class Post < ApplicationRecord
     return update( is_published: false, published_at: nil)
   end
 
+  # MOCK. returns three random posts
+  def related_posts
+    # IMPLEMENT
+    BlogPost.limit(3)
+  end
+
   private
 
     def is_published_is_true_if_publication_date_exists

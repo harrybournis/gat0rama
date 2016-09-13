@@ -1,6 +1,22 @@
 body {
 	background-color: $website-background-color;
-	//background-image: url("/placeholders/adidas.png");
+	font-family: 'garamond-regular';
+}
+
+.image-dark-gradient-mask {
+	bottom: 0;
+    content: "";
+    display: block;
+    height: 70%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    background: -moz-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(40%,rgba(0,0,0,0)),color-stop(100%,rgba(0,0,0,.7)));
+    background: -webkit-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+    background: -o-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+    background: -ms-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
 }
 
 // Header links
@@ -72,6 +88,7 @@ nav ul li.active {
 
 		li.navbar-link {
 			flex: 20 10 auto;
+			font-family: $fonts-navbar-links;
 
 			a {
 				font-size: $fonts-navbar-links-font-size;

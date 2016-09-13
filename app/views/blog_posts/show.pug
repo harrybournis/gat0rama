@@ -25,82 +25,21 @@
 					.post-image-container
 						<img class="responsive-img post-image" src=<%= @images.sample %>>
 
-.divider
-.row
-	<div id="DIV_1">
-	<div id="DIV_2">
-		<div id="DIV_3">
-			<div id="DIV_4">
-				<div id="DIV_5">
-					<a href="http://demo.tagdiv.com/newspaper/wordpress-news-magazine-charts-the-most-fashionable-new-york-couples-in-2016/" rel="bookmark" title="WordPress News Magazine Charts the Most Fashionable New York Couples in 2016" id="A_6"><img width="534" height="462" src="http://demo.tagdiv.com/newspaper/wp-content/uploads/2016/01/couple-534x462.jpg" alt="" id="IMG_7" /></a>
-				</div>
-				<div id="DIV_8">
-					<div id="DIV_9">
-						<div id="DIV_10">
-							<a href="http://demo.tagdiv.com/newspaper/category/tagdiv-lifestyle/tagdiv-health-fitness/" id="A_11">Health &amp; Fitness</a>
-							<h3 id="H3_12">
-								<a href="http://demo.tagdiv.com/newspaper/wordpress-news-magazine-charts-the-most-fashionable-new-york-couples-in-2016/" rel="bookmark" title="WordPress News Magazine Charts the Most Fashionable New York Couples in 2016" id="A_13">WordPress News Magazine Charts the Most Fashionable New York Couples in 2016</a>
-							</h3>
-						</div>
-						<div id="DIV_14">
-							<span id="SPAN_15"><a href="http://demo.tagdiv.com/newspaper/author/admin/" id="A_16">Armin Vans</a> <span id="SPAN_17">-</span></span><span id="SPAN_18"></span>
-							<time id="TIME_19">
-								Jan 22, 2016
-							</time>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="DIV_20">
-				<div id="DIV_21">
-					<div id="DIV_22">
-						<a href="http://demo.tagdiv.com/newspaper/the-most-anticipated-charter-flights-in-the-canary-islands/" rel="bookmark" title="The Most Anticipated Charter Flights in the Canary Islands" id="A_23"><img width="533" height="261" src="http://demo.tagdiv.com/newspaper/wp-content/uploads/2015/02/plane-533x261.jpg" alt="" id="IMG_24" /></a>
-					</div>
-					<div id="DIV_25">
-						<div id="DIV_26">
-							<div id="DIV_27">
-								<a href="http://demo.tagdiv.com/newspaper/category/tagdiv-lifestyle/tagdiv-travel/" id="A_28">Travel</a>
-								<h3 id="H3_29">
-									<a href="http://demo.tagdiv.com/newspaper/the-most-anticipated-charter-flights-in-the-canary-islands/" rel="bookmark" title="The Most Anticipated Charter Flights in the Canary Islands" id="A_30">The Most Anticipated Charter Flights in the Canary Islands</a>
-								</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div id="DIV_31">
-					<div id="DIV_32">
-						<a href="http://demo.tagdiv.com/newspaper/15-grooming-techniques-every-man-needs-to-know/" rel="bookmark" title="15 Grooming Techniques Every Man Needs to Know" id="A_33"><img width="265" height="198" src="http://demo.tagdiv.com/newspaper/wp-content/uploads/2015/02/bike-265x198.jpg" alt="" id="IMG_34" /></a>
-					</div>
-					<div id="DIV_35">
-						<div id="DIV_36">
-							<div id="DIV_37">
-								<a href="http://demo.tagdiv.com/newspaper/category/tagdiv-music/" id="A_38">Music</a>
-								<h3 id="H3_39">
-									<a href="http://demo.tagdiv.com/newspaper/15-grooming-techniques-every-man-needs-to-know/" rel="bookmark" title="15 Grooming Techniques Every Man Needs to Know" id="A_40">15 Grooming Techniques Every Man Needs to Know</a>
-								</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div id="DIV_41">
-					<div id="DIV_42">
-						<a href="http://demo.tagdiv.com/newspaper/fashion-photography-helps-raising-funds/" rel="bookmark" title="Fashion Photography Helps Raising Funds" id="A_43"><img width="265" height="198" src="http://demo.tagdiv.com/newspaper/wp-content/uploads/2015/02/girl-265x198.jpg" alt="" id="IMG_44" /></a>
-					</div>
-					<div id="DIV_45">
-						<div id="DIV_46">
-							<div id="DIV_47">
-								<a href="http://demo.tagdiv.com/newspaper/category/tagdiv-fashion/tagdiv-style-hunter/" id="A_48">Style hunter</a>
-								<h3 id="H3_49">
-									<a href="http://demo.tagdiv.com/newspaper/fashion-photography-helps-raising-funds/" rel="bookmark" title="Fashion Photography Helps Raising Funds" id="A_50">Fashion Photography Helps Raising Funds</a>
-								</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="DIV_51">
-		</div>
-	</div>
-</div>
+.divider.end-of-post
+.row#related-posts-section
+	section
+		h3.center-align Related Posts
+		//.container
+		<% @post.related_posts.each do |related| %>
+		.col.s12.m4.l4
+			<%= link_to related do %>
 
+			.related-post
+				.post-thumbnail
+					<img class="responsive-img post-image" src=<%= @images.sample %>>
+				.post-date <%= related.published_at.to_date.to_formatted_s(:long_ordinal)  %>
+				.post-title <%= related.title %>
+			<% end %>
+				.post-subtitle <%= related.subtitle %>
+
+		<% end %>
