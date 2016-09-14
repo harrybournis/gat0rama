@@ -9,8 +9,9 @@
 <div class="col s12 l6 m6 text-column <%= 'pull-m6 pull-l6' if index % 2 == 1 %>">
       <div class="post-date"><%= post.published_at.to_date.to_formatted_s(:long_ordinal) %></div><%= link_to post do %>
       <h5 class="post-title"><%= post.title %></h5><% end %>
-      <p class="post-subtitle"><%= post.subtitle %></p>
-      <p class="more">More...</p></div>
+      <p class="post-subtitle"><%= post.subtitle %></p><%= link_to post do %>
+      <p class="more">More...</p><% end %>
+</div>
     </div><% end %>
   </div>
 </div>
