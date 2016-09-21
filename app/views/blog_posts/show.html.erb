@@ -19,17 +19,19 @@
   </div>
 </div>
 <div class="divider end-of-post"></div>
-<div class="row" id="related-posts-section">
-  <section>
-    <h3 class="center-align">Related Posts</h3>
-    <!--.container--><% @post.related_posts.each do |related| %>
-    <div class="col s12 m4 l4"><%= link_to related do %>
-      <div class="related-post">
-        <div class="post-thumbnail"><img class="responsive-img post-image" src=<%= @images.sample %>></div>
-        <div class="post-date"><%= related.published_at.to_date.to_formatted_s(:long_ordinal)  %></div>
-        <div class="post-title"><%= related.title %></div>
+<div class="container">
+  <div class="row" id="related-posts-section">
+    <section>
+      <h3 class="center-align">Related Posts</h3>
+      <!--.container--><% @post.related_posts.each do |related| %>
+      <div class="col s12 m4 l4"><%= link_to related do %>
+        <div class="related-post">
+          <div class="post-thumbnail"><img class="responsive-img post-image" src=<%= @images.sample %>></div>
+          <div class="post-date"><%= related.published_at.to_date.to_formatted_s(:long_ordinal)  %></div>
+          <div class="post-title"><%= related.title %></div>
+        </div><% end %>
+        <div class="post-subtitle"><%= related.subtitle %></div>
       </div><% end %>
-      <div class="post-subtitle"><%= related.subtitle %></div>
-    </div><% end %>
-  </section>
+    </section>
+  </div>
 </div>
