@@ -1,6 +1,5 @@
 
 <div class="row">
-  <h1>Posts</h1>
   <div id="posts-list"><% @posts.limit(6).each_with_index do |post, index| %>
     <div class="post-item"><div class="col s12 l6 m6 image-column <%= 'push-m6 push-l6' if index % 2 == 1 %>">
 <%= link_to post do %>

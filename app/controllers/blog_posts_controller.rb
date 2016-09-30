@@ -4,7 +4,7 @@ class BlogPostsController < ApplicationController
 
 
 	def index
-		@posts = BlogPost.all
+		@posts = BlogPost.published
 	end
 
 

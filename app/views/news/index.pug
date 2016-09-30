@@ -1,7 +1,7 @@
 .row
 	h1 News
 	.container
-		.col.offset-m10.offset-l10
+		.col.push-m9.push-l9.offset-m1.offset-l1.m2.l2
 			#calendar
 				.clndr-controls
 					.clndr-previous-button ‹
@@ -10,16 +10,13 @@
 				.clndr-grid
 					.days-of-the-week
 				.divider
-		.col.s12.m10.l10
+		.col.s12.pull-m3.pull-l3.m9.l9
+			#news-index
 			<% @news.each do |news_item| %>
-			.col.s12.m4.l4
-				<%= link_to news_item do %>
-					.card
-						.card-image
-							<img src=<%= @images.sample %>>
-							span.card-tag fashion
-							span.card-title <%= news_item.title %>
-							span.card-content
-								p <%= news_item.subtitle %>
-				<% end %>
+					.news-post
+						.card-title <%= news_item.title %>
+						.date <%= news_item.published_at.to_date.to_formatted_s(:long_ordinal) %>
+						.image
+							<img class="responsive-img" src=<%= @images.sample %>>
+						.content <%= news_item.subtitle %>
 			<% end %>

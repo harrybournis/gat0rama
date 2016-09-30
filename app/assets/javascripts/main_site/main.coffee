@@ -1,9 +1,9 @@
 $(document).on 'turbolinks:load', ->
 
 	# initialize materialize javascript
-	$(".button-collapse").sideNav();
+	$(".button-collapse").sideNav()
 	$('#slider').slider()
-	$('.parallax').parallax();
+	$('.parallax').parallax()
 
 	# set the active class on the current navbar tab
 	cache3 = window.location.pathname
@@ -15,17 +15,21 @@ $(document).on 'turbolinks:load', ->
 	search = cache3.substr(1, index2)
 	$("##{search}").addClass('active')
 
+	# activate the waves effect on buttons
 	Waves.displayEffect()
 
+	# initialize calendar in news
 	$('#calendar').clndr({
 	    events: [
 		    {
-		        date: "2016-9-20"
+		        date: "2016-9-20",
+		        title: 'whatever'
 		    }
 		],
 		clickEvents:
 			click: (target) ->
-				console.log target
+				event = target.events[0].title if target.events[0]
+				console.log "#{target.date._d} - #{event}"
 	})
 
 	# options = [ {

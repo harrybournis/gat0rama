@@ -2,7 +2,7 @@
 <div class="row">
   <h1>News</h1>
   <div class="container">
-    <div class="col offset-m10 offset-l10">
+    <div class="col push-m9 push-l9 offset-m1 offset-l1 m2 l2">
       <div id="calendar">
         <div class="clndr-controls">
           <div class="clndr-previous-button">‹</div>
@@ -15,12 +15,13 @@
         <div class="divider"></div>
       </div>
     </div>
-    <div class="col s12 m10 l10"><% @news.each do |news_item| %>
-      <div class="col s12 m4 l4"><%= link_to news_item do %>
-        <div class="card">
-          <div class="card-image"><img src=<%= @images.sample %>><span class="card-tag">fashion</span><span class="card-title"><%= news_item.title %></span><span class="card-content">
-              <p><%= news_item.subtitle %></p></span></div>
-        </div><% end %>
+    <div class="col s12 pull-m3 pull-l3 m9 l9">
+      <div id="news-index"></div><% @news.each do |news_item| %>
+      <div class="news-post">
+        <div class="card-title"><%= news_item.title %></div>
+        <div class="date"><%= news_item.published_at.to_date.to_formatted_s(:long_ordinal) %></div>
+        <div class="image"><img class="responsive-img" src=<%= @images.sample %>></div>
+        <div class="content"><%= news_item.subtitle %></div>
       </div><% end %>
     </div>
   </div>

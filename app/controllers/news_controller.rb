@@ -2,10 +2,8 @@ class NewsController < ApplicationController
 
 	before_action :set_news, only: [:show]
 
-	include ApplicationHelper
-
 	def index
-		@news = News.all
+		@news = News.published
 	end
 
 
