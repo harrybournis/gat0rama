@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # styling
-gem 'materialize-sass', '~> 0.97.6'
+gem 'materialize-sass', '~> 0.97.7'
 
 gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 

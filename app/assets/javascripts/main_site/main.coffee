@@ -17,6 +17,16 @@ $(document).on 'turbolinks:load', ->
 
 	Waves.displayEffect()
 
+	$('#calendar').clndr({
+	    events: [
+		    {
+		        date: "2016-9-20"
+		    }
+		],
+		clickEvents:
+			click: (target) ->
+				console.log target
+	})
 
 	# options = [ {
 	#   selector: '.post-item'

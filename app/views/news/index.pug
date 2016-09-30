@@ -1,14 +1,25 @@
 .row
 	h1 News
-	<% @news.each do |news_item| %>
-	.col.s12.m4.l4
-		<%= link_to news_item do %>
-			.card
-				.card-image
-					<img src=<%= @images.sample %>>
-					span.card-tag fashion
-					span.card-title <%= news_item.title %>
-					span.card-content
-						p <%= news_item.subtitle %>
-		<% end %>
-	<% end %>
+	.container
+		.col.offset-m10.offset-l10
+			#calendar
+				.clndr-controls
+					.clndr-previous-button ‹
+					.month
+					.clndr-next-button ›
+				.clndr-grid
+					.days-of-the-week
+				.divider
+		.col.s12.m10.l10
+			<% @news.each do |news_item| %>
+			.col.s12.m4.l4
+				<%= link_to news_item do %>
+					.card
+						.card-image
+							<img src=<%= @images.sample %>>
+							span.card-tag fashion
+							span.card-title <%= news_item.title %>
+							span.card-content
+								p <%= news_item.subtitle %>
+				<% end %>
+			<% end %>
