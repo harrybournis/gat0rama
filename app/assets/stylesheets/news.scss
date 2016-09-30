@@ -1,13 +1,25 @@
 #news-index {
+
 	.news-post {
 		width: 100%;
+		margin-bottom: 20px;
+
+		.title {
+			font-size: 2em;
+		}
 
 		.image {
 			width: 100%;
 
-			.date {
+		}
+		.date {
+			color: #929292;
+			margin-top: 10px;
+    		margin-bottom: 10px;
+		}
 
-			}
+		.content {
+			font-size: 1.25em;
 		}
 	}
 }

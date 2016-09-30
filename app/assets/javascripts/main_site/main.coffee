@@ -19,18 +19,19 @@ $(document).on 'turbolinks:load', ->
 	Waves.displayEffect()
 
 	# initialize calendar in news
-	$('#calendar').clndr({
-	    events: [
-		    {
-		        date: "2016-9-20",
-		        title: 'whatever'
-		    }
-		],
-		clickEvents:
-			click: (target) ->
-				event = target.events[0].title if target.events[0]
-				console.log "#{target.date._d} - #{event}"
-	})
+	if search == 'news'
+		$('#calendar').clndr({
+		    events: [
+			    {
+			        date: "2016-9-20",
+			        title: 'whatever'
+			    }
+			],
+			clickEvents:
+				click: (target) ->
+					event = target.events[0].title if target.events[0]
+					console.log "#{target.date._d} - #{event}"
+		})
 
 	# options = [ {
 	#   selector: '.post-item'

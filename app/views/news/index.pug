@@ -12,11 +12,13 @@
 				.divider
 		.col.s12.pull-m3.pull-l3.m9.l9
 			#news-index
-			<% @news.each do |news_item| %>
+				<% @news.each do |news_item| %>
 					.news-post
-						.card-title <%= news_item.title %>
+
 						.date <%= news_item.published_at.to_date.to_formatted_s(:long_ordinal) %>
+						.title <%= news_item.title %>
 						.image
 							<img class="responsive-img" src=<%= @images.sample %>>
 						.content <%= news_item.subtitle %>
-			<% end %>
+						.divider
+				<% end %>

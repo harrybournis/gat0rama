@@ -16,13 +16,15 @@
       </div>
     </div>
     <div class="col s12 pull-m3 pull-l3 m9 l9">
-      <div id="news-index"></div><% @news.each do |news_item| %>
-      <div class="news-post">
-        <div class="card-title"><%= news_item.title %></div>
-        <div class="date"><%= news_item.published_at.to_date.to_formatted_s(:long_ordinal) %></div>
-        <div class="image"><img class="responsive-img" src=<%= @images.sample %>></div>
-        <div class="content"><%= news_item.subtitle %></div>
-      </div><% end %>
+      <div id="news-index"><% @news.each do |news_item| %>
+        <div class="news-post">
+          <div class="date"><%= news_item.published_at.to_date.to_formatted_s(:long_ordinal) %></div>
+          <div class="title"><%= news_item.title %></div>
+          <div class="image"><img class="responsive-img" src=<%= @images.sample %>></div>
+          <div class="content"><%= news_item.subtitle %></div>
+          <div class="divider"></div>
+        </div><% end %>
+      </div>
     </div>
   </div>
 </div>
