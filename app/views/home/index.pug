@@ -25,8 +25,10 @@
 			#home.card
 				.card-image
 					<img src=<%= @images.sample %>>
-					span.card-tag fashion
-					span.card-title <%= post.title %>
+					//-span.card-tag fashion
+					span.card-title
+						span.card-tag fashion
+						<%= post.title %>
 					//- span.card-content
 					//- 	p <%#= post.subtitle %>
 
