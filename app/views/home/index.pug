@@ -14,7 +14,7 @@
 
 
 
-<% if @posts.length - 6 > 0 %>
+<% if @posts.length > 6 %>
 
 <% @posts.each_slice(6).with_index do |posts_chunk, index| %>
 

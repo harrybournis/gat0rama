@@ -10,7 +10,7 @@
       </div><% end %>
     </li><% end %>
   </ul>
-</div><% if @posts.length - 6 > 0 %>
+</div><% if @posts.length > 6 %>
 <% @posts.each_slice(6).with_index do |posts_chunk, index| %>
 <div class="container">
   <div class="row"><% posts_chunk.each do |post| %>
