@@ -1,9 +1,14 @@
+#news-row {
+	@extend .row;
+	margin-top: 50px;
+}
+
 #news-index {
 
 	.news-post {
 		width: 100%;
 		margin-bottom: 50px;
-		margin-top: 50px;
+		//margin-top: 50px;
 
 		.title {
 			font-size: 2em;
@@ -57,4 +62,8 @@
 			}
 		}
 	}
+}
+
+#calendar {
+	margin-top: 50px;
 }

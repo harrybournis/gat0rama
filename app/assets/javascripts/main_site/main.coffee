@@ -20,7 +20,11 @@ $(document).on 'turbolinks:load', ->
 
 	# initialize calendar in news
 	if search == 'news'
-		$('#calendar').clndr({
+		$calendar = $('#calendar')
+
+		$calendar.pushpin({ top: $calendar.offset().top - 50 })
+
+		$calendar.clndr({
 		    events: [
 			    {
 			        date: "2016-9-20",
@@ -32,12 +36,3 @@ $(document).on 'turbolinks:load', ->
 					event = target.events[0].title if target.events[0]
 					console.log "#{target.date._d} - #{event}"
 		})
-
-	# options = [ {
-	#   selector: '.post-item'
-	#   offset: 200
-	#   callback: (el) ->
-	#   	Materialize.fadeInImage $(el)
-
-	# } ]
-	# Materialize.scrollFire options

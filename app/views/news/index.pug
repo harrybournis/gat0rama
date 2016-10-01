@@ -1,5 +1,4 @@
-.row
-	h1 News
+#news-row
 	.container
 		.col.push-m9.push-l9.offset-m1.offset-l1.m2.l2
 			#calendar
@@ -14,7 +13,6 @@
 			#news-index
 				<% @news.each do |news_item| %>
 					.news-post
-
 						.date <%= news_item.published_at.to_date.to_formatted_s(:long_ordinal) %>
 						.title <%= news_item.title %>
 						.image
