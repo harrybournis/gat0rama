@@ -74,16 +74,14 @@
 		margin-top: 0;
 	}
 
-
-
 	.clndr-controls {
 
 		.clndr-control-button {
 		    position: absolute;
 		    left: 0;
 		    top: 0;
-				cursor: pointer;
-				cursor: hand;
+			cursor: pointer;
+			cursor: hand;
 
 			&.rightalign {
 			    position: absolute;
@@ -108,21 +106,30 @@
 			text-align: center;
 			margin-left: 33%;
 			margin-right: 33%;
+			font-weight: bold;
 		}
-	}
+	}//.clndr-controls
 
-	.clndr-table {
+	table.clndr-table {
 		@extend .row;
+
+		tbody tr td, thead tr td {
+			border-radius: 0;
+			padding: 6px;
+		}
 
 		.header-days {
 			font-weight: bold;
 		}
-	}
 
-	table.clndr-table {
-		tbody tr td, thead tr td {
-			border-radius: 0;
-			padding: 6px;
+		td.day {
+			text-align: center;
+
+			&.event {
+				background: #62bf87;
+	    		color: white;
+	    		border-radius: 60%;
+			}
 		}
 	}
 
