@@ -2,7 +2,8 @@
 
 	.news-post {
 		width: 100%;
-		margin-bottom: 20px;
+		margin-bottom: 50px;
+		margin-top: 50px;
 
 		.title {
 			font-size: 2em;
@@ -20,6 +21,40 @@
 
 		.content {
 			font-size: 1.25em;
+			margin-bottom: 30px;
+		}
+
+		.footer {
+			@extend .row;
+			$divider-color: #c5c5c5;
+			border-top: 1px solid $divider-color;
+			border-bottom: 1px solid $divider-color;
+
+			.comments {
+				@extend .col;
+				@extend .s6;
+				@extend .m6;
+				@extend .l6;
+
+				p {
+					margin: 10px;
+				}
+			}
+
+			.social {
+				@extend .col;
+				@extend .s6;
+				@extend .m6;
+				@extend .l6;
+				@extend .right-align;
+
+				.fa {
+					color: $slider-indicator-color;
+					padding-left: 10px;
+					padding-right: 10px;
+					line-height: 42px;
+				}
+			}
 		}
 	}
 }

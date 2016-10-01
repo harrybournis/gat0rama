@@ -20,5 +20,14 @@
 						.image
 							<img class="responsive-img" src=<%= @images.sample %>>
 						.content <%= news_item.subtitle %>
-						.divider
+						.footer
+							span.comments
+								p 0 comments
+							span.social
+								a(href='#/').waves-effect.waves-custom
+									i.fa.fa-facebook(aria-hidden='true')
+								a(href='#/').waves-effect.waves-custom
+									i.fa.fa-twitter(aria-hidden='true')
+								a(href='#/').waves-effect.waves-custom
+									i.fa.fa-tumblr(aria-hidden='true')
 				<% end %>
