@@ -42,8 +42,7 @@ class Randomizer
 			post = Post.new(
 				title: Faker::Hipster.sentence,
 				subtitle: Faker::Hacker.say_something_smart,
-				body: Faker::Hipster.paragraphs(5).join,
-				category: "fashion")
+				body: Faker::Hipster.paragraphs(5).join)
 
 			if post.save
 				Rails.logger.info "\n %^&* Randomly Created Post: #{ post.inspect } \n"
@@ -68,8 +67,7 @@ class Randomizer
 			news = News.new(
 				title: Faker::Hipster.sentence,
 				subtitle: Faker::Hacker.say_something_smart,
-				body: Faker::Hipster.paragraphs(5).join,
-				category: "fashion")
+				body: Faker::Hipster.paragraphs(5).join)
 
 			if news.save
 				Rails.logger.info "\n %^&* Randomly Created Post: #{ news.inspect } \n"
