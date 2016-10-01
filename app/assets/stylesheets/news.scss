@@ -64,6 +64,59 @@
 	}
 }
 
+// Calendar
 #calendar {
 	margin-top: 50px;
+
+
+	@media #{$small-and-down} {
+			&.pinned {
+    			position: relative;
+			}
+	}
+
+	.clndr-controls {
+		@extend .row;
+
+		.clndr-control-button {
+			@extend .col;
+			@extend .s4;
+			@extend .m4;
+			@extend .l4;
+			// margin: 0;
+			// padding: 0;
+
+			.clndr-previous-button {
+				// margin: 0;
+				// padding: 0;
+			}
+		}
+
+		.month {
+			@extend .col;
+			@extend .s4;
+			@extend .m4;
+			@extend .l4;
+		}
+	}
+
+	.clndr-table {
+		@extend .row;
+
+		.header-days {
+			font-weight: bold;
+		}
+	}
+
+	table.clndr-table {
+		tbody tr td, thead tr td {
+			border-radius: 0;
+			padding: 6px;
+		}
+	}
+
+	.last-month, .next-month {
+		background-color: #ffffff;
+		color: rgba(255, 255, 255, 0);
+	}
 }

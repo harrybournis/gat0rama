@@ -1,15 +1,16 @@
 #news-row
 	.container
-		.col.push-m9.push-l9.offset-m1.offset-l1.m2.l2
+		h3 Latest News
+		.col.s12.push-m8.push-l8.offset-m1.offset-l1.m3.l3
 			#calendar
 				.clndr-controls
-					.clndr-previous-button ‹
+					.clndr-previous-button previouss
 					.month
 					.clndr-next-button ›
 				.clndr-grid
 					.days-of-the-week
 				.divider
-		.col.s12.pull-m3.pull-l3.m9.l9
+		.col.s12.pull-m4.pull-l4.m8.l8
 			#news-index
 				<% @news.each do |news_item| %>
 					.news-post

@@ -21,8 +21,13 @@ $(document).on 'turbolinks:load', ->
 	# initialize calendar in news
 	if search == 'news'
 		$calendar = $('#calendar')
+		$window = $(window)
 
-		$calendar.pushpin({ top: $calendar.offset().top - 50 })
+		$calendar.pushpin({ top: $calendar.offset().top - 50 }) if $window.width() > 600
+
+		$window.resize () ->
+			$calendar.pushpin 'remove'
+			$calendar.pushpin({ top: $calendar.offset().top - 50 }) if $window.width() > 600
 
 		$calendar.clndr({
 		    events: [
