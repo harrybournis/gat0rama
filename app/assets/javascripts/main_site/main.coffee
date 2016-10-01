@@ -40,11 +40,13 @@ $(document).on 'turbolinks:load', ->
 					title: "MAIMOUDES"
 				}
 			]
-			clickEvents:
-				click: (target) ->
-					event = target.events[0].title if target.events[0]
-					console.log "#{target.date._d} - #{event}"
 			doneRendering: () ->
 				$controlButtons = $('#calendar .clndr-control-button')
 				$controlButtons.find('.clndr-previous-button')[0].innerHTML = "‹"
 				$controlButtons.find('.clndr-next-button')[0].innerHTML = "›"
+				#console.log $('#calendar tbody .event')
+				for ev in this.options.events
+					console.log ev
+					$("#calendar .calendar-day-#{ev.date}").tooltip({html: true, position: 'bottom', tooltip: '<p class="tooltip-custom">agouroarxidi</p>', delay: 100})
+
+
