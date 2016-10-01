@@ -67,36 +67,47 @@
 // Calendar
 #calendar {
 	margin-top: 50px;
+	width: 160px;
 
-
-	@media #{$small-and-down} {
-			&.pinned {
-    			position: relative;
-			}
+	@media only screen and (max-width : 600px) {
+		width: 100%;
+		margin-top: 0;
 	}
 
+
+
 	.clndr-controls {
-		@extend .row;
 
 		.clndr-control-button {
-			@extend .col;
-			@extend .s4;
-			@extend .m4;
-			@extend .l4;
-			// margin: 0;
-			// padding: 0;
+		    position: absolute;
+		    left: 0;
+		    top: 0;
+				cursor: pointer;
+				cursor: hand;
+
+			&.rightalign {
+			    position: absolute;
+			    right: 0;
+			    top: 0;
+			}
 
 			.clndr-previous-button {
-				// margin: 0;
-				// padding: 0;
+				font-size: 25px;
+			}
+
+			.clndr-next-button {
+				position: absolute;
+				top: 0;
+				right: 0;
+				font-size: 25px;
+
 			}
 		}
 
 		.month {
-			@extend .col;
-			@extend .s4;
-			@extend .m4;
-			@extend .l4;
+			text-align: center;
+			margin-left: 33%;
+			margin-right: 33%;
 		}
 	}
 

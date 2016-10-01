@@ -40,4 +40,8 @@ $(document).on 'turbolinks:load', ->
 				click: (target) ->
 					event = target.events[0].title if target.events[0]
 					console.log "#{target.date._d} - #{event}"
+			doneRendering: () ->
+				$controlButtons = $('#calendar .clndr-control-button')
+				$controlButtons.find('.clndr-previous-button')[0].innerHTML = "‹"
+				$controlButtons.find('.clndr-next-button')[0].innerHTML = "›"
 		})
