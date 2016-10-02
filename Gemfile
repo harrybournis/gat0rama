@@ -44,6 +44,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
   gem 'factory_girl_rails', '~> 4.7'
   gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
+  gem 'pry-byebug', '~> 3.4'
 end
 
 group :development do
