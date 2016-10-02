@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 	protect_from_forgery with: :exception
 
 	before_action :get_settings
-	before_action :set_sample_images unless Rails.env.production?
+	before_action :set_sample_images
 
 private
 
