@@ -85,9 +85,9 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   if EVN["SECRET_KEY_BASE"]
-    logger.error 'yes secret key base'
+    puts 'yes secret key base'
     config.secret_key_base = ENV["SECRET_KEY_BASE"]
   else
-    logger.error "no secret key base"
+    puts "no secret key base"
   end
 end
