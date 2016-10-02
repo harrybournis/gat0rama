@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160912191607) do
+ActiveRecord::Schema.define(version: 20161002135251) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,9 +41,9 @@ ActiveRecord::Schema.define(version: 20160912191607) do
   end
 
   create_table "settings", force: :cascade do |t|
-    t.hstore "value"
     t.string "description"
-    t.index ["value"], name: "settings_gin_value", using: :gin
+    t.jsonb  "value",       default: {}, null: false
+    t.index ["value"], name: "index_settings_on_value", using: :btree
   end
 
   create_table "taggings", force: :cascade do |t|
