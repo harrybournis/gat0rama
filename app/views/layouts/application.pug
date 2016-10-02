@@ -9,6 +9,7 @@ html
     <%= javascript_include_tag 'main_site.js', 'data-turbolinks-track': 'reload' %>
 
     //custom
+    <%= cache @settings do %>
     style.
       body {
         background-color: <%= @settings.value["website_background_color"] %>;
@@ -17,6 +18,7 @@ html
       nav ul a, #burger_menu_icon {
         color: <%= @settings.value["navbar_links_color"] %>;
       }
+    <% end %>
 
   body
     header
@@ -25,7 +27,9 @@ html
           a#burger_menu_icon.button-collapse(href='#', data-activates='mobile-demo')
             i.fa.fa-bars.fa-2x
           a.brand-logo(href='/')
+            <%= cache ['header', @settings] do %>
             <img src=<%= @settings.value["header_logo"] %>>
+            <% end %>
           ul#mobile-demo.side-nav
             li
               a(href='sass.html') Sass
