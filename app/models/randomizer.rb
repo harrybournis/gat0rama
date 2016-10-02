@@ -39,7 +39,7 @@ class Randomizer
 		results = []
 
 		number.times do
-			post = Post.new(
+			post = BlogPost.new(
 				title: Faker::Hipster.sentence,
 				subtitle: Faker::Hacker.say_something_smart,
 				body: Faker::Hipster.paragraphs(5).join)

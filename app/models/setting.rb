@@ -23,11 +23,6 @@ class Setting < ApplicationRecord
 	end
 
 
-	def destroy
-		raise "Cannot delete object. Use the class method instead."
-		#super
-	end
-
 	# Empties the Hash of the first Setting Object
 	def self.destroy
 		s = Setting.first

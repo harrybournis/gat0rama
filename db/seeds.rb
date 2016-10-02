@@ -5,8 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Setting.create(value: {"header_logo"=>"/images/LOGOSITETEST.png", "navbar_links_color"=>"#063a35", "website_background_color"=>"transparent", "website_background_image"=>""}, description: "styling")
+Setting.create
+Setting.first.update(value: {"header_logo"=>"/images/LOGOSITETEST.png", "navbar_links_color"=>"#063a35", "website_background_color"=>"transparent", "website_background_image"=>""}, description: "styling")
 ParalaxImage.create(url: "/placeholders/clown.gif")
 ParalaxImage.create(url: "/placeholders/adidas.png")
 Randomizer.post(30)
 Randomizer.news(6)
+BlogPost.limit(28).each { |p| p.publish }
+News.limit(5).each { |p| p.publish }
