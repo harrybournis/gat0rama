@@ -14,4 +14,5 @@ ParalaxImage.create(url: "/placeholders/adidas.png")
 Randomizer.post(30)
 Randomizer.news(6)
 BlogPost.limit(28).each { |p| p.publish }
+BlogPost.limit(5).each { |p| p.update(is_slider_post: true) }
 News.limit(5).each { |p| p.publish }
