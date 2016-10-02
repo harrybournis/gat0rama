@@ -68,8 +68,6 @@ Rails.application.configure do
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
-  config.secret_key_base = ENV["SECRET_KEY_BASE"]
-
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
@@ -85,4 +83,11 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  if EVN["SECRET_KEY_BASE"]
+    logger.error 'yes secret key base'
+    config.secret_key_base = ENV["SECRET_KEY_BASE"]
+  else
+    logger.error "no secret key base"
+  end
 end
