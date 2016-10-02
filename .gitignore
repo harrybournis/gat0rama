@@ -42,4 +42,4 @@ bower.json
 .byebug_history
 
 
-/public/placeholders
+#/public/placeholders

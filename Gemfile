@@ -35,7 +35,7 @@ gem 'materialize-sass', '~> 0.97.7'
 
 gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 
-gem 'faker', '~> 1.6', '>= 1.6.5'
+gem 'faker', '~> 1.6', '>= 1.6.5' # dummy data
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -43,6 +43,7 @@ group :development, :test do
   #gem 'byebug', '9.0.5', platform: :mri
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
   gem 'factory_girl_rails', '~> 4.7'
+  gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 end
 
 group :development do
@@ -54,7 +55,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   # dummy data
-  gem 'faker', '~> 1.6', '>= 1.6.5'
   gem 'factory_girl', '~> 4.7'
 
   # performance profiling
