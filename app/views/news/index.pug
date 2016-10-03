@@ -15,7 +15,9 @@
 				<% @news.each do |news_item| %>
 					.news-post
 						.date <%= news_item.published_at.to_date.to_formatted_s(:long_ordinal) %>
+						<%= link_to news_item do %>
 						.title <%= news_item.title %>
+						<% end %>
 						.image
 							<img class="responsive-img" src=<%= @images.sample %>>
 						.content <%= news_item.subtitle %>
@@ -30,3 +32,5 @@
 								a(href='#/').waves-effect.waves-custom
 									i.fa.fa-tumblr(aria-hidden='true')
 				<% end %>
+script.
+	initialize_calendar();

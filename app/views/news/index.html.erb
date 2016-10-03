@@ -18,8 +18,8 @@
     <div class="col s12 pull-m4 pull-l4 m8 l8">
       <div id="news-index"><% @news.each do |news_item| %>
         <div class="news-post">
-          <div class="date"><%= news_item.published_at.to_date.to_formatted_s(:long_ordinal) %></div>
-          <div class="title"><%= news_item.title %></div>
+          <div class="date"><%= news_item.published_at.to_date.to_formatted_s(:long_ordinal) %></div><%= link_to news_item do %>
+          <div class="title"><%= news_item.title %></div><% end %>
           <div class="image"><img class="responsive-img" src=<%= @images.sample %>></div>
           <div class="content"><%= news_item.subtitle %></div>
           <div class="footer"><span class="comments">
@@ -29,3 +29,4 @@
     </div>
   </div>
 </div>
+<script>initialize_calendar();</script>

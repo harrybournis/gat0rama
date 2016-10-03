@@ -1,16 +1,56 @@
 
 <div class="row">
-  <div class="col l7 m7 s12 offset-l1 offset-m1">
-    <article id="show-post">
-      <div id="post-title"><%= @news.title %></div>
-      <div id="post-subtitle"><%= @news.subtitle %></div>
-      <div id="post-content"><%= @news.body %></div>
-    </article>
+  <div class="container">
+    <div class="col l10 m10 s12 offset-m1 offset-l1">
+      <article id="posts-show">
+        <div id="post-title"><%= @news.title %></div>
+        <div id="post-subtitle"><%= @news.subtitle %></div>
+        <div class="post-image-container"><img class="responsive-img post-image" src=<%= @images.sample %>></div>
+        <div id="post-content"><%= @news.body %>
+          <p><%= Faker::Hipster.paragraph %></p>
+          <div class="post-image-container"><img class="responsive-img post-image" src=<%= @images.sample %>></div>
+          <p><%= Faker::Hipster.paragraph %></p>
+          <div class="post-image-container"><img class="responsive-img post-image" src=<%= @images.sample %>></div>
+          <p><%= Faker::Hipster.paragraph(2) %></p>
+          <div class="post-image-container"><img class="responsive-img post-image" src=<%= @images.sample %>></div>
+        </div>
+      </article>
+    </div>
   </div>
-  <div class="col l1 m1">
-    <p style="color:transparent"><%= Faker::Lorem.paragraphs(5).join %></p>
+</div>
+<div class="divider end-of-post"></div>
+<div class="container">
+  <div class="row" id="related-posts-section">
+    <section>
+      <h3 class="center-align">Related Posts</h3>
+      <!--.container--><% @news.related_posts.each do |related| %>
+      <div class="col s12 m4 l4"><%= link_to related do %>
+        <div class="related-post">
+          <div class="post-thumbnail"><img class="responsive-img post-image" src=<%= @images.sample %>></div>
+          <div class="post-date"><%= related.published_at.to_date.to_formatted_s(:long_ordinal)  %></div>
+          <div class="post-title"><%= related.title %></div>
+        </div><% end %>
+        <div class="post-subtitle"><%= related.subtitle %></div>
+      </div><% end %>
+    </section>
   </div>
-  <div class="col l2 m2" id="col-extra">
-    <p style="background-color: black"><%= Faker::Lorem.paragraphs(5).join %></p>
+  <div class="row">
+    <div id="disqus_thread"></div>
+    <script>
+      $(document).on('turbolinks:load', function () {
+      	var disqus_config = function () {
+      	this.page.url = "<%= request.original_url %>";
+      	this.page.identifier = "<%= @news.id %>";
+      	};
+      
+      	(function() { // DON'T EDIT BELOW THIS LINE
+      	var d = document, s = d.createElement('script');
+      	s.src = '//gat0rama.disqus.com/embed.js';
+      	s.setAttribute('data-timestamp', +new Date());
+      	(d.head || d.body).appendChild(s);
+      	})();
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
 </div>
