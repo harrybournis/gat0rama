@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 # styling
 gem 'materialize-sass', '~> 0.97.7'
 
+gem 'will_paginate-materialize', git: 'https://github.com/harrybournis/will_paginate-materialize.git', branch: 'font_awesome_icons'
+
 gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 
 gem 'faker', '~> 1.6', '>= 1.6.5' # dummy data

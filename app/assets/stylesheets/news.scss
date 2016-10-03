@@ -149,3 +149,11 @@
 .tooltip-custom {
 	padding: 20px;
 }
+
+.pagination li.active {
+	background-color: #b1b1b1;
+
+	a {
+  		color: #fff;
+	}
+}
