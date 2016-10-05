@@ -8,8 +8,11 @@
 @import "posts.scss";
 @import "news.scss";
 
-@media #{$medium-and-down} {
-	html {
-		font-size: 30px;
+
+html {
+	font-size: 14px;
+
+	@media #{$medium-and-down} {
+		font-size: 35px;
 	}
 }

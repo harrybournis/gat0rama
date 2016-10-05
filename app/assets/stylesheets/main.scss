@@ -69,6 +69,10 @@ $logo-navbar-height: 100px;
 nav#nav-logo {
 	height: $logo-navbar-height;
 
+	.col {
+		padding: 0;
+	}
+
 	.row, #logo-column, #logo-column a, #logo-column a img {
 		height: 100%
 	}
@@ -94,6 +98,10 @@ nav#nav-logo {
 			#burger_menu_icon {
 				height: inherit;
 				line-height: $logo-navbar-height-mobile;
+
+				i {
+					padding-left: 5px;
+				}
 			}
 		}
 	}
@@ -101,13 +109,13 @@ nav#nav-logo {
 
 @media #{$medium-and-down} {
 	#burger_menu_icon i {
-		font-size: 5rem;
+		font-size: 2rem;
 	}
 }
 
 @media #{$small-and-down} {
 	#burger_menu_icon i {
-		font-size: 3.2rem;
+		font-size: 1.5rem;
 	}
 }
 

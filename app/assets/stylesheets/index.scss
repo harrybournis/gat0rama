@@ -38,6 +38,10 @@
 	}
 }
 
+#slider .indicators {
+	font-size: 1rem;
+}
+
 #home.card {
 	//@extend .z-index-1;
 	box-shadow: none;
@@ -49,10 +53,13 @@
 			-webkit-filter: brightness(94%);
 			filter: brightness(94%);
 
-			// JUST FOR TESTING
-		    min-height: 365px;
-		    max-height: 365px;
-			// REMOVEEE
+		    min-height: $index-post-height; //365px;
+		    max-height: $index-post-width; //365px;
+
+		    @media #{$medium-and-down} {
+			    min-height: $index-post-height-mobile;
+			    max-height: $index-post-width-mobile;
+		    }
 		}
 
 		// Image Gradient Mask

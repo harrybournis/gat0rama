@@ -15,7 +15,7 @@ $(document).on 'turbolinks:load', ->
 
 	unless search
 		if $(window).width() <= 992
-			$('#slider').slider({ height: 800 })
+			$('#slider').slider({ height: 800, indicators: true  })
 		else
 			$('#slider').slider()
 

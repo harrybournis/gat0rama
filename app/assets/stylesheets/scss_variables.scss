@@ -44,8 +44,9 @@ $fonts-card-tag: 'garamond-regular';
 $fonts-card-title: 'garamond-regular';
 $fonts-card-subtitle: 'garamond-regular';
 $fonts-card-tag-font-size: 0.75rem;
-$fonts-card-title-font-size: 1.35rem;
+$fonts-card-title-font-size: 2rem;
 $fonts-card-subtitle-font-size: 1.0rem;
+
 
 // Post
 $fonts-post-title: 'glacial-regular';
@@ -58,3 +59,8 @@ $fonts-footer: 'garamond-regular';
 
 //--------------------- Sizes ------------------------------//
 $posts-index-post-height: 350px;
+
+$index-post-height: 356px;
+$index-post-width: $index-post-height;
+$index-post-height-mobile: 500px;
+$index-post-width-mobile: $index-post-height-mobile;
