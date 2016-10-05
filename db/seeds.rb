@@ -18,5 +18,4 @@ BlogPost.limit(5).each { |p| p.update(is_slider_post: true) }
 News.limit(5).each { |p| p.publish }
 
 # events
-BlogPost.limit(1).each { |p| p.even << FactoryGirl.crate(:news, date: Faker::Date.between(10.days.ago, Date.today + 10.days)) }
-News.limit(3).each { |p| p.even << FactoryGirl.crate(:news, date: Faker::Date.between(10.days.ago, Date.today + 10.days)) }
+5.times { FactoryGirl.create(:event) }

@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :event do
-    date "2016-10-05 20:26:18"
+    date { Faker::Date.between(10.days.ago, Date.today + 10.days) }
     content "Event something happen"
     location "place"
     importance 1
