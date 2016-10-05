@@ -23,6 +23,5 @@
 			$controlButtons = $('#calendar .clndr-control-button')
 			$controlButtons.find('.clndr-previous-button')[0].innerHTML = "‹"
 			$controlButtons.find('.clndr-next-button')[0].innerHTML = "›"
-			#console.log $('#calendar tbody .event')
 			for ev in this.options.events
 				$("#calendar .calendar-day-#{ev.date}").tooltip({html: true, position: 'bottom', tooltip: '<p class="tooltip-custom">agouroarxidi</p>', delay: 100})
