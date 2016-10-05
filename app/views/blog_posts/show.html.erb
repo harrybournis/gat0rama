@@ -24,7 +24,7 @@
     <section>
       <h3 class="center-align">Related Posts</h3>
       <!--.container--><% @post.related_posts.each do |related| %>
-      <div class="col s12 m12 l4"><%= link_to related do %>
+      <div class="col s12 m12 l4 related-post"><%= link_to related do %>
         <div class="related-post">
           <div class="post-thumbnail"><img class="responsive-img post-image" src=<%= @images.sample %>></div>
           <div class="post-date"><%= related.published_at.to_date.to_formatted_s(:long_ordinal)  %></div>

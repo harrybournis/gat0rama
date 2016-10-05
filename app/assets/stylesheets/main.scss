@@ -3,6 +3,12 @@ body {
 	font-family: 'garamond-regular';
 }
 
+@media #{$medium-and-down} {
+	body {
+		font-size: 3rem;
+	}
+}
+
 .image-dark-gradient-mask {
 	bottom: 0;
     content: "";
@@ -194,25 +200,27 @@ nav#nav-logo .brand-logo {
     font-size: $fonts-navbar-brand-logo-font-size;
 }
 
-@media only screen and (min-width: 601px){
 
-    nav#nav-logo, nav#nav-logo .nav-wrapper i, nav#nav-logo a.button-collapse, nav#nav-logo a.button-collapse i, nav#nav-logo a.brand-logo img {
-        height: $logo-navbar-height;
-        line-height: $logo-navbar-height;
-    }
+@media #{$medium-and-down} {
+	$log-navbar-height-mobile: 200px;
 
-}
+	nav .button-collapse i {
+		font-size: 10rem;
+	}
 
-@media only screen and (max-width: 993px) {
 	nav#nav-logo, nav#nav-logo .nav-wrapper i, nav#nav-logo a.button-collapse, nav#nav-logo a.button-collapse i, nav#nav-logo a.brand-logo img {
-        height: $logo-navbar-height;
-        line-height: $logo-navbar-height;
+        height: $log-navbar-height-mobile;
+        line-height: $log-navbar-height-mobile;
     }
 
 
 	nav#nav-logo a.brand-logo {
-		width: 85%;
-		height: $logo-navbar-height;
+		width: 83%;
+		height: $log-navbar-height-mobile;
+
+		img {
+			width: 100%;
+		}
 	}
 }
 
