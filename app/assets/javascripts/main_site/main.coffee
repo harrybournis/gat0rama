@@ -2,8 +2,6 @@ $(document).on 'turbolinks:load', ->
 
 	# initialize materialize javascript
 	$(".button-collapse").sideNav()
-	$('#slider').slider()
-	$('.parallax').parallax()
 
 	# set the active class on the current navbar tab
 	cache3 = window.location.pathname
@@ -14,6 +12,15 @@ $(document).on 'turbolinks:load', ->
 			break
 	search = cache3.substr(1, index2)
 	$("##{search}").addClass('active')
+
+	unless search
+		if $(window).width() <= 992
+			$('#slider').slider({ height: 700 })
+		else
+			$('#slider').slider()
+
+		$('.parallax').parallax()
+
 
 	# activate the waves effect on buttons
 	Waves.displayEffect()
