@@ -83,7 +83,7 @@ nav#nav-logo {
 }
 
 @media #{$medium-and-down} {
-	$logo-navbar-height-mobile: 200px;
+	$logo-navbar-height-mobile: 300px;
 
 	nav#nav-logo {
 		height: $logo-navbar-height-mobile;
