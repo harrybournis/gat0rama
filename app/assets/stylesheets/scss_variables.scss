@@ -4,7 +4,7 @@
 // Globals
 $primary-color: color("shades", "white") !default;
 $link-color: black !default;
-$slider-indicator-color:  #063a35; //color('lime', 'lighten-2') !default;
+$slider-indicator-color:  #bcfb58; //#063a35; //color('lime', 'lighten-2') !default;
 $website-background-color: transparent;
 
 // Navbar
@@ -23,7 +23,8 @@ $footer-text-color: #6f6f6f;
 $footer-bg-color: color("grey", "lighten-3");
 
 //Extra
-$waves-custom-color: #fab0ff;
+$waves-custom-color: #b8d688; //#fab0ff;
+$active-page-color: $waves-custom-color;
 
 
 //----------------------- Fonts ------------------------------//
