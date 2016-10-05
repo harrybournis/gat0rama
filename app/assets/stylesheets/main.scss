@@ -165,7 +165,19 @@ nav#nav-logo {
 
 }
 
+// SIde nav
+.side-nav {
+	width: 500px;
 
+	li {
+		margin: 5% 15%;
+	}
+
+	a {
+		font-size: 1.5rem;
+
+	}
+}
 
 // Footer Text
 footer.page-footer .container .row a,

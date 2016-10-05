@@ -35,13 +35,15 @@ html
               <% end %>
         ul#mobile-demo.side-nav
           li
-            a(href='sass.html') Sass
+            a(href='/news').waves-effect.waves-custom  NEWS
           li
-            a(href='badges.html') Components
+            a(href='/blog_posts').waves-effect.waves-custom  FEATURES
           li
-            a(href='collapsible.html') Javascript
+            a(href='/about').waves-effect.waves-custom  ABOUT
           li
-            a(href='mobile.html') Mobile
+            a(href='/').waves-effect.waves-custom  SHOP
+          li
+            a(href='/contribute').waves-effect.waves-custom  CONTRIBUTE
 
       //- Desktop Navbar
       nav#nav-main.hide-on-med-and-down
@@ -49,8 +51,8 @@ html
           ul.center.hide-on-med-and-down.ul-flex
             li.navbar-link#news
               a(href='/news').waves-effect.waves-custom  NEWS
-            li.navbar-link#blog_posts.waves-effect.waves-custom
-              a(href='/blog_posts')  FEATURES
+            li.navbar-link#blog_posts
+              a(href='/blog_posts').waves-effect.waves-custom  FEATURES
             li.navbar-link#about
               a(href='/about').waves-effect.waves-custom  ABOUT
             li.navbar-link#shop
