@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 	resources :blog_posts
 
 	resources :news
+
+	resources :events
 end
