@@ -9,5 +9,6 @@ class Event < ApplicationRecord
 	belongs_to :post
 
 	# Validations
-	validates_presence_of :date, :content, :importance
+	validates_presence_of :date, :content, :importance, :post
+	validates_uniqueness_of :post_id
 end
