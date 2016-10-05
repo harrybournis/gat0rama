@@ -3,7 +3,7 @@
 //----------------------- Colors ------------------------------//
 // Globals
 $primary-color: color("shades", "white") !default;
-$link-color: color("red", "darken-1") !default;
+$link-color: black !default;
 $slider-indicator-color:  #063a35; //color('lime', 'lighten-2') !default;
 $website-background-color: transparent;
 
@@ -30,7 +30,7 @@ $waves-custom-color: #fab0ff;
 // Navbar
 $fonts-navbar-links: 'PoppinsRegular'; //'glacial-regular';
 $fonts-navbar-links-font-size: 1.0rem;
-$fonts-navbar-links-social-buttons-font-size: 0.6em;
+$fonts-navbar-links-social-buttons-font-size: 0.6rem;
 $fonts-navbar-brand-logo-font-size: 1.6rem;
 
 // Slider
@@ -43,9 +43,9 @@ $fonts-slider-caption-subtitle-font-size: 1.3rem;
 $fonts-card-tag: 'garamond-regular';
 $fonts-card-title: 'garamond-regular';
 $fonts-card-subtitle: 'garamond-regular';
-$fonts-card-tag-font-size: 0.556em; // 0.75em;
-$fonts-card-title-font-size: 1.35em;
-$fonts-card-subtitle-font-size: 1.0em;
+$fonts-card-tag-font-size: 0.75rem;
+$fonts-card-title-font-size: 1.35rem;
+$fonts-card-subtitle-font-size: 1.0rem;
 
 // Post
 $fonts-post-title: 'glacial-regular';
