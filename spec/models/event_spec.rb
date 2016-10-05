@@ -4,6 +4,7 @@ RSpec.describe Event, type: :model do
 
 	it 'factory is valid' do
 		expect(FactoryGirl.create(:event)).to be_truthy
+		expect(FactoryGirl.create(:event_unpublished)).to be_truthy
 	end
 
 	it { should belong_to :post }

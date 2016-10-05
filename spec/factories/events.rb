@@ -5,5 +5,9 @@ FactoryGirl.define do
     location "place"
     importance 1
     association :post, factory: :news
+
+    factory :event_unpublished do
+    	association :post, factory: :news_unpublished
+    end
   end
 end
