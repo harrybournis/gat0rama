@@ -20,8 +20,8 @@
     <header>
       <nav id="nav-logo">
         <div class="row">
-          <div class="s2 m2 l0 hide-on-large-only"><a class="button-collapse" id="burger_menu_icon" href="#" data-activates="mobile-demo"><i class="fa fa-bars fa-2x"></i></a></div>
-          <div class="s10 m10 l12"><a href="/"><%= cache ['header', @settings] do %>
+          <div class="col s2 m2 l0 hide-on-large-only"><a class="button-collapse" id="burger_menu_icon" href="#" data-activates="mobile-demo"><i class="fa fa-bars fa-2x"></i></a></div>
+          <div class="col s10 m10 l12" id="logo-column"><a href="/"><%= cache ['header', @settings] do %>
 <img class="responsive-img" src=<%= @settings.value["header_logo"] %>>
 <% end %></a></div>
         </div>

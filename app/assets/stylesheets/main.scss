@@ -55,15 +55,11 @@ nav ul li.active {
 
 #nav-logo {
 
-	a.brand-logo{
-		position: relative;
+	a{
 		height: 100%;
-		width: 100%;
 
 		img {
-			position: relative;
 			height: 100%;
-			width: 100%;
 		}
 	}
 }
@@ -161,82 +157,73 @@ nav#nav-main {
     }
 }
 
-// nav#nav-main i, nav#nav-main [class^="mdi-"], nav#nav-main [class*="mdi-"], nav#nav-main i.material-icons {
-//     height: $main-navbar-height;
-//     //line-height: $main-navbar-height;
-// }
-
-// nav#nav-main .button-collapse i {
-//     height: $main-navbar-height;
-//     //line-height: $main-navbar-height;
-// }
-
-// nav#nav-main .brand-logo {
-//     font-size: 1.6rem;
-// }
-
-// @media only screen and (min-width: 601px){
-//     nav#nav-main, nav#nav-main .nav-wrapper i, nav#nav-main a.button-collapse, nav#nav-main a.button-collapse i {
-//         height: $main-navbar-height;
-//         //line-height: $main-navbar-height;
-//     }
-// }
-
-
 //LOGO NAVBAR HEIGHT
 
 $logo-navbar-height: 100px;
 
-nav#nav-logo .nav-wrapper .col.s11.l12.m12 {
-	height: $logo-navbar-height;
-}
-
-nav#nav-logo .nav-wrapper .col.s1.m1 {
-	height: $logo-navbar-height;
-}
-
 nav#nav-logo {
-    height: $logo-navbar-height;
-    //line-height: $logo-navbar-height;
-}
+	height: 100%;
 
-nav#nav-logo i, nav#nav-logo [class^="mdi-"], nav#nav-logo [class*="mdi-"], nav#nav-logo i.material-icons {
-    height: $logo-navbar-height;
-    //line-height: $logo-navbar-height;
-}
+	#logo-column {
+		height: 100%;
+		line-height: 0px;
 
-nav#nav-logo .button-collapse i {
-    height: $logo-navbar-height;
-    //line-height: $logo-navbar-height;
-}
-
-nav#nav-logo .brand-logo {
-    font-size: $fonts-navbar-brand-logo-font-size;
-}
-
-
-@media #{$medium-and-down} {
-	$log-navbar-height-mobile: 200px;
-
-	nav .button-collapse i {
-		//font-size: 10rem;
-	}
-
-	nav#nav-logo, nav#nav-logo .nav-wrapper i, nav#nav-logo a.button-collapse, nav#nav-logo a.button-collapse i, nav#nav-logo a.brand-logo img {
-        height: $log-navbar-height-mobile;
-        //line-height: $log-navbar-height-mobile;
-    }
-
-
-	nav#nav-logo a {
-		width: 95%;
-		height: $log-navbar-height-mobile;
-
-		img {
-			width: 100%;
+		a, a img {
+			height: 100%;
+			line-height: inherit;
 		}
 	}
 }
+// nav#nav-logo .nav-wrapper .col.s11.l12.m12 {
+// 	height: $logo-navbar-height;
+// }
+
+// nav#nav-logo .nav-wrapper .col.s1.m1 {
+// 	height: $logo-navbar-height;
+// }
+
+// nav#nav-logo {
+//     height: $logo-navbar-height;
+//     //line-height: $logo-navbar-height;
+// }
+
+// nav#nav-logo i, nav#nav-logo [class^="mdi-"], nav#nav-logo [class*="mdi-"], nav#nav-logo i.material-icons {
+//     height: $logo-navbar-height;
+//     //line-height: $logo-navbar-height;
+// }
+
+// nav#nav-logo .button-collapse i {
+//     height: $logo-navbar-height;
+//     //line-height: $logo-navbar-height;
+// }
+
+// nav#nav-logo .brand-logo {
+//     font-size: $fonts-navbar-brand-logo-font-size;
+// }
+
+
+// @media #{$medium-and-down} {
+// 	$log-navbar-height-mobile: 200px;
+
+// 	nav .button-collapse i {
+// 		//font-size: 10rem;
+// 	}
+
+// 	nav#nav-logo, nav#nav-logo .nav-wrapper i, nav#nav-logo a.button-collapse, nav#nav-logo a.button-collapse i, nav#nav-logo a.brand-logo img {
+//         height: $log-navbar-height-mobile;
+//         //line-height: $log-navbar-height-mobile;
+//     }
+
+
+// 	nav#nav-logo a {
+// 		width: 95%;
+// 		height: $log-navbar-height-mobile;
+
+// 		img {
+// 			width: 100%;
+// 		}
+// 	}
+// }
 
 
 
