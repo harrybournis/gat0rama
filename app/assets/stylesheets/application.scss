@@ -7,3 +7,9 @@
 @import "index.scss";
 @import "posts.scss";
 @import "news.scss";
+
+@media #{$medium-and-down} {
+	html {
+		font-size: 30px;
+	}
+}

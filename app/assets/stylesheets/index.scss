@@ -17,6 +17,12 @@
 			//font-weight: 900;
 		}
 
+		// @media #{$medium-and-down} {
+		// 	.caption-title {
+		// 		font-size: 10rem;
+		// 	}
+		// }
+
 		.caption-subtitle {
 			font-family: $fonts-slider-caption-subtitle;
 			font-size: $fonts-slider-caption-subtitle-font-size;
