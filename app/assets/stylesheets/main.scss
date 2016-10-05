@@ -33,7 +33,7 @@ nav ul a, #burger_menu_icon {
 }
 
 #burger_menu_icon {
-	margin-left: 3%;
+	//margin-left: 3%;
 }
 
 nav {
@@ -145,28 +145,42 @@ $main-navbar-height: 40px;
 nav#nav-main {
     height: $main-navbar-height;
     line-height: $main-navbar-height;
-}
 
-nav#nav-main i, nav#nav-main [class^="mdi-"], nav#nav-main [class*="mdi-"], nav#nav-main i.material-icons {
-    height: $main-navbar-height;
-    line-height: $main-navbar-height;
-}
+    .nav-wrapper {
+    	ul, ul .navbar-link, ul .navbar-link a {
+    		height: 100%
+    	}
 
-nav#nav-main .button-collapse i {
-    height: $main-navbar-height;
-    line-height: $main-navbar-height;
-}
+    	li.social-button, li.social-button a, li.social-button a i {
+    		height: 100%;
+    	}
 
-nav#nav-main .brand-logo {
-    font-size: 1.6rem;
-}
-
-@media only screen and (min-width: 601px){
-    nav#nav-main, nav#nav-main .nav-wrapper i, nav#nav-main a.button-collapse, nav#nav-main a.button-collapse i {
-        height: $main-navbar-height;
-        line-height: $main-navbar-height;
+    	li.social-button a i {
+    		line-height: 40px;
+    	}
     }
 }
+
+// nav#nav-main i, nav#nav-main [class^="mdi-"], nav#nav-main [class*="mdi-"], nav#nav-main i.material-icons {
+//     height: $main-navbar-height;
+//     //line-height: $main-navbar-height;
+// }
+
+// nav#nav-main .button-collapse i {
+//     height: $main-navbar-height;
+//     //line-height: $main-navbar-height;
+// }
+
+// nav#nav-main .brand-logo {
+//     font-size: 1.6rem;
+// }
+
+// @media only screen and (min-width: 601px){
+//     nav#nav-main, nav#nav-main .nav-wrapper i, nav#nav-main a.button-collapse, nav#nav-main a.button-collapse i {
+//         height: $main-navbar-height;
+//         //line-height: $main-navbar-height;
+//     }
+// }
 
 
 //LOGO NAVBAR HEIGHT
@@ -183,17 +197,17 @@ nav#nav-logo .nav-wrapper .col.s1.m1 {
 
 nav#nav-logo {
     height: $logo-navbar-height;
-    line-height: $logo-navbar-height;
+    //line-height: $logo-navbar-height;
 }
 
 nav#nav-logo i, nav#nav-logo [class^="mdi-"], nav#nav-logo [class*="mdi-"], nav#nav-logo i.material-icons {
     height: $logo-navbar-height;
-    line-height: $logo-navbar-height;
+    //line-height: $logo-navbar-height;
 }
 
 nav#nav-logo .button-collapse i {
     height: $logo-navbar-height;
-    line-height: $logo-navbar-height;
+    //line-height: $logo-navbar-height;
 }
 
 nav#nav-logo .brand-logo {
@@ -205,17 +219,17 @@ nav#nav-logo .brand-logo {
 	$log-navbar-height-mobile: 200px;
 
 	nav .button-collapse i {
-		font-size: 10rem;
+		//font-size: 10rem;
 	}
 
 	nav#nav-logo, nav#nav-logo .nav-wrapper i, nav#nav-logo a.button-collapse, nav#nav-logo a.button-collapse i, nav#nav-logo a.brand-logo img {
         height: $log-navbar-height-mobile;
-        line-height: $log-navbar-height-mobile;
+        //line-height: $log-navbar-height-mobile;
     }
 
 
-	nav#nav-logo a.brand-logo {
-		width: 83%;
+	nav#nav-logo a {
+		width: 95%;
 		height: $log-navbar-height-mobile;
 
 		img {

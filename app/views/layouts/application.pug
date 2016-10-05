@@ -22,27 +22,31 @@ html
 
   body
     header
+      //- Mobile Navbar
       nav#nav-logo
-        .nav-wrapper
-          a#burger_menu_icon.button-collapse(href='#', data-activates='mobile-demo')
-            i.fa.fa-bars.fa-2x
-          a.brand-logo(href='/')
-            <%= cache ['header', @settings] do %>
-            <img src=<%= @settings.value["header_logo"] %>>
-            <% end %>
-          ul#mobile-demo.side-nav
-            li
-              a(href='sass.html') Sass
-            li
-              a(href='badges.html') Components
-            li
-              a(href='collapsible.html') Javascript
-            li
-              a(href='mobile.html') Mobile
+        .row
+          .s2.m2.l0.hide-on-large-only
+            a#burger_menu_icon.button-collapse(href='#', data-activates='mobile-demo')
+              i.fa.fa-bars.fa-2x
+          .s10.m10.l12
+            a(href='/')
+              <%= cache ['header', @settings] do %>
+              <img class="responsive-img" src=<%= @settings.value["header_logo"] %>>
+              <% end %>
+        ul#mobile-demo.side-nav
+          li
+            a(href='sass.html') Sass
+          li
+            a(href='badges.html') Components
+          li
+            a(href='collapsible.html') Javascript
+          li
+            a(href='mobile.html') Mobile
 
+      //- Desktop Navbar
       nav#nav-main.hide-on-med-and-down
         .nav-wrapper
-          ul#nav-mobile.center.hide-on-med-and-down.ul-flex
+          ul.center.hide-on-med-and-down.ul-flex
             li.navbar-link#news
               a(href='/news').waves-effect.waves-custom  NEWS
             li.navbar-link#blog_posts.waves-effect.waves-custom
