@@ -9,20 +9,8 @@ body {
 	}
 }
 
-.image-dark-gradient-mask {
-	bottom: 0;
-    content: "";
-    display: block;
-    height: 70%;
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-    background: -moz-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
-    background: -webkit-gradient(linear,left top,left bottom,color-stop(40%,rgba(0,0,0,0)),color-stop(100%,rgba(0,0,0,.7)));
-    background: -webkit-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
-    background: -o-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
-    background: -ms-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
-    background: linear-gradient(to bottom,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+.row {
+	margin-bottom: 0px;
 }
 
 // Header links
@@ -30,10 +18,6 @@ nav ul a, #burger_menu_icon {
 	// Link Color
 	color: $navbar-links-color;
 	font-weight: 900;
-}
-
-#burger_menu_icon {
-	//margin-left: 3%;
 }
 
 nav {
@@ -45,24 +29,88 @@ nav ul li.active {
 	border-top: 2px solid #b034d8;
 }
 
-.row {
-	margin-bottom: 0px;
-}
 
 #nav-logo, #nav-main, body {
 	background-color: $website-background-color;
 }
 
-#nav-logo {
+// Create the waves-custom ripple effect
+.waves-effect.waves-custom .waves-ripple {
+      background-color: $waves-custom-color;
+}
 
-	a{
-		height: 100%;
+//MAIN NAVBAR HEIGHT
 
-		img {
-			height: 100%;
+$main-navbar-height: 40px;
+
+nav#nav-main {
+    height: $main-navbar-height;
+    line-height: $main-navbar-height;
+
+    .nav-wrapper {
+    	ul, ul .navbar-link, ul .navbar-link a {
+    		height: 100%
+    	}
+
+    	li.social-button, li.social-button a, li.social-button a i {
+    		height: 100%;
+    	}
+
+    	li.social-button a i {
+    		line-height: 40px;
+    	}
+    }
+}
+
+//LOGO NAVBAR HEIGHT
+
+$logo-navbar-height: 100px;
+
+nav#nav-logo {
+	height: $logo-navbar-height;
+
+	.row, #logo-column, #logo-column a, #logo-column a img {
+		height: 100%
+	}
+
+	#logo-column {
+		line-height: 0px;
+
+		a, a img {
+			line-height: inherit;
 		}
 	}
 }
+
+@media #{$medium-and-down} {
+	$logo-navbar-height-mobile: 200px;
+
+	nav#nav-logo {
+		height: $logo-navbar-height-mobile;
+
+		#burger-menu-icon-column {
+			height: 100%;
+
+			#burger_menu_icon {
+				height: inherit;
+				line-height: $logo-navbar-height-mobile;
+			}
+		}
+	}
+}
+
+@media #{$medium-and-down} {
+	#burger_menu_icon i {
+		font-size: 5rem;
+	}
+}
+
+@media #{$small-and-down} {
+	#burger_menu_icon i {
+		font-size: 3.2rem;
+	}
+}
+
 
 #nav-main {
 
@@ -109,10 +157,6 @@ nav ul li.active {
 
 }
 
-// Create the waves-custom ripple effect
-.waves-effect.waves-custom .waves-ripple {
-      background-color: $waves-custom-color;
-}
 
 
 // Footer Text
@@ -133,97 +177,19 @@ footer.page-footer.container {
 }
 
 
-
-//MAIN NAVBAR HEIGHT
-
-$main-navbar-height: 40px;
-
-nav#nav-main {
-    height: $main-navbar-height;
-    line-height: $main-navbar-height;
-
-    .nav-wrapper {
-    	ul, ul .navbar-link, ul .navbar-link a {
-    		height: 100%
-    	}
-
-    	li.social-button, li.social-button a, li.social-button a i {
-    		height: 100%;
-    	}
-
-    	li.social-button a i {
-    		line-height: 40px;
-    	}
-    }
+.image-dark-gradient-mask {
+	bottom: 0;
+    content: "";
+    display: block;
+    height: 70%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    background: -moz-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(40%,rgba(0,0,0,0)),color-stop(100%,rgba(0,0,0,.7)));
+    background: -webkit-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+    background: -o-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+    background: -ms-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
 }
-
-//LOGO NAVBAR HEIGHT
-
-$logo-navbar-height: 100px;
-
-nav#nav-logo {
-	height: 100%;
-
-	#logo-column {
-		height: 100%;
-		line-height: 0px;
-
-		a, a img {
-			height: 100%;
-			line-height: inherit;
-		}
-	}
-}
-// nav#nav-logo .nav-wrapper .col.s11.l12.m12 {
-// 	height: $logo-navbar-height;
-// }
-
-// nav#nav-logo .nav-wrapper .col.s1.m1 {
-// 	height: $logo-navbar-height;
-// }
-
-// nav#nav-logo {
-//     height: $logo-navbar-height;
-//     //line-height: $logo-navbar-height;
-// }
-
-// nav#nav-logo i, nav#nav-logo [class^="mdi-"], nav#nav-logo [class*="mdi-"], nav#nav-logo i.material-icons {
-//     height: $logo-navbar-height;
-//     //line-height: $logo-navbar-height;
-// }
-
-// nav#nav-logo .button-collapse i {
-//     height: $logo-navbar-height;
-//     //line-height: $logo-navbar-height;
-// }
-
-// nav#nav-logo .brand-logo {
-//     font-size: $fonts-navbar-brand-logo-font-size;
-// }
-
-
-// @media #{$medium-and-down} {
-// 	$log-navbar-height-mobile: 200px;
-
-// 	nav .button-collapse i {
-// 		//font-size: 10rem;
-// 	}
-
-// 	nav#nav-logo, nav#nav-logo .nav-wrapper i, nav#nav-logo a.button-collapse, nav#nav-logo a.button-collapse i, nav#nav-logo a.brand-logo img {
-//         height: $log-navbar-height-mobile;
-//         //line-height: $log-navbar-height-mobile;
-//     }
-
-
-// 	nav#nav-logo a {
-// 		width: 95%;
-// 		height: $log-navbar-height-mobile;
-
-// 		img {
-// 			width: 100%;
-// 		}
-// 	}
-// }
-
-
 

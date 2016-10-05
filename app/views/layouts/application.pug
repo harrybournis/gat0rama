@@ -25,10 +25,10 @@ html
       //- Mobile Navbar
       nav#nav-logo
         .row
-          .col.s2.m2.l0.hide-on-large-only
+          .col.s1.m1.l0.hide-on-large-only#burger-menu-icon-column
             a#burger_menu_icon.button-collapse(href='#', data-activates='mobile-demo')
               i.fa.fa-bars.fa-2x
-          .col.s10.m10.l12#logo-column
+          .col.s11.m11.l12#logo-column
             a(href='/')
               <%= cache ['header', @settings] do %>
               <img class="responsive-img" src=<%= @settings.value["header_logo"] %>>
