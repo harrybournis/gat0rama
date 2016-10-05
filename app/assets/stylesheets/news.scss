@@ -126,7 +126,7 @@
 			text-align: center;
 
 			&.event {
-				background: #62bf87;
+				background: $calendar-event-color; //#62bf87;
 	    		color: white;
 	    		border-radius: 60%;
 				cursor: pointer;
