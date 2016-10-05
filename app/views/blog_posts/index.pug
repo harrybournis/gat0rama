@@ -2,7 +2,7 @@
 	#posts-list
 		<% @posts.limit(6).each_with_index do |post, index| %>
 		.post-item
-			<div class="col s12 l6 m6 image-column <%= 'push-m6 push-l6' if index % 2 == 1 %>">
+			<div class="col s12 m12 l6 image-column <%= 'push-l6' if index % 2 == 1 %>">
 
 				<%= link_to post do %>
 				.post-image
@@ -10,7 +10,7 @@
 				<% end %>
 
 			</div>
-			<div class="col s12 l6 m6 text-column <%= 'pull-m6 pull-l6' if index % 2 == 1 %>">
+			<div class="col s12 m12 l6 text-column <%= 'pull-l6' if index % 2 == 1 %>">
 
 				.post-date <%= post.published_at.to_date.to_formatted_s(:long_ordinal) %>
 				<%= link_to post do %>
