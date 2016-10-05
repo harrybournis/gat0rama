@@ -2,7 +2,7 @@
 <div id="news-row">
   <div class="container">
     <h3>Latest News</h3>
-    <div class="col s12 push-m8 push-l8 offset-m1 offset-l1 m3 l3">
+    <div class="col s12 m12 l3 push-l8 offset-l1">
       <div id="calendar">
         <div class="clndr-controls">
           <div class="clndr-previous-button">‹</div>
@@ -15,7 +15,7 @@
         <div class="divider"></div>
       </div>
     </div>
-    <div class="col s12 pull-m4 pull-l4 m8 l8">
+    <div class="col s12 m12 l8 pull-l4">
       <div id="news-index"><% @news.each do |news_item| %>
         <div class="news-post">
           <div class="date"><%= news_item.published_at.to_date.to_formatted_s(:long_ordinal) %></div><%= link_to news_item do %>

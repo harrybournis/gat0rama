@@ -17,5 +17,3 @@ $(document).on 'turbolinks:load', ->
 
 	# activate the waves effect on buttons
 	Waves.displayEffect()
-
-	alert $(window).width()
