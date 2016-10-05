@@ -3,6 +3,7 @@ class Post < ApplicationRecord
   # Associations
   has_many :tags, through: :taggings
   has_many :taggings, dependent: :destroy
+  has_one :event
 
   # Validations
   validates_presence_of :title, :subtitle, :body

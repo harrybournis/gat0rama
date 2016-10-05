@@ -4,6 +4,7 @@ FactoryGirl.define do
 		subtitle { Faker::Hacker.say_something_smart }
 		body { Faker::Hipster.paragraphs(5).join }
 		is_slider_post false
+		published_at { DateTime.now }
 		is_published true
 
 		factory :news_unpublished do

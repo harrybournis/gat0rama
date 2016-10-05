@@ -4,7 +4,13 @@ RSpec.describe News, type: :model do
 
 	subject(:news) { FactoryGirl.build(:news_unpublished) }
 
+	it 'factory is valid' do
+		expect(FactoryGirl.create(:news)).to be_truthy
+	end
+
 	it { should validate_absence_of :is_slider_post }
+
+	it { should have_one :event }
 
 	it 'validates that it cannot be slider post' do
 		news = News.new(title: 'title', subtitle: 'subtitle', body: 'body', is_slider_post: true)
