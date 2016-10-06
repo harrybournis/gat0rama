@@ -87,7 +87,7 @@ nav#nav-logo {
 }
 
 @media #{$medium-and-down} {
-	$logo-navbar-height-mobile: 300px;
+	$logo-navbar-height-mobile: 200px;
 
 	nav#nav-logo {
 		height: $logo-navbar-height-mobile;
@@ -97,10 +97,10 @@ nav#nav-logo {
 
 			#burger_menu_icon {
 				height: inherit;
-				line-height: $logo-navbar-height-mobile;
 
 				i {
 					padding-left: 5px;
+					line-height: $logo-navbar-height-mobile;
 				}
 			}
 		}
@@ -109,13 +109,13 @@ nav#nav-logo {
 
 @media #{$medium-and-down} {
 	#burger_menu_icon i {
-		font-size: 2rem;
+		font-size: 4rem;
 	}
 }
 
 @media #{$small-and-down} {
 	#burger_menu_icon i {
-		font-size: 1.5rem;
+		font-size: 2.5rem;
 	}
 }
 

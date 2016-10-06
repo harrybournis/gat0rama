@@ -12,8 +12,6 @@
 		<% end %>
 
 
-
-
 <% if @posts.length > 6 %>
 
 <% @posts.each_slice(6).with_index do |posts_chunk, index| %>
@@ -24,11 +22,12 @@
 		.col.s12.m12.l4
 			#home.card
 				.card-image
-					<img src=<%= @images.sample %>>
+					<img class="image-responsive" src=<%= @images.sample %>>
 					//-span.card-tag fashion
 					span.card-title
-						span.card-tag fashion
 						<%= post.title %>
+						span.card-tag fashion
+
 					//- span.card-content
 					//- 	p <%#= post.subtitle %>
 
