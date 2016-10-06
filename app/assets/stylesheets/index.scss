@@ -55,14 +55,15 @@
 			-webkit-filter: brightness(94%);
 			filter: brightness(94%);
 
-			height: inherit;
+			//height: inherit;
+			min-height: $index-post-height;
 		    //min-height: $index-post-height; //365px;
 		    //max-height: $index-post-width; //365px;
 
-		    @media #{$medium-and-down} {
-			    min-height: $index-post-height-mobile;
-			    max-height: $index-post-width-mobile;
-		    }
+		    // @media #{$medium-and-down} {
+			   //  min-height: $index-post-height-mobile;
+			   //  max-height: $index-post-width-mobile;
+		    // }
 		}
 
 		// Image Gradient Mask
