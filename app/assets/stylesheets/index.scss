@@ -48,13 +48,16 @@
 
 	.card-image  {
 		//@extend .z-depth-3;
+		height: inherit;
+		max-height: 100%;
 
 		img {
 			-webkit-filter: brightness(94%);
 			filter: brightness(94%);
 
-		    min-height: $index-post-height; //365px;
-		    max-height: $index-post-width; //365px;
+			height: inherit;
+		    //min-height: $index-post-height; //365px;
+		    //max-height: $index-post-width; //365px;
 
 		    @media #{$medium-and-down} {
 			    min-height: $index-post-height-mobile;

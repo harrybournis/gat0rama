@@ -15,7 +15,7 @@
 <div class="container">
   <div class="row"><% posts_chunk.each do |post| %>
     <div class="col s12 m12 l4">
-      <div class="card" id="home">
+      <div class="card large" id="home">
         <div class="card-image"><img class="image-responsive" src=<%= @images.sample %>><span class="card-title"><%= post.title %><span class="card-tag">fashion</span></span></div>
       </div>
     </div><% end %>
