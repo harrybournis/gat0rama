@@ -36,13 +36,13 @@
 			.col.s12.m12.l4.related-post
 				<%= link_to related do %>
 
-				.related-post
-					.post-thumbnail
-						<img class="responsive-img post-image" src=<%= @images.sample %>>
-					.post-date <%= related.published_at.to_date.to_formatted_s(:long_ordinal)  %>
-					.post-title <%= related.title %>
+
+				.post-thumbnail
+					<img class="responsive-img post-image" src=<%= @images.sample %>>
+				.post-date <%= related.published_at.to_date.to_formatted_s(:long_ordinal)  %>
+				.post-title <%= related.title %>
 				<% end %>
-					.post-subtitle <%= related.subtitle %>
+				.post-subtitle <%= related.subtitle %>
 
 			<% end %>
 	.row
