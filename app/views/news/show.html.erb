@@ -3,10 +3,11 @@
   <div class="container">
     <div class="col l10 m12 s12 offset-l1">
       <article id="posts-show">
-        <div id="post-title"><%= @news.title %></div>
-        <div id="post-subtitle"><%= @news.subtitle %></div>
+        <h2 id="post-title"><%= @news.title %></h2>
+        <h4 id="post-subtitle"><%= @news.subtitle %></h4>
         <div class="post-image-container"><img class="responsive-img post-image" src=<%= @images.sample %>></div>
-        <div id="post-content"><%= @news.body %>
+        <div id="post-content">
+          <p><%= @news.body %></p>
           <p><%= Faker::Hipster.paragraph %></p>
           <div class="post-image-container"><img class="responsive-img post-image" src=<%= @images.sample %>></div>
           <p><%= Faker::Hipster.paragraph %></p>
@@ -22,9 +23,8 @@
 <div class="container">
   <div class="row" id="related-posts-section">
     <section>
-      <h3 class="center-align">Related Posts</h3>
-      <!--.container--><% @news.related_posts.each do |related| %>
-      <div class="col s12 m12 l4"><%= link_to related do %>
+      <h2 class="center-align">Related Posts</h2><% @news.related_posts.each do |related| %>
+      <div class="col s12 m12 l4 related-post"><%= link_to related do %>
         <div class="related-post">
           <div class="post-thumbnail"><img class="responsive-img post-image" src=<%= @images.sample %>></div>
           <div class="post-date"><%= related.published_at.to_date.to_formatted_s(:long_ordinal)  %></div>

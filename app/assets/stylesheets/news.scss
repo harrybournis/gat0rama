@@ -8,25 +8,31 @@
 	.news-post {
 		width: 100%;
 		margin-bottom: 50px;
-		//margin-top: 50px;
 
 		.title {
-			//font-size: 2rem;
+			@extend h3;
 		}
 
 		.image {
 			width: 100%;
-
 		}
+
 		.date {
+			font-size: 1.2rem;
 			color: #929292;
 			margin-top: 10px;
     		margin-bottom: 10px;
 		}
 
 		.content {
-			//font-size: 1.25em;
+			@extend .flow-text;
+
 			margin-bottom: 30px;
+		}
+
+		.read-more {
+			font-size: 1.4rem;
+			color: #656565;
 		}
 
 		.footer {
@@ -42,6 +48,7 @@
 				@extend .l6;
 
 				p {
+					font-size: 1.3rem;
 					margin: 10px;
 				}
 			}
@@ -58,6 +65,7 @@
 					padding-left: 10px;
 					padding-right: 10px;
 					line-height: 42px;
+					font-size: 1.4rem;
 				}
 			}
 		}
@@ -67,9 +75,15 @@
 // Calendar
 #calendar {
 	margin-top: 50px;
-	width: 160px;
+	//width: 160px;
 
-	@media only screen and (max-width : 600px) {
+	&.pinned {
+		.clndr-controls {
+			width: 100%;
+		}
+	}
+
+	@media #{$medium-and-down} {
 		width: 100%;
 		margin-top: 0;
 	}
@@ -90,19 +104,20 @@
 			}
 
 			.clndr-previous-button {
-				font-size: 25px;
+				font-size: 2rem;
 			}
 
 			.clndr-next-button {
 				position: absolute;
 				top: 0;
 				right: 0;
-				font-size: 25px;
+				font-size: 2rem;
 
 			}
 		}
 
 		.month {
+			font-size: 1.2rem;
 			text-align: center;
 			margin-left: 33%;
 			margin-right: 33%;
@@ -111,7 +126,21 @@
 	}//.clndr-controls
 
 	table.clndr-table {
-		@extend .row;
+		width: 100%;
+		margin: 0;
+
+		thead {
+			font-size: 1.2rem;
+		}
+
+		tbody {
+			font-size: 1.1rem;
+		}
+
+		td {
+			width: auto;
+			height: auto;
+		}
 
 		tbody tr td, thead tr td {
 			border-radius: 0;
@@ -148,12 +177,20 @@
 
 .tooltip-custom {
 	padding: 20px;
+	font-size: 1.4rem;
 }
 
-.pagination li.active {
-	background-color: #b1b1b1;
+.pagination li {
 
-	a {
-  		color: #fff;
+	i {
+		vertical-align: middle;
+	}
+
+	&.active {
+		background-color: #b1b1b1;
+
+		a {
+	  		color: #fff;
+		}
 	}
 }

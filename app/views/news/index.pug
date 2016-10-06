@@ -1,6 +1,6 @@
 #news-row
 	.container
-		h3 Latest News
+		h2 Latest News
 		.col.s12.m12.l3.push-l8.offset-l1
 			#calendar
 				.clndr-controls
@@ -28,7 +28,8 @@
 						<% end %>
 						.image
 							<img class="responsive-img" src=<%= @images.sample %>>
-						.content <%= news_item.subtitle %>
+						p.content.truncate <%= news_item.body %>
+						<%= link_to news_item, class: 'read-more' do %> Read More <% end %>
 						.footer
 							span.comments
 								p 0 comments
