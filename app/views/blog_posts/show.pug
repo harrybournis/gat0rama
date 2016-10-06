@@ -3,13 +3,14 @@
 		.col.l10.m12.s12.offset-l1
 			article#posts-show
 
-				#post-title <%= @post.title %>
-				#post-subtitle <%= @post.subtitle %>
+				h2#post-title <%= @post.title %>
+				h4#post-subtitle <%= @post.subtitle %>
 
 				.post-image-container
 					<img class="responsive-img post-image" src=<%= @images.sample %>>
 
-				#post-content <%= @post.body %>
+				#post-content
+					p <%= @post.body %>
 					p <%= Faker::Hipster.paragraph %>
 
 					.post-image-container
@@ -26,11 +27,11 @@
 						<img class="responsive-img post-image" src=<%= @images.sample %>>
 
 .divider.end-of-post
+
 .container
 	.row#related-posts-section
 		section
-			h3.center-align Related Posts
-			//.container
+			h2.center-align Related Posts
 			<% @post.related_posts.each do |related| %>
 			.col.s12.m12.l4.related-post
 				<%= link_to related do %>

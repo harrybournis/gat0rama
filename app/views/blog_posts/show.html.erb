@@ -3,10 +3,11 @@
   <div class="container">
     <div class="col l10 m12 s12 offset-l1">
       <article id="posts-show">
-        <div id="post-title"><%= @post.title %></div>
-        <div id="post-subtitle"><%= @post.subtitle %></div>
+        <h2 id="post-title"><%= @post.title %></h2>
+        <h4 id="post-subtitle"><%= @post.subtitle %></h4>
         <div class="post-image-container"><img class="responsive-img post-image" src=<%= @images.sample %>></div>
-        <div id="post-content"><%= @post.body %>
+        <div id="post-content">
+          <p><%= @post.body %></p>
           <p><%= Faker::Hipster.paragraph %></p>
           <div class="post-image-container"><img class="responsive-img post-image" src=<%= @images.sample %>></div>
           <p><%= Faker::Hipster.paragraph %></p>
@@ -22,8 +23,7 @@
 <div class="container">
   <div class="row" id="related-posts-section">
     <section>
-      <h3 class="center-align">Related Posts</h3>
-      <!--.container--><% @post.related_posts.each do |related| %>
+      <h2 class="center-align">Related Posts</h2><% @post.related_posts.each do |related| %>
       <div class="col s12 m12 l4 related-post"><%= link_to related do %>
         <div class="related-post">
           <div class="post-thumbnail"><img class="responsive-img post-image" src=<%= @images.sample %>></div>

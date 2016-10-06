@@ -14,9 +14,9 @@
 
 				.post-date <%= post.published_at.to_date.to_formatted_s(:long_ordinal) %>
 				<%= link_to post do %>
-				h5.post-title <%= post.title %>
+				h3.post-title <%= post.title %>
 				<% end %>
-				p.post-subtitle <%= post.subtitle %>
+				h5.post-subtitle <%= post.subtitle %>
 
 				<%= link_to post do %>
 				p.more More...
