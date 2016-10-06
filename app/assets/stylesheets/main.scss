@@ -3,11 +3,11 @@ body {
 	font-family: 'garamond-regular';
 }
 
-@media #{$medium-and-down} {
-	body {
-		font-size: 3rem;
-	}
-}
+// @media #{$medium-and-down} {
+// 	body {
+// 		font-size: 3rem;
+// 	}
+// }
 
 .row {
 	margin-bottom: 0px;
@@ -36,7 +36,7 @@ nav ul li.active {
 
 // Create the waves-custom ripple effect
 .waves-effect.waves-custom .waves-ripple {
-      background-color: $waves-custom-color;
+	background-color: $waves-custom-color;
 }
 
 //MAIN NAVBAR HEIGHT
@@ -166,18 +166,18 @@ nav#nav-logo {
 }
 
 // SIde nav
-.side-nav {
-	width: 500px;
+// .side-nav {
+// 	width: 500px;
 
-	li {
-		margin: 5% 15%;
-	}
+// 	li {
+// 		margin: 5% 15%;
+// 	}
 
-	a {
-		font-size: 1.5rem;
+// 	a {
+// 		font-size: 1.5rem;
 
-	}
-}
+// 	}
+// }
 
 // Footer Text
 footer.page-footer .container .row a,
