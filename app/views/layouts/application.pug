@@ -3,6 +3,7 @@ html
   head
     title Gat0rama
     <%= csrf_meta_tags %>
+    <meta name="theme-color" content="#000000" />
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -50,7 +51,7 @@ html
         .nav-wrapper
           ul.center.hide-on-med-and-down.ul-flex
             li.navbar-link#news
-              a(href='/news').waves-effect.waves-custom  NEWS
+              a(href='/news').waves-effect.waves-custom NEWS
             li.navbar-link#blog_posts
               a(href='/blog_posts').waves-effect.waves-custom  FEATURES
             li.navbar-link#about
