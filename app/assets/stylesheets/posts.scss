@@ -14,7 +14,8 @@
 		.post-title {
 			font-family: $fonts-post-title;
 		    color: black;
-		    margin-bottom: 25px;
+		    margin-bottom: 40px;
+		    margin-top: 9px;
 		}
 
 		.post-subtitle {
@@ -38,18 +39,6 @@
 			height: $posts-index-post-height;
 			position: relative;
 
-			// dagwmeni gwnia
-			// &:after {
-			//     content: "";
-			//     position: absolute;
-			//     bottom: 0;
-			//     left: 0;
-			//     background-color: white;
-			//     width: 30px;
-			//     height: 10%;
-			//     border-radius: 0% 100% 0% 0%;
-			// }
-
 			img {
 				width: 100%;
 				height: 100%;
@@ -59,37 +48,10 @@
 			}
 		}
 
-		// &:hover img {
-		// 			//&:first-child:before {
-		// 	bottom: 0;
-		//     content: "";
-		//     display: block;
-		//     height: 70%;
-		//     width: 100%;
-		//     position: absolute;
-		//     z-index: 1;
-		//     background: -moz-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
-		//     background: -webkit-gradient(linear,left top,left bottom,color-stop(40%,rgba(0,0,0,0)),color-stop(100%,rgba(0,0,0,.7)));
-		//     background: -webkit-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
-		//     background: -o-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
-		//     background: -ms-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
-		//     background: linear-gradient(to bottom,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
-		// //}
-		// }
-
-		// &:hover img {
-		// 	//border-radius: 0 0 80% 0%;
-		// 	background-color: white;
-
-		// 	&.even {
-		// 		//border-radius: 0 0 0% 80%;
-		// 	}
-		// }
-
 		.more {
 			color: black;
     		font-weight: bold;
-    		font-size: 1.2rem;
+    		font-size: 1.5rem;
     		bottom: 0;
     		position: absolute;
 		}
