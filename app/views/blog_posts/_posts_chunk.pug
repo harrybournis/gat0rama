@@ -4,21 +4,25 @@
 .posts-chunk
 	<% while i < posts_chunk.length do %>
 	<div class="col s12 m12 l<%= pattern[j] %>">
+	<%= link_to posts_chunk[i] do %>
 		#home.card.medium
 			.card-image
 				<img class="image-responsive" src=<%= @images.sample %>>
 				span.card-title
 					<%= posts_chunk[i].title %>
 					span.card-tag fashion
+	<% end %>
 	</div>
 
 	<div class="col s12 m12 l<%= 12 - pattern[j] %>">
+	<%= link_to posts_chunk[i + 1] do %>
 		#home.card.medium
 			.card-image
 				<img class="image-responsive" src=<%= @images.sample %>>
 				span.card-title
 					<%= posts_chunk[i + 1].title %>
 					span.card-tag fashion
+	<% end %>
 	</div>
 	<% i += 2; j += 1 %>
 	<% end %>
