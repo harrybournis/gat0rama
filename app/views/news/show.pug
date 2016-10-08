@@ -7,24 +7,24 @@
 				h4#post-subtitle <%= @news.subtitle %>
 
 				.post-image-container
-					<img class="responsive-img post-image" src=<%= @images.sample %>>
+					<img class="responsive-img post-image materialboxed" width="650" src=<%= @images.sample %>>
 
 				#post-content
 					p <%= @news.body %>
 					p <%= Faker::Hipster.paragraph %>
 
 					.post-image-container
-						<img class="responsive-img post-image" src=<%= @images.sample %>>
+						<img class="responsive-img post-image materialboxed" width="650" src=<%= @images.sample %>>
 
 					p <%= Faker::Hipster.paragraph %>
 
 					.post-image-container
-						<img class="responsive-img post-image" src=<%= @images.sample %>>
+						<img class="responsive-img post-image materialboxed"  width="650" src=<%= @images.sample %>>
 
 					p <%= Faker::Hipster.paragraph(2) %>
 
 					.post-image-container
-						<img class="responsive-img post-image" src=<%= @images.sample %>>
+						<img class="responsive-img post-image materialboxed" width="650" src=<%= @images.sample %>>
 
 .divider.end-of-post
 
@@ -36,6 +36,8 @@
 		#disqus_thread
 		script.
 			$(document).on('turbolinks:load', function () {
+				$('.materialboxed').materialbox();
+
 				var disqus_config = function () {
 				this.page.url = "<%= request.original_url %>";
 				this.page.identifier = "<%= @news.id %>";

@@ -5,15 +5,15 @@
       <article id="posts-show">
         <h2 id="post-title"><%= @post.title %></h2>
         <h4 id="post-subtitle"><%= @post.subtitle %></h4>
-        <div class="post-image-container"><img class="responsive-img post-image" src=<%= @images.sample %>></div>
+        <div class="post-image-container"><img class="responsive-img post-image materialboxed" src=<%= @images.sample %>></div>
         <div id="post-content">
           <p><%= @post.body %></p>
           <p><%= Faker::Hipster.paragraph %></p>
-          <div class="post-image-container"><img class="responsive-img post-image" src=<%= @images.sample %>></div>
+          <div class="post-image-container"><img class="responsive-img post-image materialboxed" src=<%= @images.sample %>></div>
           <p><%= Faker::Hipster.paragraph %></p>
-          <div class="post-image-container"><img class="responsive-img post-image" src=<%= @images.sample %>></div>
+          <div class="post-image-container"><img class="responsive-img post-image materialboxed" src=<%= @images.sample %>></div>
           <p><%= Faker::Hipster.paragraph(2) %></p>
-          <div class="post-image-container"><img class="responsive-img post-image" src=<%= @images.sample %>></div>
+          <div class="post-image-container"><img class="responsive-img post-image materialboxed" src=<%= @images.sample %>></div>
         </div>
       </article>
     </div>
@@ -25,6 +25,8 @@
     <div id="disqus_thread"></div>
     <script>
       $(document).on('turbolinks:load', function () {
+      	$('.materialboxed').materialbox();
+      
       	var disqus_config = function () {
       	this.page.url = "<%= request.original_url %>";
       	this.page.identifier = "<%= @post.id %>";
