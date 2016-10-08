@@ -1,5 +1,21 @@
+#search-row {
+	@extend .row;
+
+	.input-field {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+
+		.prefix.active {
+			color: $search-highlight-color;
+		}
+
+		label.active {
+			color: $search-highlight-color;
+		}
+	}
+}
+
 #posts-list {
-	@extend .container;
 
 	.post-item {
 		@extend .row;

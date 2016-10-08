@@ -1,4 +1,11 @@
-.row
+.container
+	#search-row
+		.col.s12.m12.l8.offset-l2
+			.row
+				.input-field.col.s12
+					i.prefix.fa.fa-search
+					input#posts-search-input.autocomplete(type='text')
+					label(for='autocomplete-input') Search
 	#posts-list
 		<% @posts.limit(6).each_with_index do |post, index| %>
 		.post-item
@@ -25,3 +32,7 @@
 					<% end %>
 			</div>
 		<% end %>
+
+
+script.
+	initialize_search()
