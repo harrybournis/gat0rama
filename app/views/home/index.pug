@@ -17,21 +17,16 @@
 <% @posts.each_slice(6).with_index do |posts_chunk, index| %>
 
 .container
-	.row
-		<% posts_chunk.each do |post| %>
-		.col.s12.m12.l4
-			#home.card.large
-				.card-image
-					<img class="image-responsive" src=<%= @images.sample %>>
-					//-span.card-tag fashion
-					span.card-title
-						<%= post.title %>
-						span.card-tag fashion
-
-					//- span.card-content
-					//- 	p <%#= post.subtitle %>
-
-		<% end %>
+	<%= render 'blog_posts/posts_chunk', posts_chunk: posts_chunk %>
+		//- <#% posts_chunk.each do |post| %>
+		//- .col.s12.m12.l4
+		//- 	#home.card.large
+		//- 		.card-image
+		//- 			<img class="image-responsive" src=<%#= @images.sample %>>
+		//- 			span.card-title
+		//- 				<%#= post.title %>
+		//- 				span.card-tag fashion
+		//- <#% end %>
 
 
 <% if posts_chunk.length == 6 %>
@@ -53,14 +48,9 @@
 			#home.card.large
 				.card-image
 					<img class="image-responsive" src=<%= @images.sample %>>
-					//-span.card-tag fashion
 					span.card-title
 						<%= post.title %>
 						span.card-tag fashion
-
-					//- span.card-content
-					//- 	p <%#= post.subtitle %>
-
 		<% end %>
 
 <% end %>

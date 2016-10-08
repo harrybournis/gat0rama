@@ -12,15 +12,7 @@
   </ul>
 </div><% if @posts.length > 6 %>
 <% @posts.each_slice(6).with_index do |posts_chunk, index| %>
-<div class="container">
-  <div class="row"><% posts_chunk.each do |post| %>
-    <div class="col s12 m12 l4">
-      <div class="card large" id="home">
-        <div class="card-image"><img class="image-responsive" src=<%= @images.sample %>><span class="card-title"><%= post.title %><span class="card-tag">fashion</span></span></div>
-      </div>
-    </div><% end %>
-  </div>
-</div><% if posts_chunk.length == 6 %>
+<div class="container"><%= render 'blog_posts/posts_chunk', posts_chunk: posts_chunk %></div><% if posts_chunk.length == 6 %>
 <div class="row">
   <div class="parallax-container">
     <div class="parallax"><img src=<%= @paralax_images.sample.url %>></div>
