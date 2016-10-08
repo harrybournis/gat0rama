@@ -1,43 +1,51 @@
+<% pattern = pick_random_pattern; i = 0; j = 0 %>
 .posts-chunk
-	.col.s12.m12.l9
+	<% while i < 6 do %>
+	<div class="col s12 m12 l<%= pattern[j] %>">
 		#home.card.medium
 			.card-image
 				<img class="image-responsive" src=<%= @images.sample %>>
 				span.card-title
-					<%= posts_chunk[0].title %>
+					<%= posts_chunk[i].title %>
 					span.card-tag fashion
-	.col.s12.m12.l3
+	</div>
+
+	<div class="col s12 m12 l<%= 12 - pattern[j] %>">
 		#home.card.medium
 			.card-image
 				<img class="image-responsive" src=<%= @images.sample %>>
 				span.card-title
-					<%= posts_chunk[1].title %>
+					<%= posts_chunk[i + 1].title %>
 					span.card-tag fashion
-	.col.s12.m12.l5
-		#home.card.medium
-			.card-image
-				<img class="image-responsive" src=<%= @images.sample %>>
-				span.card-title
-					<%= posts_chunk[2].title %>
-					span.card-tag fashion
-	.col.s12.m12.l7
-		#home.card.medium
-			.card-image
-				<img class="image-responsive" src=<%= @images.sample %>>
-				span.card-title
-					<%= posts_chunk[3].title %>
-					span.card-tag fashion
-	.col.s12.m12.l6
-		#home.card.medium
-			.card-image
-				<img class="image-responsive" src=<%= @images.sample %>>
-				span.card-title
-					<%= posts_chunk[4].title %>
-					span.card-tag fashion
-	.col.s12.m12.l6
-		#home.card.medium
-			.card-image
-				<img class="image-responsive" src=<%= @images.sample %>>
-				span.card-title
-					<%= posts_chunk[5].title %>
-					span.card-tag fashion
+	</div>
+	<% i += 2; j += 1 %>
+	<% end %>
+	//- .col.s12.m12<%= pattern[1] %>
+	//- 	#home.card.medium
+	//- 		.card-image
+	//- 			<img class="image-responsive" src=<%= @images.sample %>>
+	//- 			span.card-title
+	//- 				<%= posts_chunk[2].title %>
+	//- 				span.card-tag fashion
+	//- .col.s12.m12<%= 12 - pattern[1] %>
+	//- 	#home.card.medium
+	//- 		.card-image
+	//- 			<img class="image-responsive" src=<%= @images.sample %>>
+	//- 			span.card-title
+	//- 				<%= posts_chunk[3].title %>
+	//- 				span.card-tag fashion
+
+	//- .col.s12.m12<%= pattern[2] %>
+	//- 	#home.card.medium
+	//- 		.card-image
+	//- 			<img class="image-responsive" src=<%= @images.sample %>>
+	//- 			span.card-title
+	//- 				<%= posts_chunk[4].title %>
+	//- 				span.card-tag fashion
+	//- .col.s12.m12<%= 12 - pattern[2] %>
+	//- 	#home.card.medium
+	//- 		.card-image
+	//- 			<img class="image-responsive" src=<%= @images.sample %>>
+	//- 			span.card-title
+	//- 				<%= posts_chunk[5].title %>
+	//- 				span.card-tag fashion

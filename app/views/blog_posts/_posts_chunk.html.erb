@@ -1,33 +1,13 @@
-
-<div class="posts-chunk">
-  <div class="col s12 m12 l9">
-    <div class="card medium" id="home">
-      <div class="card-image"><img class="image-responsive" src=<%= @images.sample %>><span class="card-title"><%= posts_chunk[0].title %><span class="card-tag">fashion</span></span></div>
-    </div>
-  </div>
-  <div class="col s12 m12 l3">
-    <div class="card medium" id="home">
-      <div class="card-image"><img class="image-responsive" src=<%= @images.sample %>><span class="card-title"><%= posts_chunk[1].title %><span class="card-tag">fashion</span></span></div>
-    </div>
-  </div>
-  <div class="col s12 m12 l5">
-    <div class="card medium" id="home">
-      <div class="card-image"><img class="image-responsive" src=<%= @images.sample %>><span class="card-title"><%= posts_chunk[2].title %><span class="card-tag">fashion</span></span></div>
-    </div>
-  </div>
-  <div class="col s12 m12 l7">
-    <div class="card medium" id="home">
-      <div class="card-image"><img class="image-responsive" src=<%= @images.sample %>><span class="card-title"><%= posts_chunk[3].title %><span class="card-tag">fashion</span></span></div>
-    </div>
-  </div>
-  <div class="col s12 m12 l6">
-    <div class="card medium" id="home">
-      <div class="card-image"><img class="image-responsive" src=<%= @images.sample %>><span class="card-title"><%= posts_chunk[4].title %><span class="card-tag">fashion</span></span></div>
-    </div>
-  </div>
-  <div class="col s12 m12 l6">
-    <div class="card medium" id="home">
-      <div class="card-image"><img class="image-responsive" src=<%= @images.sample %>><span class="card-title"><%= posts_chunk[5].title %><span class="card-tag">fashion</span></span></div>
-    </div>
-  </div>
+<% pattern = pick_random_pattern; i = 0; j = 0 %>
+<div class="posts-chunk"><% while i < 6 do %>
+<div class="col s12 m12 l<%= pattern[j] %>">
+  <div class="card medium" id="home">
+    <div class="card-image"><img class="image-responsive" src=<%= @images.sample %>><span class="card-title"><%= posts_chunk[i].title %><span class="card-tag">fashion</span></span></div>
+  </div></div>
+<div class="col s12 m12 l<%= 12 - pattern[j] %>">
+  <div class="card medium" id="home">
+    <div class="card-image"><img class="image-responsive" src=<%= @images.sample %>><span class="card-title"><%= posts_chunk[i + 1].title %><span class="card-tag">fashion</span></span></div>
+  </div></div>
+<% i += 2; j += 1 %>
+<% end %>
 </div>
