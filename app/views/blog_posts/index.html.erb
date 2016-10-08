@@ -6,11 +6,18 @@
       <div class="post-image"><img class="responsive-img post-image <%= 'even' if index % 2 == 1 %>" src=<%= @images.sample %>></div><% end %>
 </div>
 <div class="col s12 m12 l6 text-column <%= 'pull-l6' if index % 2 == 1 %>">
-      <div class="post-date"><%= post.published_at.to_date.to_formatted_s(:long_ordinal) %></div><%= link_to post do %>
-      <h3 class="post-title"><%= post.title %></h3><% end %>
-      <h5 class="post-subtitle"><%= post.subtitle %></h5><%= link_to post do %>
-      <p class="more">More...</p><% end %>
-</div>
+      <div class="row col s12">
+        <div class="post-date"><%= post.published_at.to_date.to_formatted_s(:long_ordinal) %></div>
+      </div>
+      <div class="row col s12"><%= link_to post do %>
+        <h3 class="post-title"><%= post.title %></h3><% end %>
+      </div>
+      <div class="row col s12">
+        <h5 class="post-subtitle"><%= post.subtitle %></h5>
+      </div>
+      <div class="row col s12"><%= link_to post do %>
+        <p class="more">More...</p><% end %>
+      </div></div>
     </div><% end %>
   </div>
 </div>

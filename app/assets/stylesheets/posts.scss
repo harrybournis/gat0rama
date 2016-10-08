@@ -14,13 +14,12 @@
 		.post-title {
 			font-family: $fonts-post-title;
 		    color: black;
-		    margin-bottom: 40px;
+		    margin-bottom: 10px;
 		    margin-top: 9px;
 		}
 
 		.post-subtitle {
 			color: black;
-			//font-size: 1.25rem;
 		}
 
 		.image-column {
@@ -30,14 +29,17 @@
 
 		.text-column {
 			position: relative;
-			height: $posts-index-post-height;
+
+			@media #{$large-and-up} {
+				height: $posts-index-post-height;
+			}
 		}
 
 		.post-image {
 			background-color: transparent;
 			width: 100%;
-			height: $posts-index-post-height;
 			position: relative;
+			height: $posts-index-post-height;
 
 			img {
 				width: 100%;
@@ -46,14 +48,24 @@
 				border-radius: 0 0 0 0;  // One edge only
 				transition: border-radius 0.4s ease-in-out;
 			}
+
+			// @media #{$large-and-up} {
+			// }
 		}
 
 		.more {
 			color: black;
     		font-weight: bold;
     		font-size: 1.5rem;
-    		bottom: 0;
-    		position: absolute;
+
+    		@media #{$large-and-up} {
+    			bottom: 0;
+    			position: absolute;
+    		}
+
+			@media #{$medium-and-down} {
+				margin-bottom: 40px;
+			}
 		}
 	}
 }

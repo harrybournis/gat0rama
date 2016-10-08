@@ -11,15 +11,17 @@
 
 			</div>
 			<div class="col s12 m12 l6 text-column <%= 'pull-l6' if index % 2 == 1 %>">
-
-				.post-date <%= post.published_at.to_date.to_formatted_s(:long_ordinal) %>
-				<%= link_to post do %>
-				h3.post-title <%= post.title %>
-				<% end %>
-				h5.post-subtitle <%= post.subtitle %>
-
-				<%= link_to post do %>
-				p.more More...
-				<% end %>
+				.row.col.s12
+					.post-date <%= post.published_at.to_date.to_formatted_s(:long_ordinal) %>
+				.row.col.s12
+					<%= link_to post do %>
+					h3.post-title <%= post.title %>
+					<% end %>
+				.row.col.s12
+					h5.post-subtitle <%= post.subtitle %>
+				.row.col.s12
+					<%= link_to post do %>
+					p.more More...
+					<% end %>
 			</div>
 		<% end %>
