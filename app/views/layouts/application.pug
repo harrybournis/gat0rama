@@ -35,6 +35,23 @@ html
               <img class="responsive-img" src=<%= @settings.value["header_logo"] %>>
               <% end %>
         ul#mobile-demo.side-nav
+          li.social-buttons
+            ul.social-buttons-list
+              li.social-button
+                a(href='#/').waves-effect.waves-custom
+                  i.fa.fa-twitter.fa-2x(aria-hidden='true')
+
+              li.social-button
+                a(href='#/').waves-effect.waves-custom
+                  i.fa.fa-facebook.fa-2x(aria-hidden='true')
+
+              li.social-button
+                a(href='#/').waves-effect.waves-custom
+                  i.fa.fa-instagram.fa-2x(aria-hidden='true')
+
+              li.social-button
+                a(href='#/').waves-effect.waves-custom
+                  i.fa.fa-tumblr.fa-2x(aria-hidden='true')
           li
             a(href='/news').waves-effect.waves-custom
               p NEWS
@@ -50,6 +67,7 @@ html
           li
             a(href='/contribute').waves-effect.waves-custom
               p CONTRIBUTE
+
 
       //- Desktop Navbar
       nav#nav-main.hide-on-med-and-down

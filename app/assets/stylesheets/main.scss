@@ -136,6 +136,44 @@ nav#nav-logo {
 		}
 	}
 
+	li.social-buttons {
+		// position: absolute;
+		// bottom: 0;
+		// left: 0;
+		//width: 100%;
+
+		ul {
+			display: -webkit-flex;
+			display: flex;
+			flex-direction: row;
+			-webkit-flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+
+			margin: 20px 0;
+
+			li {
+				flex: 20 10 auto;
+
+				a {
+					// padding-left: 1rem;
+					// padding-right: 1rem;
+					display: -webkit-flex;
+					display: flex;
+					flex-direction: row;
+					-webkit-flex-direction: row;
+					flex-wrap: nowrap;
+					justify-content: center;
+
+					i{
+						margin: 0;
+						font-size: 2rem;
+						//float: left;
+					}
+				}
+			}
+		}
+	}
 	// li a p {
 	// 	margin: 0;
 	// 	padding: 0;
