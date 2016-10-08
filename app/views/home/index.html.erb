@@ -31,8 +31,8 @@
 <div class="container">
   <div class="row"><% @posts.each do |post| %>
     <div class="col s12 m12 l4">
-      <div class="card">
-        <div class="card-image"><img src=<%= @images.sample %>><span class="card-tag">fashion</span><span class="card-title"><%= post.title %></span></div>
+      <div class="card large" id="home">
+        <div class="card-image"><img class="image-responsive" src=<%= @images.sample %>><span class="card-title"><%= post.title %><span class="card-tag">fashion</span></span></div>
       </div>
     </div><% end %>
   </div>

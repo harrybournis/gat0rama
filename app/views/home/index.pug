@@ -50,11 +50,14 @@
 	.row
 		<% @posts.each do |post| %>
 		.col.s12.m12.l4
-			.card
+			#home.card.large
 				.card-image
-					<img src=<%= @images.sample %>>
-					span.card-tag fashion
-					span.card-title <%= post.title %>
+					<img class="image-responsive" src=<%= @images.sample %>>
+					//-span.card-tag fashion
+					span.card-title
+						<%= post.title %>
+						span.card-tag fashion
+
 					//- span.card-content
 					//- 	p <%#= post.subtitle %>
 
