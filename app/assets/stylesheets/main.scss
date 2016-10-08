@@ -119,6 +119,30 @@ nav#nav-logo {
 	}
 }
 
+#mobile-demo.side-nav {
+	width: 500px;
+
+	li {
+		//margin: 5% 15%;
+		padding-bottom: 20px;
+
+		a {
+			height: 100%;
+		}
+
+		a p {
+			font-size: 2rem;
+			padding: 0.5rem 0;
+		}
+	}
+
+	// li a p {
+	// 	margin: 0;
+	// 	padding: 0;
+	// 	padding-bottom: 10px;
+	// 	font-size: 2rem;
+	// }
+}
 
 #nav-main {
 
@@ -165,19 +189,7 @@ nav#nav-logo {
 
 }
 
-// SIde nav
-// .side-nav {
-// 	width: 500px;
-
-// 	li {
-// 		margin: 5% 15%;
-// 	}
-
-// 	a {
-// 		font-size: 1.5rem;
-
-// 	}
-// }
+//SIde nav
 
 // Footer Text
 footer.page-footer .container .row a,
