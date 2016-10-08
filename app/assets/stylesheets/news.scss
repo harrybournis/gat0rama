@@ -155,16 +155,35 @@
 			text-align: center;
 
 			&.event {
-				background: $calendar-event-color; //#62bf87;
-	    		color: white;
-	    		border-radius: 60%;
-				cursor: pointer;
-				cursor: hand;
+				// background: $calendar-event-color; //#62bf87;
+	   //  		color: white;
+	   //  		border-radius: 60%;
+				// cursor: pointer;
+				// cursor: hand;
+
+				.day-contents {
+					@media #{$medium-and-down} {
+						background: $calendar-event-color; //#62bf87;
+	    				color: white;
+					    // height: 40px;
+					    // width: 40px;
+
+	    				cursor: pointer;
+						cursor: hand;
+					}
+				}
 			}
 
 			.day-contents {
 				height: 15px;
 				line-height: 15px;
+
+				@media #{$medium-and-down} {
+				    height: 40px;
+				    width: 40px;
+				    border-radius: 50%;
+			    	padding-top: 12px;
+				}
 			}
 		}
 	}
