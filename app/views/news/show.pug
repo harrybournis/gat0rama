@@ -29,22 +29,9 @@
 .divider.end-of-post
 
 .container
-	.row#related-posts-section
-		section
-			h2.center-align Related Posts
-			<% @news.related_posts.each do |related| %>
-			.col.s12.m12.l4.related-post
-				<%= link_to related do %>
 
+	<%= render 'blog_posts/related_posts', post: @news %>
 
-				.post-thumbnail
-					<img class="responsive-img post-image" src=<%= @images.sample %>>
-				.post-date <%= related.published_at.to_date.to_formatted_s(:long_ordinal)  %>
-				.post-title <%= related.title %>
-				<% end %>
-				.post-subtitle <%= related.subtitle %>
-
-			<% end %>
 	.row
 		#disqus_thread
 		script.

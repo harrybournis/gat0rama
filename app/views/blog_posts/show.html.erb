@@ -20,18 +20,7 @@
   </div>
 </div>
 <div class="divider end-of-post"></div>
-<div class="container">
-  <div class="row" id="related-posts-section">
-    <section>
-      <h2 class="center-align">Related Posts</h2><% @post.related_posts.each do |related| %>
-      <div class="col s12 m12 l4 related-post"><%= link_to related do %>
-        <div class="post-thumbnail"><img class="responsive-img post-image" src=<%= @images.sample %>></div>
-        <div class="post-date"><%= related.published_at.to_date.to_formatted_s(:long_ordinal)  %></div>
-        <div class="post-title"><%= related.title %></div><% end %>
-        <div class="post-subtitle"><%= related.subtitle %></div>
-      </div><% end %>
-    </section>
-  </div>
+<div class="container"><%= render 'related_posts', post: @post %>
   <div class="row">
     <div id="disqus_thread"></div>
     <script>
