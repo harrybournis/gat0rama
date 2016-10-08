@@ -20,12 +20,4 @@
 </div><% end %>
 <% end %>
 <% else %>
-<div class="container">
-  <div class="row"><% @posts.each do |post| %>
-    <div class="col s12 m12 l4">
-      <div class="card large" id="home">
-        <div class="card-image"><img class="image-responsive" src=<%= @images.sample %>><span class="card-title"><%= post.title %><span class="card-tag">fashion</span></span></div>
-      </div>
-    </div><% end %>
-  </div>
-</div><% end %>
+<div class="container"><%= render 'blog_posts/posts_chunk', posts_chunk: @posts %></div><% end %>

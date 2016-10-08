@@ -14,20 +14,11 @@
 
 <% if @posts.length > 6 %>
 
+
 <% @posts.each_slice(6).with_index do |posts_chunk, index| %>
 
 .container
 	<%= render 'blog_posts/posts_chunk', posts_chunk: posts_chunk %>
-		//- <#% posts_chunk.each do |post| %>
-		//- .col.s12.m12.l4
-		//- 	#home.card.large
-		//- 		.card-image
-		//- 			<img class="image-responsive" src=<%#= @images.sample %>>
-		//- 			span.card-title
-		//- 				<%#= post.title %>
-		//- 				span.card-tag fashion
-		//- <#% end %>
-
 
 <% if posts_chunk.length == 6 %>
 .row
@@ -36,22 +27,13 @@
 			<img src=<%= @paralax_images.sample.url %>>
 <% end %>
 
-
 <% end %>
+
 
 <% else %>
 
 .container
-	.row
-		<% @posts.each do |post| %>
-		.col.s12.m12.l4
-			#home.card.large
-				.card-image
-					<img class="image-responsive" src=<%= @images.sample %>>
-					span.card-title
-						<%= post.title %>
-						span.card-tag fashion
-		<% end %>
+	<%= render 'blog_posts/posts_chunk', posts_chunk: @posts %>
 
 <% end %>
 

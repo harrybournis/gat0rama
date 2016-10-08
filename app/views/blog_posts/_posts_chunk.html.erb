@@ -1,5 +1,6 @@
+<% if posts_chunk.length % 2 == 0 %>
 <% pattern = pick_random_pattern; i = 0; j = 0 %>
-<div class="posts-chunk"><% while i < 6 do %>
+<div class="posts-chunk"><% while i < posts_chunk.length do %>
 <div class="col s12 m12 l<%= pattern[j] %>">
   <div class="card medium" id="home">
     <div class="card-image"><img class="image-responsive" src=<%= @images.sample %>><span class="card-title"><%= posts_chunk[i].title %><span class="card-tag">fashion</span></span></div>
@@ -10,4 +11,11 @@
   </div></div>
 <% i += 2; j += 1 %>
 <% end %>
-</div>
+</div><% else %>
+<div class="posts-chunk"><% posts_chunk.each do |post| %>
+  <div class="col s12 m12 l6">
+    <div class="card medium" id="home">
+      <div class="card-image"><img class="image-responsive" src=<%= @images.sample %>><span class="card-title"><%= post.title %><span class="card-tag">fashion</span></span></div>
+    </div>
+  </div><% end %>
+</div><% end %>
