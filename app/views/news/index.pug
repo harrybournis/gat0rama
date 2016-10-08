@@ -28,7 +28,7 @@
 						<% end %>
 						.image
 							<img class="responsive-img" src=<%= @images.sample %>>
-						p.content.truncate <%= news_item.body %>
+						p.content.truncate.flow-text <%= news_item.body %>
 						<%= link_to news_item, class: 'read-more' do %> Read More <% end %>
 						.footer
 							span.comments

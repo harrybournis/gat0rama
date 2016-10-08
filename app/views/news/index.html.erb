@@ -34,7 +34,7 @@
           <div class="date"><%= news_item.published_at.to_date.to_formatted_s(:long_ordinal) %></div><%= link_to news_item do %>
           <div class="title"><%= news_item.title %></div><% end %>
           <div class="image"><img class="responsive-img" src=<%= @images.sample %>></div>
-          <p class="content truncate"><%= news_item.body %></p><%= link_to news_item, class: 'read-more' do %> Read More <% end %>
+          <p class="content truncate flow-text"><%= news_item.body %></p><%= link_to news_item, class: 'read-more' do %> Read More <% end %>
           <div class="footer"><span class="comments">
               <p>0 comments</p></span><span class="social"><a class="waves-effect waves-custom" href="#/"><i class="fa fa-facebook" aria-hidden="true"></i></a><a class="waves-effect waves-custom" href="#/"><i class="fa fa-twitter" aria-hidden="true"></i></a><a class="waves-effect waves-custom" href="#/"><i class="fa fa-tumblr" aria-hidden="true"></i></a></span></div>
         </div><% end %>
