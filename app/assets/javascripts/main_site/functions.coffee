@@ -3,11 +3,8 @@
 		url: "/events"
 		dataType: "json"
 		error: (jqXHR, textStatus, errorThrown) ->
-			console.log textStatus
 			document.getElementById('calendar').innerHTML = "Calendar Failed to load"
 		success: (data, textStatus, jqXHR) ->
-			console.log textStatus
-			console.log data
 			init data
 
 

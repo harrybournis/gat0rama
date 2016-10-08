@@ -123,6 +123,10 @@
 			height: 220px;
 			margin-bottom: 15px;
 
+			@media #{$medium-and-down} {
+				height: 400px;
+			}
+
 			img {
 				height: 100%;
 				width: 100%;
