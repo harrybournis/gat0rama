@@ -14,7 +14,7 @@ html
     style.
       body {
         background-color: <%= @settings.value["website_background_color"] %>;
-        background-image: <%= @settings.value["website_background_image"] %>;
+        background-image: url(<%= @settings.value["website_background_image"] %>);
       }
       nav ul a, #burger_menu_icon {
         color: <%= @settings.value["navbar_links_color"] %>;
