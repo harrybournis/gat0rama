@@ -156,11 +156,11 @@
 
 
 			&.event {
-				// background: $calendar-event-color; //#62bf87;
-	   //  		color: white;
-	   //  		border-radius: 60%;
-				// cursor: pointer;
-				// cursor: hand;
+				background: $calendar-event-color; //#62bf87;
+	     		color: white;
+	     		border-radius: 60%;
+				cursor: pointer;
+				cursor: hand;
 
 				.day-contents {
 					@media #{$medium-and-down} {
