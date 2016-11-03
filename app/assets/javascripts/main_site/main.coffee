@@ -1,7 +1,8 @@
 $(document).on 'turbolinks:load', ->
 
 	# initialize materialize javascript
-	$(".button-collapse").sideNav()
+	$(".button-collapse").sideNav
+		menuWidth: 500
 
 	# set the active class on the current navbar tab
 	cache3 = window.location.pathname

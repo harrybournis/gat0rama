@@ -5,7 +5,7 @@
 	<% while i < posts_chunk.length do %>
 	<div class="col s12 m12 l<%= pattern[j] %>">
 	<%= link_to posts_chunk[i] do %>
-		#home.card.medium
+		.home.card.medium
 			.card-image
 				<img class="image-responsive" src=<%= @images.sample %>>
 				span.card-title
@@ -16,7 +16,7 @@
 
 	<div class="col s12 m12 l<%= 12 - pattern[j] %>">
 	<%= link_to posts_chunk[i + 1] do %>
-		#home.card.medium
+		.home.card.medium
 			.card-image
 				<img class="image-responsive" src=<%= @images.sample %>>
 				span.card-title
@@ -32,7 +32,7 @@
 .posts-chunk
 	<% posts_chunk.each do |post| %>
 		.col.s12.m12.l6
-			#home.card.medium
+			.home.card.medium
 				.card-image
 					<img class="image-responsive" src=<%= @images.sample %>>
 					span.card-title

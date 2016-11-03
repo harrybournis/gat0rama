@@ -56,9 +56,13 @@
 	}
 }
 
-#home.card {
+.home.card {
 	//@extend .z-index-1;
 	box-shadow: none;
+
+	@media #{$medium-and-down} {
+		height: $index-post-height-mobile;
+	}
 
 	.card-image  {
 		//@extend .z-depth-3;
@@ -74,10 +78,10 @@
 		    //min-height: $index-post-height; //365px;
 		    //max-height: $index-post-width; //365px;
 
-		    // @media #{$medium-and-down} {
-			   //  min-height: $index-post-height-mobile;
-			   //  max-height: $index-post-width-mobile;
-		    // }
+		    @media #{$medium-and-down} {
+			    min-height: $index-post-height-mobile;
+			    max-height: $index-post-width-mobile;
+		    }
 		}
 
 		// Image Gradient Mask
@@ -85,7 +89,7 @@
 			bottom: 0;
 		    content: "";
 		    display: block;
-		    height: 70%;
+		    height: 100%;
 		    width: 100%;
 		    position: absolute;
 		    z-index: 1;
