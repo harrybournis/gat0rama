@@ -10,10 +10,10 @@ DEVELOPMENT_SECRET_KEY_BASE=<add_your_secret_development_key>
 TEST_SECRET_KEY_BASE=<add_your_secret_test_key>
 
 2. Run in one terminal 
-	pug . -E html.erb -P -w (to autocompile pug in html files)
+	**pug . -E html.erb -P -w** (to autocompile pug in html files)
 	
 3. Start Server with
-	rails s -b 0.0.0.0 -p 1111 
+	**rails s -b 0.0.0.0 -p 1111**
 
 4. for development add this to the hosts file (needs it for disqus to work)
 	127.0.0.1 gat0rama.com
