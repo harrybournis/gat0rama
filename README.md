@@ -1,9 +1,7 @@
 # stellosite_rails
 
-location: https://gat0rama.herokuapp.com/
+found at: https://gat0rama.herokuapp.com/
 
-for development add this to the hosts file (needs it for disqus to work)
-	gat0rama.com:3000
 
 # Installation
 
@@ -16,3 +14,6 @@ TEST_SECRET_KEY_BASE=<add_your_secret_test_key>
 	
 3. Start Server with
 	rails s -b 0.0.0.0 -p 1111 
+
+4. for development add this to the hosts file (needs it for disqus to work)
+	gat0rama.com:3000
