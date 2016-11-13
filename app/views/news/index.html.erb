@@ -28,7 +28,7 @@
         </div>
       </div>
     </div>
-    <div class="col s12 m12 l8 pull-l4">
+    <div class="col s12 m12 l8 pull-l4" id="news-column">
       <div id="news-index"><% @news.each do |news_item| %>
         <div class="news-post">
           <h6 class="date"><%= news_item.published_at.to_date.to_formatted_s(:long_ordinal) %></h6><%= link_to news_item do %>
@@ -37,7 +37,7 @@
           <div class="content">
             <p><%= news_item.body %></p>
           </div>
-          <div class="footer">
+          <div class="footer row">
             <div class="read-more-span col s4 hide-on-small-only m4 l4 push-m4 push-l4"><%= link_to news_item, class: 'read-more' do %> Read More <% end %></div>
             <div class="comments col s6 m4 l4 pull-m4 pull-l4">
               <p>0 comments</p>

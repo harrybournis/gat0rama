@@ -55,13 +55,14 @@
 			width: 100%;
 			position: relative;
 			height: $posts-index-post-height;
+			max-height: 100%;
 
 			img {
-				width: 100%;
-				height: 100%;
+				//width: 100%;
+				min-height: $posts-index-post-height;
 				//border-radius: 0 50% 0 50%; // FYLA
-				border-radius: 0 0 0 0;  // One edge only
-				transition: border-radius 0.4s ease-in-out;
+				//border-radius: 0 0 0 0;  // One edge only
+				//transition: border-radius 0.4s ease-in-out;
 			}
 
 			// @media #{$large-and-up} {

@@ -25,12 +25,12 @@ html
       nav#nav-logo
         .row
           .col.s2.m2.l0.hide-on-large-only#burger-menu-icon-column
-            a#burger_menu_icon.button-collapse(href='#', data-activates='mobile-demo')
+            a#burger_menu_icon.button-collapse(href='#', data-activates='mobile-nav', ontouchstart="")
               i.fa.fa-bars.fa-2x
           .col.s10.m10.l12#logo-column
             a(href='/')
               <img class="responsive-img" src=<%= @settings.value["header_logo"] %>>
-        ul#mobile-demo.side-nav
+        ul#mobile-nav.side-nav
           li.social-buttons
             ul.social-buttons-list
               li.social-button

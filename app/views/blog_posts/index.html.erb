@@ -13,14 +13,14 @@
   <div id="posts-list"><% @posts.limit(6).each_with_index do |post, index| %>
     <div class="post-item"><div class="col s12 m12 l6 image-column <%= 'push-l6' if index % 2 == 1 %>">
 <%= link_to post do %>
-      <div class="post-image"><img class="responsive-img post-image" src=<%= @images.sample %>></div><% end %>
+      <div class="post-image"><img class="post-image" src=<%= @images.sample %>></div><% end %>
 </div>
 <div class="col s12 m12 l6 text-column <%= 'pull-l6' if index % 2 == 1 %>">
       <div class="row col s12">
         <div class="post-date"><%= post.published_at.to_date.to_formatted_s(:long_ordinal) %></div>
       </div>
       <div class="row col s12"><%= link_to post do %>
-        <h5 class="post-title"><%= post.title %></h5><% end %>
+        <h4 class="post-title"><%= post.title %></h4><% end %>
       </div>
       <div class="row col s12">
         <h6 class="post-subtitle"><%= post.subtitle %></h6>

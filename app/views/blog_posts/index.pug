@@ -13,7 +13,7 @@
 
 				<%= link_to post do %>
 				.post-image
-					<img class="responsive-img post-image" src=<%= @images.sample %>>
+					<img class="post-image" src=<%= @images.sample %>>
 				<% end %>
 
 			</div>
@@ -22,7 +22,7 @@
 					.post-date <%= post.published_at.to_date.to_formatted_s(:long_ordinal) %>
 				.row.col.s12
 					<%= link_to post do %>
-					h5.post-title <%= post.title %>
+					h4.post-title <%= post.title %>
 					<% end %>
 				.row.col.s12
 					h6.post-subtitle <%= post.subtitle %>

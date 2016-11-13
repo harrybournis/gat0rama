@@ -18,7 +18,7 @@
 							.circle
 						.circle-clipper.right
 							.circle
-		.col.s12.m12.l8.pull-l4
+		.col.s12.m12.l8.pull-l4#news-column
 			#news-index
 				<% @news.each do |news_item| %>
 					.news-post
@@ -31,7 +31,7 @@
 						.content
 							p <%= news_item.body %>
 
-						.footer
+						.footer.row
 							div.read-more-span.col.s4.hide-on-small-only.m4.l4.push-m4.push-l4
 								<%= link_to news_item, class: 'read-more' do %> Read More <% end %>
 							div.comments.col.s6.m4.l4.pull-m4.pull-l4

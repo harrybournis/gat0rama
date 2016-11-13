@@ -61,15 +61,22 @@
 	@extend .row;
 
 	// Remove bottom margin from the two last cards
-	& > :nth-last-child(-n+2) > a > .home.card {
+
+	& > :nth-last-child(1) > a >.home.card {
 		margin-bottom: 0;
+	}
+
+  	@media only screen and (min-width: $medium-screen) {
+		& > :nth-last-child(-n+2) > a > .home.card {
+			margin-bottom: 0;
+		}
 	}
 
 	.col {
 		padding-left: 4px;
 		padding-right: 4px;
 
-		.card {
+		.home.card {
 			margin-top: 0px;
 			margin-bottom: 8px;
 		}
@@ -93,14 +100,11 @@
 			-webkit-filter: brightness(94%);
 			filter: brightness(94%);
 
-			//height: inherit;
 			min-height: $index-post-height;
-		    //min-height: $index-post-height; //365px;
-		    //max-height: $index-post-width; //365px;
 
 		    @media #{$medium-and-down} {
 			    min-height: $index-post-height-mobile;
-			    max-height: $index-post-width-mobile;
+			    //max-height: $index-post-width-mobile;
 		    }
 		}
 

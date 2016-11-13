@@ -25,6 +25,7 @@
 
 		.content {
 			font-size: $fonts-post-p-size;
+			line-height: 1.5;
 			height: 15rem;
 			overflow: hidden;
 			position: relative;
@@ -35,7 +36,6 @@
 		}
 
 		.footer {
-			@extend .row;
 			$divider-color: #c5c5c5;
 			$margins-size: 0.5rem;
 			border-top: 1px solid $divider-color;
@@ -159,6 +159,7 @@
 
 		td.day {
 			text-align: center;
+			padding: 1rem;
 
 
 			&.event {
@@ -167,10 +168,16 @@
 	     		border-radius: 60%;
 				cursor: pointer;
 				cursor: hand;
+				float: left;
+
+				@media #{$medium-and-down} {
+					border-radius: 0%;
+				}
 
 				.day-contents {
 					@media #{$medium-and-down} {
 						background: $calendar-event-color; //#62bf87;
+						border-radius: 0%;
 	    				color: white;
 					    // height: 40px;
 					    // width: 40px;
@@ -207,7 +214,13 @@
 	font-size: 1.4rem;
 }
 
-.pagination li {
+#news-column > div:nth-last-child(1) {
+	@extend .center-align;
+}
+
+ul.pagination li {
+
+	height: 2rem;
 
 	i {
 		vertical-align: middle;
