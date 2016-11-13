@@ -4,7 +4,7 @@
 // Globals
 $primary-color: color("shades", "white") !default;
 $link-color: black !default;
-$slider-indicator-color: #bcfb58; //#063a35; //color('lime', 'lighten-2') !default;
+$slider-indicator-color:  #bcfb58; //#063a35; //color('lime', 'lighten-2') !default;
 $website-background-color: transparent;
 
 // Navbar
@@ -23,13 +23,17 @@ $footer-text-color: #6f6f6f;
 $footer-bg-color: color("grey", "lighten-3");
 
 //Extra
-$waves-custom-color: #a9e24d; //#b8d688;
+$waves-custom-color: #aad3c5;//#FFC7AC;//#78B39E;//#aad3c5;//#A08DEC;//#CFB2F8; //#a9e24d; //#b8d688;
 $active-page-color: $waves-custom-color;
 $calendar-event-color: $waves-custom-color;
+$slider-indicator-color: $waves-custom-color;
+$navbar-links-color: $waves-custom-color;
 
 //Posts
-$search-highlight-color: #bcfb58;
+$search-highlight-color: $waves-custom-color; //#bcfb58;
 $input-focus-color: $search-highlight-color !default;
+$post-links-color: #78B39E;
+$post-links-hover-color: #DD9471;
 
 
 //----------------------- Fonts ------------------------------//
