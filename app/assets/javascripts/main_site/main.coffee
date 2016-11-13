@@ -16,7 +16,7 @@ $(document).on 'turbolinks:load', ->
 
 	unless search
 		if $(window).width() <= 992
-			$('#slider').slider({ height: 800, indicators: true  })
+			$('#slider').slider({ height: 760, indicators: true  }) # 760 to remove the extra 40px that it automatically adds, and get it to an even 800 px
 		else
 			$('#slider').slider()
 

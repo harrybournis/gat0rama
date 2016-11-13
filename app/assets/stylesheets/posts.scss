@@ -94,22 +94,27 @@
 	}
 
 	#post-subtitle {
-
-		//font-size: 1.63rem;
+		font-size: $fonts-post-subtitle-size;
 		font-family: $fonts-post-subtitle;
+
+		@media only screen and (min-width: 768px) and (max-width: $medium-screen) {
+			font-size: $fonts-post-subtitle-size-mobile;
+		}
 	}
 
 	#post-content {
 		font-family: $fonts-post-content;
-	    //font-size: 1.31rem;
-	    //line-height: 1.5;
+	    font-size: $fonts-post-p-size;
+	    line-height: 1.5;
+
+		@media only screen and (min-width: 768px) and (max-width: $medium-screen) {
+			font-size: $fonts-post-p-size-mobile;
+		}
 
 	    p {
-	    	@extend .flow-text;
-
-			@media only screen and (max-width: $medium-screen) {
-				font-size: 2.4rem;
-			}
+			// @media only screen and (max-width: $medium-screen) {
+			// 	font-size: 2.4rem;
+			// }
 	    }
 	}
 
@@ -130,7 +135,7 @@
 
 #related-posts-section {
 
-	margin-bottom: 50px;
+	margin-bottom: 3rem;
 
 	a {
 		color: black;
@@ -142,9 +147,9 @@
 			height: 220px;
 			margin-bottom: 15px;
 
-			@media #{$medium-and-down} {
-				height: 400px;
-			}
+			// @media #{$medium-and-down} {
+			// 	height: 400px;
+			// }
 
 			img {
 				height: 100%;
@@ -153,15 +158,15 @@
 		}
 
 		.post-date {
+			@extend h6;
 
-			font-size: 1.1rem;
+			//font-size: 1.1rem;
 			color: grey;
 			margin-bottom: 9px;
 		}
 
 		.post-title {
-			@extend h4;
-			//font-size: 1.6rem;
+			@extend h5;
     		margin-bottom: 22px;
     		padding-bottom: 23px;
 			position: relative;
@@ -183,9 +188,9 @@
 		}
 
 		.post-subtitle {
-			@extend h5;
+			@extend h6;
 
-			//font-size: 1rem;
+			font-size: $fonts-post-related-subtitle-size;
 			padding-bottom: 17px;
 		}
 

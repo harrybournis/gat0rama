@@ -4,6 +4,12 @@ body {
 	font-size: 1rem;
 }
 
+.slider .indicators .indicator-item {
+	width: 1rem;
+	height: 1rem;
+	margin: 0 0.9rem;
+}
+
 // @media #{$medium-and-down} {
 // 	body {
 // 		font-size: 3rem;

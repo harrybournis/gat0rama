@@ -3,12 +3,11 @@
 		.col.l10.m12.s12.offset-l1
 			article#posts-show
 
-				h2#post-title <%= @post.title %>
-				h4#post-subtitle <%= @post.subtitle %>
+				h3#post-title <%= @post.title %>
+				h5#post-subtitle <%= @post.subtitle %>
 
 				.post-image-container
 					<img class="responsive-img post-image materialboxed" src=<%= @images.sample %>>
-
 				#post-content
 					p <%= @post.body %>
 					p <%= Faker::Hipster.paragraph %>
