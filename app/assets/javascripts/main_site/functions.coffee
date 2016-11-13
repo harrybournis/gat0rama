@@ -112,7 +112,7 @@ init = (events) ->
 `
 
 @initialize_search = ->
-	$('input.autocomplete').autocomplete data:
+	$('#posts-search-input').autocomplete data:
 	  'Apple': null
 	  'Microsoft': null
 	  'Google': 'http://placehold.it/250x250'

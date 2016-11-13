@@ -1,5 +1,4 @@
 #news-row {
-	@extend .row;
 	margin-top: 50px;
 }
 
@@ -10,7 +9,6 @@
 		margin-bottom: 50px;
 
 		.title {
-			@extend h3;
 		}
 
 		.image {
@@ -22,50 +20,58 @@
 			color: #929292;
 			margin-top: 10px;
     		margin-bottom: 10px;
+    		white-space: pre-wrap;
 		}
 
 		.content {
-			@extend .flow-text;
+			font-size: $fonts-post-p-size;
+			height: 15rem;
+			overflow: hidden;
+			position: relative;
 
-			margin-bottom: 30px;
-		}
-
-		.read-more {
-			font-size: 1.4rem;
-			color: #656565;
+			& > p:first-child:before {
+				@extend .image-white-gradient-mask;
+			}
 		}
 
 		.footer {
 			@extend .row;
 			$divider-color: #c5c5c5;
+			$margins-size: 0.5rem;
 			border-top: 1px solid $divider-color;
 			border-bottom: 1px solid $divider-color;
 
 			.comments {
-				@extend .col;
-				@extend .s6;
-				@extend .m6;
-				@extend .l6;
 
 				p {
-					font-size: 1.3rem;
-					margin: 10px;
+					font-size: 1rem;
+					margin-top: $margins-size;
+					margin-bottom: $margins-size;
+				}
+			}
+
+			.read-more-span {
+
+				.read-more {
+					@extend h6;
+					display: block;
+					//font-size: 1.2rem;
+					color: #656565;
+					text-align: center;
+					margin-top: $margins-size;
+					margin-bottom: $margins-size;
+					line-height: 1.5;
 				}
 			}
 
 			.social {
-				@extend .col;
-				@extend .s6;
-				@extend .m6;
-				@extend .l6;
-				@extend .right-align;
 
 				.fa {
 					color: $slider-indicator-color;
 					padding-left: 10px;
 					padding-right: 10px;
-					line-height: 42px;
-					font-size: 1.4rem;
+					line-height: 2.5;
+					font-size: 1.1rem;
 				}
 			}
 		}

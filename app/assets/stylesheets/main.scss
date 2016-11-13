@@ -27,7 +27,7 @@ nav {
 
 nav ul li.active {
 	background-color: transparent;
-	border-top: 2px solid $active-page-color;
+	border-bottom: 2px solid $active-page-color;
 }
 
 
@@ -261,5 +261,22 @@ footer.page-footer.container {
     background: -o-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
     background: -ms-linear-gradient(top,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
     background: linear-gradient(to bottom,rgba(0,0,0,0) 40%,rgba(0,0,0,.7) 100%);
+}
+
+.image-white-gradient-mask {
+	bottom: 0;
+    content: "";
+    display: block;
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+background: -moz-linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.08) 97%, rgba(255,255,255,0.05) 100%); /* ff3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0.05)), color-stop(3%, rgba(255,255,255,0.08)), color-stop(100%, rgba(255,255,255,1))); /* safari4+,chrome */
+background: -webkit-linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.08) 97%, rgba(255,255,255,0.05) 100%); /* safari5.1+,chrome10+ */
+background: -o-linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.08) 97%, rgba(255,255,255,0.05) 100%); /* opera 11.10+ */
+background: -ms-linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.08) 97%, rgba(255,255,255,0.05) 100%); /* ie10+ */
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.08) 97%, rgba(255,255,255,0.05) 100%); /* w3c */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#ffffff',GradientType=0 ); /* ie6-9 */
 }
 

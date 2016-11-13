@@ -1,4 +1,4 @@
-#news-row
+#news-row.row
 	.container
 		h2 Latest News
 		.col.s12.m12.l3.push-l8.offset-l1
@@ -22,18 +22,21 @@
 			#news-index
 				<% @news.each do |news_item| %>
 					.news-post
-						.date <%= news_item.published_at.to_date.to_formatted_s(:long_ordinal) %>
+						h6.date <%= news_item.published_at.to_date.to_formatted_s(:long_ordinal) %>
 						<%= link_to news_item do %>
-						.title <%= news_item.title %>
+						h4.title <%= news_item.title %>
 						<% end %>
 						.image
 							<img class="responsive-img" src=<%= @images.sample %>>
-						p.content.truncate.flow-text <%= news_item.body %>
-						<%= link_to news_item, class: 'read-more' do %> Read More <% end %>
+						.content
+							p <%= news_item.body %>
+
 						.footer
-							span.comments
+							div.read-more-span.col.s4.hide-on-small-only.m4.l4.push-m4.push-l4
+								<%= link_to news_item, class: 'read-more' do %> Read More <% end %>
+							div.comments.col.s6.m4.l4.pull-m4.pull-l4
 								p 0 comments
-							span.social
+							div.social.col.s6.m4.l4.right-align
 								a(href='#/').waves-effect.waves-custom
 									i.fa.fa-facebook(aria-hidden='true')
 								a(href='#/').waves-effect.waves-custom

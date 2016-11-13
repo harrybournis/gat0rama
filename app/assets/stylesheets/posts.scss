@@ -1,9 +1,8 @@
 #search-row {
-	@extend .row;
+
+	margin-bottom: 1rem;
 
 	.input-field {
-		margin-top: 2rem;
-		margin-bottom: 2rem;
 
 		.prefix.active {
 			color: $search-highlight-color;
@@ -72,7 +71,7 @@
 		.more {
 			color: black;
     		font-weight: bold;
-    		font-size: 1.5rem;
+    		font-size: 1rem;
 
     		@media #{$large-and-up} {
     			bottom: 0;
