@@ -18,4 +18,4 @@ TEST_SECRET_KEY_BASE=(add_your_secret_test_key)
 4. for development add this to the hosts file (needs it for disqus to work)
 	127.0.0.1 gat0rama.com
 	
-5. In browser: gat0rama.com:3000
+5. In browser: gat0rama.com:1111
