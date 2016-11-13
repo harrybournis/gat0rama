@@ -48,7 +48,7 @@ nav ul li.active {
 
 //MAIN NAVBAR HEIGHT
 
-$main-navbar-height: 40px;
+$main-navbar-height: $index-main-navbar-height;
 
 nav#nav-main {
     height: $main-navbar-height;
@@ -71,7 +71,7 @@ nav#nav-main {
 
 //LOGO NAVBAR HEIGHT
 
-$logo-navbar-height: 100px;
+$logo-navbar-height: $index-logo-navbar-height;
 
 nav#nav-logo {
 	height: $logo-navbar-height;
@@ -94,7 +94,7 @@ nav#nav-logo {
 }
 
 @media #{$medium-and-down} {
-	$logo-navbar-height-mobile: 200px;
+	$logo-navbar-height-mobile: $index-logo-navbar-height-mobile;
 
 	nav#nav-logo {
 		height: $logo-navbar-height-mobile;
@@ -116,13 +116,13 @@ nav#nav-logo {
 
 @media #{$medium-and-down} {
 	#burger_menu_icon i {
-		font-size: 4rem;
+		font-size: $index-burger-button-size;
 	}
 }
 
 @media #{$small-and-down} {
 	#burger_menu_icon i {
-		font-size: 2.5rem;
+		font-size: $index-burger-button-size-small;
 	}
 }
 

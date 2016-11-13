@@ -69,9 +69,15 @@ $fonts-footer: 'garamond-regular';
 
 
 //--------------------- Sizes ------------------------------//
-$posts-index-post-height: 400px;
+$index-logo-navbar-height: 100px;
+$index-logo-navbar-height-mobile: 200px;
+$index-burger-button-size: 4rem;
+$index-burger-button-size-small: 2.5rem;
+$index-main-navbar-height: 40px;
 
 $index-post-height: 500px;
 $index-post-width: $index-post-height;
 $index-post-height-mobile: 600px;
 $index-post-width-mobile: $index-post-height-mobile;
+
+$posts-index-post-height: 400px;
