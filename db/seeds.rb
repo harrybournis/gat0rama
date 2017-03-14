@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Setting.create
-s = Setting.first
+s = Setting.new
+s.description = "Settings"
 s.value = {"header_logo"=>"/images/LOGOSITETEST.png", "navbar_links_color"=>"#063a35", "website_background_color"=>"transparent", "website_background_image"=>""}
 s.save
 ParalaxImage.create(url: "/placeholders/clown.gif")
